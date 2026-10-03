@@ -1,0 +1,8 @@
+ticker,stop,stop_type,ladder_done,catalyst,catalyst_date,rating,note
+ARM,250,structural,0,earnings,2026-11-04,B,avg 259.17; dip 262-268 (50-DMA) max $150 until 10/27; adds 1/2; +25% 323.97 / +40% 362.84 / +75% 453.55; broker TP 440
+BE,250,structural,1,earnings (est),2026-10-27,B,avg 239.26; dip 256-262 max $100 (tight stop) until 10/19; adds 0/2 (reset by 9/29 profit sale); sell 1/3 if >299 before 10/27
+EWY,172,structural,0,Samsung Q3 preview (unverified),2026-10-07,B,dip 176-178 (50-DMA) max $145 after Samsung preview; adds 0/2; memory EWY+WDC 20%; broker TP 240 sells all
+QUBT,8,structural,0,earnings (est),2026-11-13,D,v2 speculative slot (<=6% at cost); dip 8.10-8.30 max ~$30 until 11/5; broker TP 10
+TTWO,185,weekly close,0,GTA VI launch,2026-11-19,C,dip 188-196 max $150 until 10/28; adds 1/2; launch week 11/16-20 >270 sell 1/3; earnings 11/5 (est); review 12/19
+VOO,,none,0,none,,core,never trimmed; index ladder SPX -4% 7487 (VOO~686, 1/4 reserve) / -7% 7253 (~664, 1/2) / -15% 6629 (~607, rest)
+WDC,395,structural,0,earnings (est),2026-10-29,C,broker stop 420 -> move to 395; dip 410-420 max $150 until 10/21 (425-435 if stop stays 420); adds 0/2; 6th satellite override 9/24

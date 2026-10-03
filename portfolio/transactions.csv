@@ -1,0 +1,21 @@
+date,ticker,side,shares,price,fees,note
+2026-08-18,AMD,buy,0.83507306,478.80,1.00,post-reset build
+2026-08-18,ARM,buy,1.60019202,250.00,1.00,post-reset build
+2026-08-18,BE,buy,1.92771084,207.70,1.00,post-reset build
+2026-08-18,EWY,buy,2.33740431,171.04,1.00,post-reset build
+2026-08-18,VOO,buy,1.4159292,706.23,1.00,post-reset build; core anchor
+2026-08-18,INTC,buy,4.17101147,95.82,1.00,post-reset build
+2026-09-01,TTWO,buy,0.99351455,216.98,1.00,GTA VI catalyst; non-AI diversifier
+2026-09-08,INTC,sell,4.17101147,105.62,1.00,lock gains (+10.2%) amid volatility
+2026-09-08,BE,sell,0.96385542,281.14,1.00,lock half (+35.4%) amid volatility
+2026-09-15,QUBT,buy,25.28445006,7.92,1.00,off-plan speculative (PLAN §2 'never story micro-caps'); bracket SL 8 / TP 10
+2026-09-15,TTWO,buy,0.86134649,214.82,1.00,the one allowed average-down (PLAN §4)
+2026-09-21,AMD,sell,0.65681444,608.47,1.00,full exit +27% after rally; +$85.17
+2026-09-21,AMD,sell,0.17825862,609.15,1.00,full exit remainder; +$23.24
+2026-09-21,ARM,sell,0.63337239,314.76,1.00,partial sell into CEO-comment spike; +$41.02
+2026-09-24,BE,buy,0.77908924,256.29,1.00,dip-zone add ($250-260) after S&P inclusion
+2026-09-24,VOO,buy,0.28394974,703.57,1.00,core top-up from AMD/ARM proceeds (PLAN §3 half-to-VOO)
+2026-09-24,WDC,buy,0.66526222,451.14,1.00,NEW 6th satellite (breaks 5-satellite max); memory/storage; bracket SL 420 / TP 600
+2026-09-28,BE,buy,0.76516948,261.66,1.00,second BE add (breaks one-average-down rule)
+2026-09-28,ARM,buy,0.35188964,284.38,1.00,re-add after pullback from 332
+2026-09-29,BE,sell,1.01615689,294.55,1.00,sold the two adds into +13% bounce; +$56.19 (broker avg-cost basis)

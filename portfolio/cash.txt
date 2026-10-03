@@ -1,0 +1,2 @@
+# Free cash in the stock account (USD). Derived from statement 2026-09-29: equity 3666.25 - open positions 3346.00 (invested 3199.27 + floating 146.73)
+320.25

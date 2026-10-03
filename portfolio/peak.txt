@@ -1,0 +1,2 @@
+# Sleeve equity high-water mark (USD) and its date. Update when a statement shows a new high.
+3670.02 2026-09-21
