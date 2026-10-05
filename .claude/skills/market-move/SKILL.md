@@ -41,8 +41,9 @@ Answer three questions, each in ≤2 sentences, with the data:
 2. **Where does the unlocked reserve go, in order?** VOO first (§5). Then the satellite with the best
    `rating` in `portfolio/levels.csv` that is at/near its 50-DMA with thesis intact. Give the exact
    dollar amount per name and a limit price, never "buy some".
-3. **On an up-shock: what does the ladder let us bank?** List trims the engine fired. If nothing
-   fired, the answer is "hold; do not add", and say so.
+3. **On an up-shock: what does the ladder let us bank?** List trims the engine fired, then the optional
+   trade-around sells it lists under "adjust" (names in their sell zone, ≤ ⅓). If nothing fired, the answer is
+   "hold; do not add", and say so.
 
 ### 4. Deliver the decision card (template in `references/decision-card.md`)
 Verdict line → mechanical actions with sizes and limits → reserve decision → do-nots → what would
@@ -59,7 +60,8 @@ the client's decision. If fills happen, record them per stock-desk workflow D an
 - Never recommend selling VOO or touching the gold/cash vault, whatever the tape.
 - Never deploy more than the engine's `deployable_now`; never all at once.
 - A stop is a stop. "It'll bounce" is not a rule.
-- On a ≥+3% index day, the only allowed trades are ladder trims and cap trims.
+- On a ≥+3% index day, the only allowed trades are ladder trims, cap trims and trade-around sells in a sell zone
+  (PLAN §3b, ≤ ⅓ of the line).
 - If data is stale or missing, say "unverified" and give the rule-based answer conditionally —
   do not delay the card waiting for perfect data; a shock is time-sensitive.
 - Delegation: `sonnet` for the data sweep, `opus` if a thesis-event deep dive is needed. Never `fable`.

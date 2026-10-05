@@ -24,7 +24,7 @@ TRANCHE_0_DD = -0.04            # v2: quarter of reserve, VOO only
 TRANCHE_1_DD = -0.07
 TRANCHE_2_DD = -0.15
 CASH_FLOOR = 0.05
-RESERVE_TARGET = 0.10          # v2 floor for discretionary buys
+RESERVE_TARGET = 0.075         # v3 floor for discretionary buys
 # §7 circuit breaker (sleeve drawdown from peak)
 CIRCUIT_BREAKER = -0.10
 # up-shock guards (§2 entry rules)
@@ -62,6 +62,14 @@ def kv(items):
             sys.exit(f"bad item {it!r}, expected TICKER=VALUE")
         out[k.upper()] = float(v)
     return out
+
+
+def zone(text):
+    lo, _, hi = (text or "").partition("-")
+    try:
+        return float(lo), float(hi)
+    except ValueError:
+        return None
 
 
 def classify(day_move, spx_dd, vix):
@@ -155,12 +163,20 @@ def main():
             stages = "+".join(f"{thr:.0%}" for _, thr in sell_stages)
             actions.append(f"{t}: SELL {len(sell_stages)}/3 ≈ {sh_sell:.4f} sh ≈ ${sh_sell*p['price']:,.0f} — ratchet {stages}"
                            + (" (cost fully recovered)" if sell_stages[-1][0] == 2 else "")
-                           + f" → set ladder_done={sell_stages[-1][0]+1}; banked 50% VOO / 50% reserve")
+                           + f" → set ladder_done={sell_stages[-1][0]+1}; banked → reserve until 15%, then 50% VOO / 50% reserve")
         # cap
         if p["weight"] > NAME_CAP_MKT:
             excess = (p["weight"] - TRIM_TO) * equity
             p["signals"].append(f"CAP {p['weight']:.1%} > 20% → trim ${excess:,.0f} back to 15%")
             actions.append(f"{t}: TRIM ${excess:,.0f} — concentration cap")
+        # v3 trade-around zones (PLAN §3b): optional, never forced
+        buy, sell = zone(L.get("buy_zone")), zone(L.get("sell_zone"))
+        if sell and p["price"] >= sell[0] and not sell_stages:
+            p["signals"].append(f"SELL ZONE {sell[0]:g}-{sell[1]:g} → trade-around: may sell up to 1/3 (proceeds → reserve)")
+            watch.append(f"{t}: optional trade-around sell of up to 1/3 ≈ {p['shares']/3:.4f} sh in {sell[0]:g}-{sell[1]:g}")
+        elif buy and buy[0] <= p["price"] <= buy[1]:
+            p["signals"].append(f"BUY ZONE {buy[0]:g}-{buy[1]:g} → add only if cash stays ≥ {RESERVE_TARGET:.1%} after it, "
+                                f"adds remain ({L.get('adds_used') or 0} of 2 used), outside the 3-session earnings blackout; index rungs first")
         # catalyst proximity
         if L.get("catalyst_date"):
             p["signals"].append(f"catalyst: {L.get('catalyst')} {L.get('catalyst_date')} — trim INTO run-up, not after")
@@ -187,11 +203,11 @@ def main():
     else:
         reserve["tranche"] = "none — up-move. Reserve is not deployed on green days."
         if cash_w < RESERVE_TARGET:
-            donts.append(f"reserve {cash_w:.1%} < {RESERVE_TARGET:.0%} floor → next contribution to cash, no new satellite")
+            donts.append(f"reserve {cash_w:.1%} < {RESERVE_TARGET:.1%} floor → no discretionary buys; next contribution to cash")
     if reserve["deployable_now"] > 0:
         actions.append(f"DEPLOY up to ${reserve['deployable_now']:,.0f} of reserve — VOO first, then best-rated satellite at/near its 50-DMA with thesis intact; limit orders, not market (§5 tranche {reserve['tranche'][0]})")
     if day >= BIG_DAY:
-        donts.append("no buys on a ≥+3% index day — chase guard (§2); ladder trims are allowed")
+        donts.append("no buys on a ≥+3% index day — chase guard (§2); ladder, cap and trade-around trims are allowed")
     if day <= -0.03 and reserve["deployable_now"] == 0:
         donts.append("do not 'buy the dip' on a red day the ladder hasn't unlocked — that is exactly the pre-reset pattern")
     donts.append("no shorts / leverage / options (cash account, PLAN §2)")

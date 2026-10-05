@@ -19,3 +19,6 @@ date,ticker,side,shares,price,fees,note
 2026-09-28,BE,buy,0.76516948,261.66,1.00,second BE add (breaks one-average-down rule)
 2026-09-28,ARM,buy,0.35188964,284.38,1.00,re-add after pullback from 332
 2026-09-29,BE,sell,1.01615689,294.55,1.00,sold the two adds into +13% bounce; +$56.19 (broker avg-cost basis)
+2026-10-02,WDC,sell,0.66526222,418.20,1.00,broker stop 420 hit on a -8.5% gap (low 396.57); -$21.91; desk had recommended moving the stop to 395
+2026-10-02,WDC,buy,0.98638784,404.48,1.00,same-day re-entry after the stop-out; full size in one fill; stop 360 / TP 500; reserve 5.3% < 10% floor (OVERRIDE)
+2026-10-02,TTWO,buy,0.49677098,202.40,1.00,add #2 of 2; above the 188-196 zone; R/R 1.4:1 to 227; reserve below floor (OVERRIDE)

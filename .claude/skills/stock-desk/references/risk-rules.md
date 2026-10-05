@@ -9,39 +9,53 @@ All limits are % of the **stock sleeve** (total money in the stock account, cash
 they hold regardless of the sleeve's dollar size. The script `scripts/portfolio_report.py` checks
 the mechanical ones; the judgment ones are on you.
 
-## Position sizing
-- **Single-name cap: 30%** of sleeve at cost, 35% at market (let winners run a little, then trim).
-- **Full position = 20–25%**, half = 10–12%, starter = 5%. Enter in halves: half at the level,
-  half on confirmation (break of resistance or successful retest) — never all at once into strength.
+## Position sizing (PLAN.md is the authority; v3 2026-10-03)
+- **Single-name cap**: no add may take a satellite past **15%** of the sleeve; above **20%** at market, trim back to 15%.
+  VOO (core) has its own 30–35% band instead.
+- **Full position = 10–15%**, half = 5–8%, starter ≤ 5%. Up to 8% of the sleeve may go in one fill; above 8%, enter
+  in halves: half at the level, half on confirmation (break of resistance or successful retest) — never all at once
+  into strength.
+- **Risk per buy ≤ 2% of the sleeve** (shares × distance to the stop). **Open stop-risk ≤ 8%**: every satellite stop
+  hit on the same day must cost less than 8% of the sleeve, which keeps it under the 10% circuit breaker. Above 8% →
+  no buys until a trim or a stop raise. `portfolio_report.py` computes both from `portfolio/levels.csv`.
+- **Minimum buy $50** — the $1 clearing fee must stay ≤ 2% of the fill.
 - **Theme cap: 60%** in any one theme (e.g. "AI power" or "AI compute"), 80% in the AI race
   overall. The remaining 20%+ is cash or an uncorrelated holding.
-- **Minimum 10% cash for discretionary buys** (v2, 2026-10-01; was 15%). The index-dip ladder may go to 5%. In a cash account this
+- **Minimum 7.5% cash after any discretionary buy** (v3, 2026-10-03; v2 10%, v1 15%). Contributions refill it toward
+  10%; the index-dip ladder may go to 5%. In a cash account this
   reserve stays usable no matter how open positions move, so it *is* the option to buy the crash.
   Deploy at most half of it on any single dip; keep the rest for a second leg down.
 - **Max 7 lines** (VOO + 6 satellites, one of which may be the speculative slot: ≤ 6% at cost, stop ≤ 12% under entry).
-- **Fills: ≤ 8 a month.** Over 8 → no new buys for the rest of the month; sells are always allowed.
+- **Buys: ≤ 10 a month** (v3). Sells never count and are always allowed.
 
 ## Entry discipline
 - No new buy with RSI(14) > 70 or price > 20% above its 50-DMA. Put it on WATCH with the level.
-- No new buy or add within 5 trading days of earnings unless the position is a starter (≤5%).
-- Reward/risk ≥ 2:1 on the first target, or skip.
+- No new buy or add in the 3 trading sessions before earnings (v3), nor on FOMC day or a data morning.
+- Reward/risk ≥ 2:1 on the first target (the bottom of the name's sell zone), or skip.
 - No averaging down into a position whose *fundamental* thesis is impaired. Adding on a
   purely technical pullback with intact thesis is allowed twice per holding period (each ≤ 4% of the sleeve, inside a
-  dip zone above the stop, never past the 15% cap); the count resets after a sale that banks a profit.
+  buy zone above the stop, never past the 15% cap); the count resets after a sale that banks a profit.
+- A headline that questions the thesis locks adds on that name until the next hard data point (its own or a close
+  peer's earnings) answers it.
 
 ## Exit and profit-taking
-- **Hard invalidation** at the set level: exit, no debate. Re-entry is always possible later.
+- **Hard invalidation** at the set level: exit, no debate. Re-entry (PLAN §4a): never the same session the stop
+  fired; after that only with evidence the fall ended (higher low or a close back above the broken level), a new stop
+  written first, and R/R ≥ 2:1.
 - **Portfolio-level circuit breaker**: if the sleeve draws down **10% from its peak**, cut every
   position to half and stop new buys until a journal review explains what happened.
-- **Profit ladder** (default, override per name): **trim ⅓ when a position is up 40%+ and
-  RSI > 70**, trim another ⅓ if it later exceeds the single-name cap, let the rest run with a
-  trailing stop at the 50-DMA (weekly close). Kept deliberately simple for a small account.
+- **Profit ratchet** (PLAN §3, the minimum selling): +25% → stop to breakeven; +40% → sell ⅓; +75% → sell another ⅓;
+  the rest trails on a weekly close below the 50-DMA. Trim into a known catalyst's run-up, not after.
+- **Trade-around (v3, PLAN §3b)**: every satellite has a sell zone (first target / resistance, above avg cost) and a
+  buy zone (support above the stop, R/R ≥ 2:1 to the sell zone). Up to ⅓ of the line may be sold in the sell zone and
+  bought back in the buy zone, repeatedly. Optional, never forced; the other ⅔ follow the ratchet. Tag fills `TA`.
+- Banked profit refills the Reserve to 15% first, then splits 50/50 Reserve/VOO.
 - Time stop: a thesis that has not started working in 2 earnings cycles is reviewed for exit.
 
 ## Monthly contribution
-- Default: contribution goes to cash. Deploy when a WATCH level is hit or a review says ADD.
-  Small contributions ≠ obligation to buy every month.
-- Prefer adding to an existing winner within caps over opening a 6th name.
+- Default (PLAN §5): $200 → VOO while Core < 35% and the Reserve is ≥ 10%; otherwise → Reserve.
+  Small contributions ≠ obligation to buy a satellite every month.
+- Prefer adding to an existing winner within caps over opening a 7th line.
 
 ## Behavioral guards (from the client's own history)
 - The pre-2026-08-12 period was experimentation. Do not let anchoring to those prices drive today's

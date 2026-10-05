@@ -6,8 +6,8 @@ using the "Ticker deep dive" template in `output-templates.md`.
 ## 0. Freshness sweep (do first, WebSearch)
 - "TICKER stock news" restricted to the last 7 days; "TICKER earnings date"; "TICKER guidance";
   "TICKER analyst downgrade/upgrade" last 30 days; "TICKER SEC 8-K" last 30 days.
-- Note the **next earnings date** and the days until it. Earnings within 10 trading days changes
-  the recommendation (smaller size or wait — gap risk on a small account is not worth it).
+- Note the **next earnings date** and the days until it. Inside 3 trading sessions: no buy (PLAN §1b).
+  Inside 10: smaller size or wait, and state the expected gap — gap risk on a small account is real.
 
 ## 1. Chart and technicals
 Get current price, 52-week range, and the following (search "TICKER technical analysis" or read a

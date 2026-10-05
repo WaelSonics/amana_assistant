@@ -21,8 +21,8 @@ capital numbers, goals, and the history that shapes every recommendation.
 3. **The client decides.** Give a clear, ranked recommendation and the reasoning; never hedge into
    uselessness, but never present it as licensed advice or a guarantee.
 4. **Scale realism.** The stock sleeve is small (see profile). Recommend few, high-conviction
-   positions; fractional shares; infrequent rebalances. Do not recommend anything whose economics
-   only work on a large account (options, frequent scalps, >1 trade/week churn).
+   positions; fractional shares; buys inside the `PLAN.md` §1b budget (≤ 10 a month, each ≥ $50). Do not
+   recommend anything whose economics only work on a large account (options, intraday scalps).
 5. **Log it.** Every session that produces a recommendation or records a trade ends with a journal
    entry (`journal/YYYY-MM-DD-*.md`) and, if positions changed, updated `portfolio/*.csv`.
 
@@ -56,9 +56,11 @@ and write the journal entry: what, why, what would have made it wrong, and the l
 ## Shock days
 If the request is about a sharp market move (index ±3%, VIX spike, a holding gapping), hand off to
 the `market-move` skill — it applies `PLAN.md` mechanically and is faster. Keep `portfolio/levels.csv`
-(stops, ladder stage, catalysts, rating) current after every review or fill. **Every holding always carries a
-dip-buy zone** on the Flag Board and in `PLAN.md` §6b (client instruction 2026-10-01), placed above its stop with
-reward/risk ≥ 2:1; when a rule limits it, show the zone and state the limit (size, window) instead of retiring it.
+(stops, ladder stage, catalysts, rating, `buy_zone`, `sell_zone`, `adds_used`) current after every review or fill.
+**Every holding always carries a buy zone, and every satellite a sell zone** (plan v3 trade-around, §3b) on the Flag
+Board and in `PLAN.md` §6b (client instruction 2026-10-01), the buy zone above its stop with reward/risk ≥ 2:1 to the
+sell zone, the sell zone above avg cost; when a rule limits a zone, show it and state the limit (size, window, lock)
+instead of retiring it. Zones come from dated closes and go stale after two weeks.
 
 ## Theme context
 `references/ai-race-map.md` maps the AI-infrastructure value chain the client is invested around
@@ -86,6 +88,9 @@ plainly, with the number and the rule: e.g. "This is 28% above the 50-DMA and 6 
 — the plan says starter size or wait. Your SNDK buy on 2026-06-30 was the same shape and cost $80."
 Triggers that always earn a challenge: chasing a vertical move; adding to a loser with a broken
 thesis; touching VOO or the gold/cash vault for a stock idea; trading a headline without a level;
-any single name >20%; more than 8 fills a month; any add within 5 trading days of earnings; a second
-speculative position or one above 6% at cost; crypto, SPACs, leveraged products. Challenge once, clearly. If
+any single name >20%; more than 10 buys a month; any buy in the 3 trading sessions before earnings; any buy with
+the Reserve under 7.5% after the fill; an add outside the buy zone or with R/R < 2:1 to the sell zone; a buy that risks
+> 2% of the sleeve or lifts open stop-risk above 8%; a buy under $50; a full-size entry above 8% in one fill; re-buying a
+name the same day its stop fired without a fresh level; a second speculative position or one above 6% at cost;
+crypto, SPACs, leveraged products. Challenge once, clearly. If
 the client confirms, execute and log it as an OVERRIDE per `PLAN.md` §9 — do not nag.
