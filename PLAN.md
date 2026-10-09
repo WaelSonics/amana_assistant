@@ -32,7 +32,7 @@ freely the satellites are traded. It adds an explicit risk budget so every trade
 
 | Rule | v2 (2026-10-01) | **v3** |
 |---|---|---|
-| Fill budget | ≤ 8 fills a month (sells allowed beyond) | **≤ 10 buys a month; sells never count** |
+| Fill budget | ≤ 8 fills a month (sells allowed beyond) | **5–10 buys a month** (client, 2026-10-07): 5 is the normal pace, 10 the hard cap; buys 6–10 are named as such by the desk. Not a quota: zero is fine if nothing is in a zone. Sells never count |
 | Reserve floor for discretionary buys | 10% | **7.5%**; contributions refill toward 10%; the index ladder may still go to 5% |
 | Selling | ratchet (+25/+40/+75) and catalyst trims only | **+ trade-around (§3b)**: up to ⅓ of any satellite sold in its sell zone, bought back in its buy zone, repeatable |
 | Entry size | always in halves | **one fill up to 8% of the sleeve**; halves above that |
@@ -94,7 +94,8 @@ Ratchet stages are measured on the shares held at the time (after any trade-arou
 ## 3b. Trade-around (v3) — sell strength, rebuy weakness, on written levels
 Every satellite carries **two zones**, kept in §6b and `portfolio/levels.csv` (`buy_zone`, `sell_zone`):
 - **Sell zone**: the first target / nearest resistance, always above the average cost. In it you *may* sell **up to ⅓**
-  of the position with a limit order. Optional, never forced. Proceeds go to the Reserve.
+  of the position: set a price alert at the zone edge, and when it fires sell the ⅓ by hand at market (Amana has no
+  partial limit orders; its SL/TP close the whole line). Optional, never forced. Proceeds go to the Reserve.
 - **Buy zone**: support above the stop, with R/R ≥ 2:1 to the bottom of the sell zone. In it you may buy back up to
   what was sold. That buy-back counts as an add (the sale already reset the add count because it banked a profit).
 - The other ⅔ follow only the ratchet and the stop.
@@ -108,6 +109,12 @@ Every satellite carries **two zones**, kept in §6b and `portfolio/levels.csv` (
 - **§4a Re-entry after a stop (v3)**: never in the same session the stop fired. After that it needs all three:
   evidence the fall ended (a higher low, or a close back above the broken level — a lower price is not evidence),
   a new stop written first, and R/R ≥ 2:1 — plus every §2 entry rule. Buy zones always sit above the stop.
+  *Why (from v1.2, 2026-09-24):* the stop and the dip-buy are opposite conclusions about the same fall — above the
+  stop a drop is a discount (thesis holds), at the stop it is information (thesis broke); exactly one can be right at
+  any price. Stopping out and re-buying as the price keeps falling keeps the realized loss *and* removes the cap, plus
+  a second round of fees — a stop that is undone the moment it fires is theatre; size smaller instead. Worked example:
+  BE sold 8/12 at $243.92 (−$63), *not* re-bought that afternoon at $235; re-entered 8/18 at $207.70 with a new size
+  and stop → +32% by 9/23. What worked was the pause and the new decision, not the lower price.
 - Up to **two adds** per name per holding period, only on a technical pullback with the thesis intact,
   only inside the buy zone above the stop, each ≤ 4% of the sleeve, never past the 15% cap, only while the Reserve stays
   ≥ 7.5% after the fill, never within 3 trading sessions of earnings. The count resets after any sale from the line
@@ -134,89 +141,93 @@ Every satellite carries **two zones**, kept in §6b and `portfolio/levels.csv` (
 - **Shock (index ±3% day, VIX spike, or a holding gapping)**: `/market-move` — applies §3–§7 mechanically
   via `portfolio/levels.csv` and returns a decision card. No improvising in the moment.
 
-## 6b. Flags — when to call the desk (`/stock-desk`), levels as of 2026-10-02 closes
+## 6b. Flags — when to call the desk (`/stock-desk`), levels as of 2026-10-06 closes
 Live version with news and statuses: **Amana Flag Board** (https://claude.ai/artifact/HjfHpid7GbLvP5VQUSYZmF).
-Check prices **once a week** (Friday after the close). Between checks, act only if a flag fires.
-Averages are the broker's blended costs from the 2026-10-02 statement. MAs are 10/2 daily (Yahoo closes).
-Earnings dates: Yahoo calendar, fetched 2026-10-03 ("est" = company not confirmed).
+Check prices **once a week** (Friday after the close). Between checks, act only if a flag fires — and **ask the desk
+before every trade** (client commitment, 2026-10-07).
+Averages are the broker's blended costs from the 2026-10-06 statement. MAs/RSI are 10/7 (stockanalysis.com);
+10/7 prices are early-session. Earnings dates: stockanalysis/Yahoo, fetched 2026-10-07 ("est" = not confirmed).
 
 **Price and ratchet flags (closing prices).** Ladder from avg cost.
 | Ticker | Avg cost | ⚠ Exit (close below) | +25% → stop to BE | +40% → sell ⅓ | +75% → sell ⅓ | Catalyst trim |
 |---|---|---|---|---|---|---|
 | EWY | 171.04 | **172** | 213.80 | 239.46 | 299.32 | none |
-| ARM | 259.17 | **260** (client, 10/2) | 323.97 | 362.84 | 453.55 | none (earnings 11/4) |
-| BE | 239.26 | **250** | 299.07 | 334.96 | 418.70 | **> 299 before 10/27 earnings → sell ⅓** |
-| TTWO | 213.11 | **185 weekly close** | 266.39 | 298.35 | 372.94 | launch week 11/16–20 > **270** → sell ⅓ |
+| ARM | 259.17 | **280** (client raised, ~10/6) | 323.97 | 362.84 | 453.55 | none (earnings 11/4) |
+| BE | 239.26 | **260** (client raised) | 299.07 | 334.96 | 418.70 | **> 299 before 10/27 earnings → sell ⅓ of what is left** |
+| TTWO | 213.11 | **190** (broker, hard) | 266.39 | 298.35 | 372.94 | launch week 11/16–20 > **270** → sell ⅓ |
 | WDC | 404.48 | **360** (hard exit −15% = 343.81) | 505.60 | 566.27 | 707.84 | none (earnings 11/5) |
-| QUBT | 7.92 | **8.00** | — | — | — | speculative slot (≤ 6% at cost); broker TP 10 |
+| STX | 807.43 | **760** | 1,009.29 | 1,130.40 | 1,413.00 | none (earnings 10/27); broker TP 1000 sells all |
+| QUBT | 7.92 | **8.00 → EXIT CALLED** (7.86 on 10/6); broker stop was lowered to 7 | — | — | — | — |
 | VOO | 705.79 | none (core) | never | never | never | none |
 | Any satellite | — | — | — | — | — | market value > 20% of sleeve → trim to 15% |
 
 **Trade ranges (plan v3).** Buy zone above the stop with R/R ≥ 2:1 to the sell zone; sell zone ≤ ⅓ of the line.
-All buys are locked while the Reserve is below 7.5% (today 5.3%). Each add ≤ $150 and never past 15% of the sleeve.
-No buys in the 3 trading sessions before earnings or on 10/28 (FOMC). 10 buys a month in all.
-| Ticker | Buy zone | Sell zone (≤ ⅓) | Stop | R/R | Max add | Adds used | Buy window | 10/2 close |
+All buys are locked while the Reserve is below 7.5% (today 5.8%). Each add ≤ $150 and never past 15% of the sleeve.
+No buys in the 3 trading sessions before earnings or on 10/28 (FOMC). 5–10 buys a month (5 normal, 10 cap): October 3 so far.
+| Ticker | Buy zone | Sell zone (≤ ⅓) | Stop | R/R | Max add | Adds used | Buy window | 10/6 close |
 |---|---|---|---|---|---|---|---|---|
-| VOO | ≈ $686 (SPX −4%) · ≈ $665 (−7%) · ≈ $608 (−15%) | never sold | none | — | ¼ · ½ · rest of Reserve (5% floor) | — | any time | 707.54 |
-| ARM | **$276–284** (20-DMA 281.7, 9/28 low 279.2) | **$325–337** (under the 9/23 high 336.98) | 260 | 2.2:1 | $150 | 1 of 2 | until 10/29 | 307.49 |
-| EWY | **$176–180** (rising 50-DMA 176.7) | **$192–196** (9/9 + 9/22 double top 193–194) | 172 | 2.3:1 | $150 | 0 of 2 | after the Samsung Q3 prelim (~10/7, unverified) | 191.88 ← **at the sell zone** |
-| BE | **$256–264** (9/24 low 251.3, 9/28 close) | **$299–305** (+25% mark, 9/29 high 302.35) | 250 | 3.9:1 | $100 (stop is 0.5 ATR under the zone) | 0 of 2 | until 10/21 | 289.15 |
-| TTWO | **$188–196** (9/28 low 199.5, March low 187.6) | **$222–228** (9/14 high 224.3; falling 50/200-DMA ≈ 225) | 185 wk | 4.3:1 | **blocked** — 2 of 2 used | 2 of 2 | until 11/3 | 202.73 |
-| WDC | **$384–396** (under the 200-DMA 400 and the 10/2 low 396.6) | **$455–465** (gap fill to 462.56; 50-DMA 466) | 360 | 2.2:1 | $150 | 0 of 2 | **locked until STX reports 10/27**, then 10/29–10/30 | 415.29 |
-| QUBT | **$8.05–8.25** | **$9.20–9.70** (under the 9/23 high 9.76) | 8.00 | 7:1 | **blocked** — spec-cap room ≈ $27 < $50 minimum | 0 of 2 | until 11/3 | 8.18 (in zone, add blocked) |
-| GOOGL (watch) | $315–328 | — | 305 | 2.6:1 to 364 | needs a free slot | — | after 10/28 earnings | 343.50 |
-| INTC (watch) | $100–105 | — | 94 | 2.9:1 to 127 | needs a free slot | — | after ~10/22 earnings (est) | 119.33 |
+| VOO | ≈ $688 (SPX −4%) · ≈ $666 (−7%) · ≈ $609 (−15%) | never sold | none | — | ¼ · ½ · rest of Reserve (5% floor) | — | any time | 716.20 |
+| ARM | **$285–292** (9/28 close 283.3, above the 280 stop) | **$325–337** (under the 9/23 high 336.98) | 280 | 4.3:1 | $100 (stop < 1 ATR under) | 1 of 2 | until 10/29 | 302.56 |
+| EWY | **$176–180** (9/28 low 180.4, 9/18 low 178.2) | **$192–196** (9/22 high 193.0, 10/2 high 192.9) | 172 | 2.3:1 | $150 | 0 of 2 | after Samsung's prelim (10/8 KST) | 186.40 |
+| BE | **$265–272** (9/18 close 265.6) | **$299–305** (+25% mark, 9/29 high 302.35) | 260 | 3.6:1 | $100 | 0 of 2 (reset 10/6) | until 10/21 | 295.78 |
+| TTWO | **$193–198** | **$222–228** (50/200-DMA ≈ 224, 9/14 high 224.3) | 190 | 4.8:1 | **blocked** — 2 of 2 used | 2 of 2 | until 11/3 | 202.53 |
+| WDC | **$384–396** (10/2 low 396.6) | **$455–465** (gap fill 462.56; 50-DMA 461.5) | 360 | 2.2:1 | $150 | 0 of 2 | **locked until STX reports 10/27**, then 10/29–10/30 | 411.04 |
+| STX | **$770–785** (9/17 low 783, 10/7 low 782) | **$845–860** (10/2 close 849; 50-DMA 856) | 760 | 3.9:1 | $100 | 0 of 2 | **locked until its own 10/27 report**, then 10/29–10/30 | 805.63 |
+| QUBT | none — exit called | none | 8.00 | — | blocked | — | — | 7.86 |
+| GOOGL (watch) | $315–328 | — | 305 | 2.6:1 to 364 | needs a free slot | — | after ~10/28 earnings | 347.68 |
+| INTC (watch) | $100–105 | — | 94 | 2.9:1 to 127 | needs a free slot | — | after ~10/22 earnings | 112.50 |
 
-**Market flags** (S&P 500 record close 7,798.99 on 2026-08-13; 7,722.72 on 10/2 = −1.0%)
-- ☐ SPX **−4%** (≈ 7,487) → up to a quarter of the Reserve into VOO.
-- ⚠ SPX **−7%** (≈ 7,253) → deploy up to half the Reserve (VOO first). Use `/market-move`.
-- ⚠ SPX **−15%** (≈ 6,629) → deploy the second half, keep the 5% floor.
-- ⚠ Sleeve equity **< $3,402** (−10% from the $3,779.85 peak of 10/2, which includes the $100 referral) → circuit breaker.
-- ⚠ Open stop-risk **> 8%** of the sleeve (today 7.1%) → no buys until a trim or a stop raise.
-- ⚠ VIX spike or any holding gaps > 8% on news → `/market-move` **before** touching anything (WDC gapped −8.5% on 10/2).
+**Market flags** (S&P 500 record close **7,818.93 on 2026-10-06**; 7,775 early 10/7)
+- ☐ SPX **−4%** (≈ 7,506) → up to a quarter of the Reserve into VOO.
+- ⚠ SPX **−7%** (≈ 7,272) → deploy up to half the Reserve (VOO first). Use `/market-move`.
+- ⚠ SPX **−15%** (≈ 6,646) → deploy the second half, keep the 5% floor.
+- ⚠ Sleeve equity **< $3,402** (−10% from the $3,779.85 peak of 10/2) → circuit breaker.
+- ⚠ Open stop-risk **> 8%** of the sleeve (today 4.8%) → no buys until a trim or a stop raise.
+- ⚠ VIX spike or any holding gaps > 8% on news → `/market-move` **before** touching anything (WDC and STX both −10% on 10/2, STX −9% again 10/6).
+- Rates: US 10-year above 5.3% (10/7), highest since 2002. Long-duration growth is the exposed end of this sleeve.
 
 **Calendar flags**
 | Date | Event | Action |
 |---|---|---|
-| 2026-10-02 | Jobs +29k vs ≈ 85k, unemployment 4.2%; October hike odds 64% → 16% (Yahoo, 10/2) | done |
-| October | $200 contribution (not on the 10/2 statement yet) | → Reserve (5.3% < 10%) |
-| ~2026-10-07 | Samsung Q3 preliminary results (date unverified) | EWY buy zone opens after |
-| 2026-10-14 | CPI (per 10/1 review) | no trades that morning |
+| October | $200 contribution (not on the 10/6 statement) | → Reserve (5.8% < 10%) |
+| 2026-10-08 | Samsung Q3 prelim (LSEG ≈ ₩106.1T OP, estimate cut 7.7% since Aug) | EWY buy zone opens after the print |
+| 2026-10-14 | CPI 8:30 ET | no trades that morning |
 | 2026-10-21 | last day for BE adds | |
 | ~2026-10-22 | INTC earnings (est) | watch zone after |
-| 2026-10-27 | **STX earnings** (confirmed) · BE earnings (est) | STX on HDD pricing decides the WDC add lock; BE ⅓ trim beforehand if > 299 |
-| 2026-10-28 | FOMC · GOOGL earnings | no trades that day |
-| 2026-10-29 / 10-30 | last day for ARM / WDC adds | |
+| 2026-10-27 | **STX earnings** (confirmed) · BE earnings (est) | decides the WDC and STX add locks; BE ⅓ trim beforehand if > 299 |
+| 2026-10-28 | FOMC · GOOGL earnings (est) | no trades that day |
+| 2026-10-29 | PCE 8:30 ET · last day for ARM adds | no trades that morning |
+| 2026-10-30 | last day for WDC / STX adds (if Seagate held up) | |
 | 2026-11-01 | $200 contribution | VOO if Reserve ≥ 10%, else Reserve |
-| 2026-11-03 | last day for TTWO / QUBT adds | |
-| 2026-11-04 / 11-05 | ARM / WDC earnings (both confirmed) | hold with stops |
-| 2026-11-09 | TTWO earnings (confirmed; was 11/5) · QUBT (est) | hold; TTWO gap risk accepted |
+| 2026-11-04 / 11-05 | ARM / WDC earnings | hold with stops |
+| 2026-11-09 | TTWO earnings (confirmed 10/3; one source says ~11/6) | hold; gap risk accepted |
 | 2026-11-16→20 | GTA VI launch week (11/19) | TTWO > 270 → sell ⅓ |
 | 2026-12-19 | TTWO review | exit or re-underwrite |
 | 2026-12-31 | v3 review | score active fills and `TA` round trips net of fees |
 
 **Anything else** (a headline that scares or excites you, an urge to buy something new): write it down, bring it to the
-weekly check. A new name needs a filed research note and must beat the weakest holding.
+desk **before** trading. A new name needs a filed research note and must beat the weakest holding.
 
 ## 7. Scorecard (measured from 2026-08-18)
 - Satellite sleeve vs VOO, rolling 6 months — the only test of whether the satellite layer earns its risk.
 - Max drawdown of the whole sleeve: **target < 15%**. Circuit breaker at −10% from peak (halve every satellite, pause buys, write the post-mortem).
 - Profit ratcheted into Tiers 1+3 per year (dollars). Win rate matters less than this number.
-- Fills: ≤ 10 buys a month under v3; sells uncounted. Trade-around round trips scored separately. Fees tracked; review 2026-12-31.
+- Fills: 5–10 buys a month under v3 (5 normal pace, 10 hard cap); sells uncounted. Trade-around round trips scored separately. Fees tracked; review 2026-12-31.
 
-## 8. Current application (2026-10-02 closes; see journal/2026-10-03-plan-v3.md)
+## 8. Current application (2026-10-06 closes; see journal/2026-10-07-review.md)
 | Ticker | Avg cost | Now | P&L | Stop | Zone status | Notes |
 |---|---|---|---|---|---|---|
-| EWY | 171.04 | 191.88 | +12.2% | 172 | **at the sell zone 192–196** | trade-around ⅓ candidate: limit ≈ $193.50 |
-| BE | 239.26 | 289.15 | +20.9% | 250 | 3% under the sell zone | sell ⅓ > 299 before 10/27 |
-| TTWO | 213.11 | 202.73 | −4.9% | 185 weekly | between zones | adds 2/2 used (10/2 add = OVERRIDE); hold to launch; review 12/19 |
-| ARM | 259.17 | 307.49 | +18.6% | 260 | between zones | stop raised to ≈ breakeven by client 10/2 |
-| WDC | 404.48 | 415.29 | +2.7% | 360 | between zones; adds locked | re-entry 10/2 = OVERRIDE; Toshiba HDD capacity; STX 10/27 |
-| QUBT | 7.92 | 8.18 | +3.3% | 8.00 | in the buy zone, add blocked | stop 2.2% away |
-| VOO | 705.79 | 707.54 | +0.2% | — | core | never trimmed |
+| VOO | 705.79 | 716.20 | +1.5% | — | core (32.3%) | never trimmed |
+| TTWO | 213.11 | 202.53 | −5.0% | 190 | between zones | adds 2/2 used; hold to launch; review 12/19 |
+| EWY | 171.04 | 186.40 | +9.0% | 172 | between zones | Samsung prelim 10/8; 181 early 10/7 |
+| WDC | 404.48 | 411.04 | +1.6% | 360 | above the buy zone; adds locked | 399.5 early 10/7, under the 200-DMA |
+| ARM | 259.17 | 302.56 | +16.7% | 280 | between zones | stop raised by client; 293.5 early 10/7 |
+| BE | 239.26 | 295.78 | +23.6% | 260 | 1% under the sell zone | half sold 10/6 @295.02 |
+| STX | 807.43 | 805.63 | −0.2% | 760 | between zones; adds locked | 10/6 buy = OVERRIDE (7th satellite, Reserve below floor) |
+| QUBT | 7.92 | 7.86 | −0.8% | 8.00 (plan) / 7 (broker) | **EXIT** | under the plan stop; broker stop lowered = OVERRIDE |
 
-Reserve $199 (5.3%) — below the 7.5% floor: no discretionary buys. Path back: October $200 → ≈ 10.0%;
-an EWY ⅓ trade-around at ≈ $193.50 adds ≈ $150 (→ ≈ 13.8% with both). Open stop-risk $268 = 7.1% of $3,780.
+Reserve $217 (5.8%) — below the 7.5% floor, and 8 lines > 7 max. Fix: sell QUBT (≈ +$190 → ≈ 11%), October $200 →
+Reserve (≈ 16%). Open stop-risk $181 = 4.8% of $3,770.
 
 ## 9. Override protocol
 If Wael wants to do something the plan or the desk objects to: the desk states the objection, the
@@ -225,10 +236,14 @@ data, and the rule it breaks — once, plainly. If Wael still wants it, it is ex
 beating the rules, the rules change; if not, they stop.
 
 ## Changelog
+- 2026-10-07 — 10/6 statement: BE half sold @295.02 (+$41.59); STX bought @807.43 (OVERRIDE: 7th satellite, Reserve 5.8% < 7.5%); QUBT broker stop lowered 8 → 7 (OVERRIDE; exit called); stops raised ARM 280, BE 260, TTWO 190. S&P record re-pinned 7,798.99 → 7,818.93 (10/6); index ladder 7,506 / 7,272 / 6,646. Client committed to ask the desk before every trade.
+- 2026-10-07 — client set the monthly buy range to **5–10**: 5 is the normal pace, 10 stays the hard cap, no minimum. Buys past the 5th are flagged in each recommendation. Sells still uncounted.
 - 2026-10-03 v3 — client asked to loosen buying and selling again (sleeve ≈ 10% of savings; ≈ 70% physical, ≈ 20% cash outside). Loosened: buys ≤ 10/month and sells uncounted (was 8 fills), Reserve floor 10% → 7.5%, trade-around ⅓ between written buy/sell zones (§3b), one-fill entries up to 8%, earnings blackout 5 → 3 sessions, banked profit refills the Reserve to 15% first, satellite band 45–60%, §4a re-entry wait one week → next session (moved from the Flag Board into the plan). Added: risk per buy ≤ 2%, open stop-risk ≤ 8%, $50 minimum buy, `TA` tagging, headline add-lock. Kept: stops + R/R ≥ 2:1, chase guard, 15/20% name caps, ratchet, circuit breaker, 6 satellites, spec slot, 2 adds, no leverage/shorts/options/CFDs/crypto. Review 2026-12-31.
 - 2026-10-03 — 10/2 statement: WDC stopped out at 418.20 (−$21.91) and re-bought 0.986 sh @404.48 (stop 360); TTWO add 0.497 sh @202.40; ARM stop 250 → 260; +$100 referral; Reserve 5.3%. WDC re-entry and TTWO add logged as OVERRIDES. Earnings dates corrected: TTWO 11/9, WDC 11/5.
 - 2026-10-01 v2 — client asked to trade more (vault outside the account is the safety layer). Loosened: fills 2 → 8/month, Reserve floor 15% → 10%, satellites 5 → 6, one speculative slot (≤ 6% at cost), 2 adds per name (reset after profit-banking sale), earnings blackout 10 → 5 trading days, VOO −4% rung. Every holding always carries a dip zone. Kept: stops + R/R ≥ 2:1 first, 15% name cap, ladder, circuit breaker, no leverage/shorts/options/CFDs/crypto. Review 2026-12-31. QUBT no longer a forced sale.
 - 2026-10-01 v1.2 — 9/29 statement review: logged 11 fills (9/15–9/29); Reserve 8.7% and 6 satellites breach the plan → sell QUBT, Oct $200 to Reserve, buy freeze until ≥ 15%, one dip fill in October. New dip zones (ARM 262–268, EWY 176–178, WDC 410–420 with stop 395), BE pre-earnings trim > 299, GOOGL 315–328 / INTC 100–105 watch zones. Overrides logged: WDC 6th satellite, BE double average-down.
+- 2026-09-24 — (back-filled from the pre-v2 copy) weekly check vs the 9/23 statement: SPX high corrected 7,765 → 7,798.99 (8/13 ATH); EWY stop set 172, QUBT stop raised to 8.00 (above cost); BE securities class action filed 9/22; GOOGL researched → WATCH, not bought (below 50-DMA, R/R 1.33:1); broker TPs flagged as full-line exits that pre-empt the ⅓ ladder. Added §4a (stop vs dip-buy). See `journal/2026-09-24-check-and-googl.md`, `research/GOOGL-2026-09-24.md`.
+- 2026-09-22 — (back-filled) 9/21 statement review: AMD closed +27.1%, ARM trimmed ~40% at +25.9%, TTWO add 9/15 against the 9/9 decision, QUBT opened 9/15 against §2 (OVERRIDE logged). Peak $3,670.02. See `journal/2026-09-22-review.md`, `journal/2026-09-22-qubt-override.md`.
 - 2026-09-09 — §6b: added per-name trim ladder table.
 - 2026-09-09 — §6b: added per-name dip-buy zones (client asked why only exits were listed).
 - 2026-09-09 — TTWO: client requested $400 now + hold through launch; challenged per §9; client then decided NOT to add at all. Existing position held through launch to 12/19 (⅓ trim in launch week if >$271). Stop $195 → $185. Added §6b flag list.

@@ -26,7 +26,8 @@ the mechanical ones; the judgment ones are on you.
   reserve stays usable no matter how open positions move, so it *is* the option to buy the crash.
   Deploy at most half of it on any single dip; keep the rest for a second leg down.
 - **Max 7 lines** (VOO + 6 satellites, one of which may be the speculative slot: ≤ 6% at cost, stop ≤ 12% under entry).
-- **Buys: ≤ 10 a month** (v3). Sells never count and are always allowed.
+- **Buys: 5–10 a month** (client, 2026-10-07): 5 is the normal pace, 10 the hard cap. Past the 5th buy, say
+  "buy #N of the month, above the normal 5" in the recommendation. It is a ceiling, not a quota. Sells never count and are always allowed.
 
 ## Entry discipline
 - No new buy with RSI(14) > 70 or price > 20% above its 50-DMA. Put it on WATCH with the level.
@@ -46,6 +47,9 @@ the mechanical ones; the judgment ones are on you.
   position to half and stop new buys until a journal review explains what happened.
 - **Profit ratchet** (PLAN §3, the minimum selling): +25% → stop to breakeven; +40% → sell ⅓; +75% → sell another ⅓;
   the rest trails on a weekly close below the 50-DMA. Trim into a known catalyst's run-up, not after.
+- **Broker take-profits sell 100% of the line**, not ⅓. A TP parked at the +40% rung silently replaces the ratchet
+  with a full exit. When the stop is already at breakeven, raising the TP costs nothing: put it at or above the +75%
+  rung and do the ⅓ trims by hand: a price alert at the level, then a market sell of the ⅓ when it fires. Always say in a review which rung each broker TP actually hits.
 - **Trade-around (v3, PLAN §3b)**: every satellite has a sell zone (first target / resistance, above avg cost) and a
   buy zone (support above the stop, R/R ≥ 2:1 to the sell zone). Up to ⅓ of the line may be sold in the sell zone and
   bought back in the buy zone, repeatedly. Optional, never forced; the other ⅔ follow the ratchet. Tag fills `TA`.

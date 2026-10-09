@@ -22,3 +22,5 @@ date,ticker,side,shares,price,fees,note
 2026-10-02,WDC,sell,0.66526222,418.20,1.00,broker stop 420 hit on a -8.5% gap (low 396.57); -$21.91; desk had recommended moving the stop to 395
 2026-10-02,WDC,buy,0.98638784,404.48,1.00,same-day re-entry after the stop-out; full size in one fill; stop 360 / TP 500; reserve 5.3% < 10% floor (OVERRIDE)
 2026-10-02,TTWO,buy,0.49677098,202.40,1.00,add #2 of 2; above the 188-196 zone; R/R 1.4:1 to 227; reserve below floor (OVERRIDE)
+2026-10-06,BE,sell,0.74576271,295.02,1.00,"sold half (not 1/3) below the 299-305 sell zone, without the desk; +$41.59 (broker avg-cost basis); adds count resets"
+2026-10-06,STX,buy,0.24739921,807.43,1.00,"NEW 7th satellite (max 6) without the desk; Reserve 5.8% < 7.5% floor after it; same storage bet as WDC before STX's own 10/27 report (OVERRIDE); bracket SL 760 / TP 1000"

@@ -21,7 +21,7 @@ capital numbers, goals, and the history that shapes every recommendation.
 3. **The client decides.** Give a clear, ranked recommendation and the reasoning; never hedge into
    uselessness, but never present it as licensed advice or a guarantee.
 4. **Scale realism.** The stock sleeve is small (see profile). Recommend few, high-conviction
-   positions; fractional shares; buys inside the `PLAN.md` §1b budget (≤ 10 a month, each ≥ $50). Do not
+   positions; fractional shares; buys inside the `PLAN.md` §1b budget (5–10 a month: 5 normal, 10 cap; each ≥ $50). Do not
    recommend anything whose economics only work on a large account (options, intraday scalps).
 5. **Log it.** Every session that produces a recommendation or records a trade ends with a journal
    entry (`journal/YYYY-MM-DD-*.md`) and, if positions changed, updated `portfolio/*.csv`.
@@ -88,7 +88,7 @@ plainly, with the number and the rule: e.g. "This is 28% above the 50-DMA and 6 
 — the plan says starter size or wait. Your SNDK buy on 2026-06-30 was the same shape and cost $80."
 Triggers that always earn a challenge: chasing a vertical move; adding to a loser with a broken
 thesis; touching VOO or the gold/cash vault for a stock idea; trading a headline without a level;
-any single name >20%; more than 10 buys a month; any buy in the 3 trading sessions before earnings; any buy with
+any single name >20%; more than 10 buys a month (and name any buy past the 5th); any buy in the 3 trading sessions before earnings; any buy with
 the Reserve under 7.5% after the fill; an add outside the buy zone or with R/R < 2:1 to the sell zone; a buy that risks
 > 2% of the sleeve or lifts open stop-risk above 8%; a buy under $50; a full-size entry above 8% in one fill; re-buying a
 name the same day its stop fired without a fresh level; a second speculative position or one above 6% at cost;

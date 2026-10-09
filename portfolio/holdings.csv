@@ -1,8 +1,9 @@
 ticker,shares,avg_cost,theme,opened,notes
-ARM,1.31870927,259.1741,Compute,2026-08-18,"CPU IP; trimmed 9/21 @314.76, re-added 9/28 @284.38; broker SL 260 / TP 440"
-BE,1.49195725,239.25538,Power generation,2026-08-18,S&P 500 since 9/21; adds 9/24+9/28 then sold 1.016 sh 9/29 @294.55; broker SL 250 / TP 350
+ARM,1.31870927,259.1741,Compute,2026-08-18,"CPU IP; trimmed 9/21 @314.76, re-added 9/28 @284.38; broker SL 280 / TP 440"
+BE,0.74619454,239.25538,Power generation,2026-08-18,S&P 500 since 9/21; sold half 10/6 @295.02 (+$41.59); broker SL 260 / TP 350
 EWY,2.33740431,171.04,Memory,2026-08-18,Korea ETF ~Samsung+SK Hynix = HBM/memory proxy; broker SL 172 / TP 240
-QUBT,25.28445006,7.92,Non-AI,2026-09-15,speculative quantum micro-cap (off-plan); broker SL 8 / TP 10
-TTWO,2.35163202,213.10889,Non-AI,2026-09-01,GTA VI launch 2026-11-19; adds 9/15 @214.82 and 10/2 @202.40 (2 of 2 used); broker SL 185 / TP 500
+QUBT,25.28445006,7.92,Non-AI,2026-09-15,speculative quantum micro-cap (off-plan); broker SL LOWERED 8 -> 7 by client ~10/6 after the desk called an exit below 8 / TP 10
+TTWO,2.35163202,213.10889,Non-AI,2026-09-01,GTA VI launch 2026-11-19; adds 9/15 @214.82 and 10/2 @202.40 (2 of 2 used); broker SL 190 / TP 500
 VOO,1.69987894,705.78567,Non-AI,2026-08-18,S&P 500 core anchor; +$200 on 9/24
+STX,0.24739921,807.43,Memory,2026-10-06,"HDD/storage, bought 10/6 without the desk (OVERRIDE); broker SL 760 / TP 1000"
 WDC,0.98638784,404.48,Memory,2026-10-02,"HDD/storage for AI data; first lot stopped out 10/2 @418.20 (-$21.91), re-bought same day; broker SL 360 / TP 500"

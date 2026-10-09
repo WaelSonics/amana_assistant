@@ -40,7 +40,7 @@ Answer three questions, each in ≤2 sentences, with the data:
    even if the tranche is unlocked.
 2. **Where does the unlocked reserve go, in order?** VOO first (§5). Then the satellite with the best
    `rating` in `portfolio/levels.csv` that is at/near its 50-DMA with thesis intact. Give the exact
-   dollar amount per name and a limit price, never "buy some".
+   dollar amount per name and an alert price (Amana has no limit orders: alert, then market order), never "buy some".
 3. **On an up-shock: what does the ladder let us bank?** List trims the engine fired, then the optional
    trade-around sells it lists under "adjust" (names in their sell zone, ≤ ⅓). If nothing fired, the answer is
    "hold; do not add", and say so.
