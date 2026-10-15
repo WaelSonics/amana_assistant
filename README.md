@@ -12,7 +12,7 @@ portfolio/transactions.csv   every fill: date,ticker,side,shares,price,fees,note
 portfolio/cash.txt           free cash in the account
 portfolio/levels.csv         per-name stop, ladder stage done, catalyst, rating (edit freely)
 portfolio/peak.txt           sleeve high-water mark for the circuit breaker
-research/                    per-ticker deep dives, TICKER-YYYY-MM-DD.md
+research/                    one file per ticker, TICKER.md (dated entries, newest first)
 journal/                     dated reviews, trade logs, lessons
 ```
 

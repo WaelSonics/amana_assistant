@@ -1,2 +1,3 @@
-# Free cash in the stock account (USD). Derived from statement 2026-10-06: equity 3768.68 - invested 3419.98 - floating 131.37
-217.33
+# Free cash in the stock account (USD). Client-reported 2026-10-14 after the EWY and WDC stop-outs of 10/13
+# (the estimated fills at the opens, 163.18 / 359.01, gave 1237.00; actual fills were ~$2 better in total).
+1239.00

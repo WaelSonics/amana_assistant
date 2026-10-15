@@ -7,7 +7,7 @@ Macro and GOOGL data fetched live 2026-09-24.
 
 > "I was thinking of buying google today for $400, it seems down, I think it might come up shortly"
 
-**Answer: not today. WATCH with two triggers.** Full note: `research/GOOGL-2026-09-24.md`.
+**Answer: not today. WATCH with two triggers.** Full note: `research/GOOGL.md` (entry 2026-09-24).
 
 ## Sleeve
 

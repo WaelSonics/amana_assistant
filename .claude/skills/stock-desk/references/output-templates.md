@@ -1,9 +1,9 @@
 # Output templates
 
-## Ticker deep dive → `research/TICKER-YYYY-MM-DD.md`
+## Ticker deep dive → new entry at the top of `research/TICKER.md` (one file per ticker; create it with a `# TICKER — Company — research log` title if it does not exist)
 
 ```markdown
-# TICKER — Company name — deep dive YYYY-MM-DD
+## TICKER — Company name — deep dive YYYY-MM-DD
 
 **Verdict:** BUY / ADD / HOLD / TRIM / EXIT / WATCH · **Conviction:** High/Med/Low — one-line why
 

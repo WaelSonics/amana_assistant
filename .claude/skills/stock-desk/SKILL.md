@@ -38,7 +38,7 @@ capital numbers, goals, and the history that shapes every recommendation.
 ### B. Ticker deep dive — follow `references/research-protocol.md` exactly
 Chart & technicals → fundamentals → news & catalysts → positioning/sentiment → thesis & invalidation
 → verdict table (template in `references/output-templates.md`). Save it as
-`research/TICKER-YYYY-MM-DD.md`.
+a new dated entry at the top of `research/TICKER.md` (one file per ticker; never a second file for the same stock).
 
 ### C. Portfolio review
 1. Collect fresh prices for every holding (search each; cite date). Run

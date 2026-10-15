@@ -1,6 +1,6 @@
 # Research protocol — per-ticker deep dive
 
-Run every section. Cite the date of every number. Save the result as `research/TICKER-YYYY-MM-DD.md`
+Run every section. Cite the date of every number. Save the result in `research/TICKER.md` (one file per ticker, client instruction 2026-10-13): add it as a new dated entry at the top, under the file's title, and leave older entries below
 using the "Ticker deep dive" template in `output-templates.md`.
 
 ## 0. Freshness sweep (do first, WebSearch)

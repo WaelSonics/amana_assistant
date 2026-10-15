@@ -1,4 +1,13 @@
-# GOOGL — Alphabet Inc. — deep dive 2026-09-24
+# GOOGL — Alphabet Inc. — research log
+
+One file per ticker; newest entry first. Each entry is dated; numbers are as of that date.
+
+Entries:
+- 2026-09-24
+
+---
+
+## GOOGL — Alphabet Inc. — deep dive 2026-09-24
 
 **Verdict:** WATCH (not BUY today) · **Conviction:** Med — right company, wrong entry. Price is *below* its
 50-DMA and sitting *on* its 200-DMA, and the reason it fell is a thesis question, not noise. Reward/risk to
@@ -20,14 +29,14 @@ the first real resistance is ~1.3:1, under the 2:1 minimum.
 | Timeframe | months (not days) |
 | Next earnings | **2026-10-27** after close (~24 trading days out — *outside* the 10-day blackout) |
 
-## Thesis
+### Thesis
 Alphabet is the cheapest high-quality name in the AI platform layer: 24% revenue growth, 34% operating
 margin, and a cloud business compounding at 82% — at ~25x forward earnings, roughly its own 5-year average
 and in line with MSFT. The bear case is not valuation, it is that AI agents disintermediate the ad auction
 that funds everything. That is a real, live question, and it is why the stock is down 17%, not a mispricing
 to be scooped up on a hunch.
 
-## Chart & technicals
+### Chart & technicals
 The setup contradicts "it seems down, it might come up shortly":
 - **Below the 50-DMA ($345.07)** — the plan's own dip-buy rule is "a satellite *at* its 50-DMA with the
   thesis intact". Below it is the opposite setup.
@@ -36,7 +45,7 @@ The setup contradicts "it seems down, it might come up shortly":
 - **Failed at ~$360 on 2026-09-22**, then −3.8% on 9/23. That is a lower high followed by distribution.
 - 20-DMA and RSI(14) could not be verified from a consistent source — flagged, not guessed.
 
-## Fundamentals (Q2 2026, reported 2026-07-22)
+### Fundamentals (Q2 2026, reported 2026-07-22)
 - Revenue **$119.8B, +24% YoY** — 12th straight quarter of double-digit growth
 - Operating margin **34%** (+2pp YoY); operating income +30%
 - Google Cloud **$24.8B, +82% YoY**; cloud operating income $8.8B vs $2.8B a year earlier
@@ -44,7 +53,7 @@ The setup contradicts "it seems down, it might come up shortly":
 - Forward P/E **~25.2x**; trailing **16.95x**. 5-yr average trailing P/E ~25x, so it is not expensive
 - **Capex guided up to $195–205B** for FY26 (from $180–190B) on the Q2 call — the standing overhang
 
-## News & catalysts
+### News & catalysts
 - **2026-09-23 — breaking** — GOOGL −3.8% as Meta's "Muse" AI agent hit ~2.8M downloads in 12 days, the
   fastest adoption since ChatGPT. The fear is direct: agents that complete tasks bypass the ad auction.
 - 2026-09-22 — neutral/breaking — failed at $360 resistance on Gemini-spend-vs-growth concerns
@@ -54,25 +63,25 @@ The setup contradicts "it seems down, it might come up shortly":
 - Search antitrust remedies remain on appeal (both sides); no decision date
 - **2026-10-27** — Q3 earnings, the next real catalyst
 
-## Positioning & sentiment
+### Positioning & sentiment
 Consensus **Strong Buy**, average 12-month target **~$428** (range $340–515) across ~62 analysts. No analyst
 target changes could be confirmed in the September window — the most recent dated moves are from the July
 earnings reaction (Morgan Stanley cut to $400, Wedbush held $445). So the Street has not yet re-rated for
 the Muse narrative; that cuts both ways.
 
-## What would make me wrong
+### What would make me wrong
 - A close back above **$345** (50-DMA) on volume — the downtrend is over and I was too cautious (this is
   Trigger A; I buy it there)
 - Muse adoption stalls, or Q3 on 10/27 shows Search revenue accelerating anyway
 - Conversely: a **close below $330** with the 200-DMA lost puts $300–310 in play quickly, and below that
   there is very little structure
 
-## The behavioural note
+### The behavioural note
 The client has traded GOOGL three times before, all in June 2026: 6/3→6/5, 6/15→6/16, 6/22→6/29. Average
 hold **3 days**, total profit **+$10.31** on six fills. This request has the same shape — no level, no
 horizon, "might come up shortly." That pattern is what the 8/12 reset was meant to end.
 
-## Sources
+### Sources
 - [stockanalysis.com/stocks/googl](https://stockanalysis.com/stocks/googl/) — price, MAs, P/E, 2026-09-23/24
 - [Alphabet Q2 2026 results](https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Second-Quarter-2026-Results-2026-Y3uQ6H4ZJa/default.aspx) — 2026-07-22
 - [Invezz — Alphabet falls 3% as Meta's Muse raises competition](https://invezz.com/ca/news/2026/09/23/alphabet-stock-falls-3percent-as-metas-muse-ai-raises-competition/) — 2026-09-23
