@@ -22,9 +22,9 @@ The open-risk cap (§1b) keeps "every stop hit on the same day" under 8% of the 
 | **2 · Satellites** | Up to 6 individual stocks/ETFs, mostly AI-race layers, ≤1 non-AI + 1 speculative slot | **45–60%**, each 8–15% at entry | **yes — this is the only tier we trade** | Where the excess return is earned and locked in |
 | **3 · Reserve** | Cash inside the account | **7.5–25%**, never below 5% | n/a | Buys the dip. In a cash account it is never frozen by open losses |
 
-Current fit (2026-10-13, 10:30 ET): Core 34.5% ✓ · Satellites 30.4% (TTWO 13.6, ARM 11.2, SNDK 5.6) — under the band after
-seven stop-outs/exits in two sessions · Reserve **35.1%** — above the band. Rebuild satellites only through written levels
-(one new position at a time, each with a research entry), never by "redeploying the cash".
+Current fit (2026-10-16, 09:44 ET): Core 34.7% ✓ · Satellites 44.8% (AMD 14.3, TTWO 14.1, ARM 10.7, MU 5.6) — just under
+the band · Reserve **20.5%** ✓. Rebuild satellites only through written levels (one new position at a time, each with a
+research entry), never by "redeploying the cash".
 
 ## 1b. Trading rules (v3, from 2026-10-03)
 Client asked again to loosen buying and selling, citing the vault outside the account. v3 loosens how often and how
@@ -141,69 +141,78 @@ Every satellite carries **two zones**, kept in §6b and `portfolio/levels.csv` (
 - **Shock (index ±3% day, VIX spike, or a holding gapping)**: `/market-move` — applies §3–§7 mechanically
   via `portfolio/levels.csv` and returns a decision card. No improvising in the moment.
 
-## 6b. Flags — when to call the desk (`/stock-desk`), levels as of 2026-10-13 (10:30 ET)
+## 6b. Flags — when to call the desk (`/stock-desk`), levels as of 2026-10-16 (09:44 ET)
 Live version with news and statuses: **Amana Flag Board** (https://claude.ai/artifact/HjfHpid7GbLvP5VQUSYZmF) — refreshed
-2026-10-14 12:45 ET. History: **Amana Account Ledger** (https://claude.ai/artifact/88jFMg2Jbrqe3peDpDUDv5), to the 10/12 statement.
-Check prices **once a week** (Friday after the close). Price alerts are set by the client in the Amana app (AXTI $62, AMD $545, VOO $688). Between checks, act only if a flag fires — and **ask the desk
+2026-10-14 12:45 ET (before the AMD/MU buys). History: **Amana Account Ledger** (https://claude.ai/artifact/88jFMg2Jbrqe3peDpDUDv5), to the 10/14 close.
+Check prices **once a week** (Friday after the close). Price alerts are set by the client in the Amana app (suggested
+10/16: AMD $630, MU $1,030, ARM $275, TTWO $222 for the sell zones; ANET $178; VOO $688). Between checks, act only if a flag fires — and **ask the desk
 before every trade** (client commitment, 2026-10-07; broken 10/8–10/9 and 10/12).
 **If the desk cannot be reached: sells at written levels and stop-outs are allowed; buys are not. Stops never move down.**
-Averages are the broker's blended costs (statement 2026-10-12). Prices, MAs, RSI, ATR: Yahoo bars 10/13 ≈ 10:30 ET.
+Averages are the broker's blended costs (statement 2026-10-15). Prices, MAs, RSI, ATR: Yahoo bars 10/16 09:44 ET.
 Research: `research/TICKER.md` (one file per ticker, newest entry first).
 
 **Price and ratchet flags (closing prices).** Ladder from avg cost.
 | Ticker | Avg cost | ⚠ Exit | +25% → stop to BE | +40% → sell ⅓ | +75% → sell ⅓ | Catalyst trim |
 |---|---|---|---|---|---|---|
-| ARM | 255.87 | **220** (broker) · or a Qualcomm verdict granting a royalty holiday → sell at market | 319.84 | 358.22 | 447.77 | none (earnings 11/4) |
+| AMD | 546.54 | **498** (set it in the app as SL) | 683.17 | 765.16 | 956.44 | 11/3 report: decide 11/2 (sell ⅓ only if in the sell zone) |
+| ARM | 255.87 | **220** (broker) · or a court ruling granting Qualcomm the 5-year royalty suspension → sell at market | 319.84 | 358.22 | 447.77 | none (earnings 11/4) |
+| MU | 926.20 | **850** (set it in the app as SL) | 1,157.75 | 1,296.68 | 1,620.85 | none (earnings ≈ 12/16) |
 | TTWO | 213.11 | **190** (broker, hard) | 266.39 | 298.35 | 372.94 | launch week 11/16–20 > **270** → sell ⅓ |
-| SNDK | 1,477.05 | **1,300** (broker, set 10/14) · 10/28: below the 50-DMA ≈ 1,590 → sell before the 10/29 report | 1,846.31 | 2,067.87 | 2,584.84 | none |
 | VOO | 705.79 | none (core) | never | never | never | none |
 | Any satellite | — | — | — | — | — | market value > 20% of sleeve → trim to 15% |
-Closed 10/12–10/13 by stops: STX 759.71 (−$11.81) · BE 260.20 (+$8.04) · QUBT 7.00 (−$23.26, lowered stop) · EWY ≈ 163.18
-and WDC ≈ 359.01 (both gapped under their stops at the 10/13 open; fills to confirm).
+Closed by stops: STX 10/12 759.71 (−$11.81) · BE 10/12 260.20 (+$8.04) · QUBT 10/12 7.00 (−$23.26, lowered stop) · EWY 10/13
+163.23 (−$34.93) · WDC 10/13 360.62 (−$50.85) · SNDK 10/15 1,300.39 (−$23.90; 1,350.85 on 10/16 09:44 ET).
 
 **Trade ranges (plan v3).** Buy zone above the stop with R/R ≥ 2:1 to the sell zone; sell zone ≤ ⅓ of the line.
-**October buying is closed** (8 buys: WDC, TTWO, STX, EWY, BE, WDC, SNDK, ARM; normal pace 5, cap 10). Sells always allowed.
-No buys in the 3 trading sessions before earnings, on 10/28 (FOMC) or on data mornings (10/14 CPI, 10/15 PPI, 10/29 PCE).
-| Ticker | Buy zone | Sell zone (≤ ⅓) | Stop | R/R | Max add | Adds used | Buy window | 10/13 price |
+**October buys: 10 of 12** (cap raised 10 → 12 for October only, client OVERRIDE 10/15): WDC, TTWO, STX, EWY, BE, WDC, SNDK,
+ARM, **AMD (#9), MU (#10)**. Two left, and the desk gate below applies to both. Sells always allowed.
+No buys in the 3 trading sessions before earnings, on 10/28 (FOMC) or on data mornings (10/29 PCE).
+| Ticker | Buy zone | Sell zone (≤ ⅓) | Stop | R/R | Max add | Adds used | Buy window | 10/16 price |
 |---|---|---|---|---|---|---|---|---|
-| VOO | ≈ $688 (SPX −4%) · ≈ $666 (−7%) · ≈ $609 (−15%) | never sold | none | — | ¼ · ½ · rest of Reserve (5% floor) | — | any time | 714.88 |
-| ARM | $225–233 (9/3 low 225.5, 8/24 low 233.3) — **locked** | **$275–281** → ⅓ = 0.52 sh | 220 | 3.2:1+ | $150 | 0 of 2 | after the 11/4 report | 251.74 |
-| TTWO | $193–198 — **blocked** (2 of 2 adds used) | **$222–228** → ⅓ = 0.78 sh | 190 | — | blocked | 2 of 2 | — | 203.72 |
-| SNDK | **no add** (a 2:1 add needs ≤ $1,393, inside the stop's noise) | $1,560–1,600 (10/9 low, 50-DMA) | 1,300 | 1.4:1 at 1,420 ✘ | blocked | 0 of 2 | re-buy only from 11/2 after the 10/29 report | 1,436.55 (10/14) |
+| VOO | ≈ $688 (SPX −4%) · ≈ $666 (−7%) · ≈ $609 (−15%) | never sold | none | — | ¼ · ½ · rest of Reserve (5% floor) | — | any time | 709.40 |
+| AMD | $530–541 (10/15 low 530.1, rising 50-DMA 537.5) — **blocked**: 14.3% of the sleeve, an add passes the 15% cap | **$630–658** → ⅓ = 0.30 sh | 498 | 2.1:1 at 541 | blocked | 0 of 2 | — | 544.97 |
+| ARM | $225–233 (9/3 low 225.5, 8/24 low 233.3) — **locked** | **$275–281** → ⅓ = 0.52 sh | 220 | 3.2:1+ | $150 | 0 of 2 | after the 11/4 report and the royalty ruling | 237.62 |
+| MU | $880–895 (8/24 887.6, 7/7 891.7 lows) — **locked** until the 10/29 memory prints | **$1,030–1,045** → ⅓ = 0.07 sh · target 2 $1,090–1,109 | 850 | 3.0:1 at 895 | $150 | 0 of 2 | from 11/2 | 902.52 |
+| TTWO | $193–198 — **blocked** (2 of 2 adds used) | **$222–228** → ⅓ = 0.78 sh | 190 | — | blocked | 2 of 2 | — | 208.83 |
 
-**The cash plan ($1,239 on 10/14) — the only ways it gets spent:**
+**10/17: October buying is closed (desk).** The account closed 10/16 $16 above the breaker. No buys until 11/2, after the
+memory and hyperscaler prints. **Desk gate for buys #11–12 (judgment, 10/16, superseded):** a new satellite only while the account is **≥ $3,500**, i.e. more than one
+10/14-style day (−$72.5 at today's weights) above the $3,402 circuit breaker. At 09:44 ET on 10/16: $3,475 ✘. If every stop
+fired today the account would be ≈ $3,349, under the breaker — no new risk on top of that until the gap widens.
+
+**The cash plan ($712 on 10/16) — the only ways it gets spent:**
 | When | Trigger | Buy | Amount |
 |---|---|---|---|
-| Any day | S&P 500 closes ≤ **7,506** (−4% from the record) | VOO | ¼ of cash ≈ $310 |
+| Any day | S&P 500 closes ≤ **7,506** (−4% from the record) | VOO | ¼ of cash ≈ $180 |
 | Any day | S&P 500 closes ≤ **7,272** (−7%) | VOO first, then the best-rated satellite | up to ½ of cash |
-| Until **10/27** (desk first) | AXTI closes ≥ $62, **or** AMD closes in $530–545 — one of the two | AXTI or AMD | ≈ $190–200, stop written first |
-| From **11/2** | AXTI after its 10/29 report (if not bought before) | AXTI | ≈ $190 |
-| From **11/2** | SNDK after its 10/29 report: GM ≥ 83% **and** a close above its 50-DMA or a higher low | SNDK | ≈ $200 |
-| From **11/5** | ARM after its 11/4 report, in $225–233, Qualcomm resolved | ARM add | ≤ $150 |
+| From **11/2** | AXTI after its 10/29 report, at a fresh level | AXTI | ≈ $190 |
+| From **11/2** | MU add in $880–895 after the 10/29 prints (margins hold) | MU add | ≤ $150 |
+| From **11/5** | ARM after its 11/4 report, in $225–233, royalty question resolved | ARM add | ≤ $150 |
 | Never | "it's on sale", "it seems low", "the market may go up" | — | — |
-One stock buy per week at most, each after a desk note. Everything else stays in cash. In a cash account, cash cannot be
-frozen by losses: it *is* the opportunity, and it keeps until a level is hit.
+One stock buy per week at most, each after a desk note (10/15 had two — AMD and MU — so the next is 10/19 at the earliest).
+Everything else stays in cash. In a cash account, cash cannot be frozen by losses: it *is* the opportunity.
 
-**Watchlist** (each needs a written stop and R/R ≥ 2:1 at the time; one new position at a time). Prices 10/14 12:45 ET.
-**October exception (buy #9 of 10, one name only, through the desk):** AXTI on a close ≥ $62, or AMD on a close in $530–545, until 10/27.
-| Ticker | Zone | Stop | Target | R/R | Report | Earliest | 10/14 |
+**Watchlist** (each needs a written stop and R/R ≥ 2:1 at the time; one new position at a time). Prices 10/16 09:44 ET.
+| Ticker | Zone | Stop | Target | R/R | Report | Earliest | 10/16 |
 |---|---|---|---|---|---|---|---|
-| AXTI | $62–63.50 (200-DMA ≈ 62.7, Apr offering 64.25) | 54 | 84–88 | 2.7:1 at 62 | 10/29 (≈ ±20%) | **now, on a close ≥ $62** (to 10/23 pre-report; ≈ $190) | 62.09 |
-| AMD | $530–545 (retest of the Sept breakout > $527; 50-DMA 535 rising) | 498 | 630–658 | 2.1–3.1:1 | 11/3 | **if it closes in the zone by 10/27**, else after 11/3 | 571.81 |
-| BE | $210–218 (200-DMA 215, 8/10 low 210) | 195 | 260 | 2.4:1 at 214 | **10/22 (confirmed)** | after the report, with a higher low (§4a: stopped 10/12) | 241.63 |
-| INTC | $95–98 ($94.5–95.4 support, $95 raise price) | 89 | 114 | 2.3:1 | **10/29 (confirmed)** | after the report | 99.22 |
-| SNDK / WDC / EWY | after the 10/22 and 10/29 prints: margins hold **and** a higher low or a close above the 50-DMA | — | — | — | 10/22, 10/29 | 11/2+ | SNDK 1,420 · WDC 368 · EWY 161 |
-| MU | $880–895 (8/24 887.6, 7/7 891.7, 9/14 902.6 lows) | 830 | 1,030–1,045 | 2.1–3.0:1 | ≈ 12/16 | **from 11/2**, after SK hynix (10/27–28), Samsung and SNDK (10/29); one memory name: replaces SNDK if the 10/28 rule sells it | 922.01 |
-| AAOI | zone failed (Sept double bottom 93.6 broke) | 82 | — | — | ≈ 11/5 | re-derive after the report | 88.57 |
-| GOOGL | stale (9/24 levels) | — | — | — | ≈ 10/28 | re-research after the report | 351.43 |
+| ANET | **≤ $160 only** (zone A failed: closed 176.98 on 10/16, under 178); 200-DMA 162.6, 7/17–7/29 lows 156.8–157.1 | 150 | 181–187 | 2.1:1 at 160 | **11/3 (confirmed)** | not before 11/2 (October buying closed 10/17); re-run 11/4 | 176.98 (10/16 close) |
+| AXTI | failed: closed 57.91 on 10/15 after a 53.31 low (under the 54 stop level) | — | — | — | 10/29 (≈ ±20%) | re-derive after the report | 55.71 |
+| BE | $210–218 (200-DMA 216, 8/10 low 210) | 195 | 260 | 2.4:1 at 214 | **10/22 (confirmed)** | after the report, with a higher low (§4a: stopped 10/12) | 231.73 |
+| INTC | broke its $95–98 zone (10/15 low 90.02) | — | — | — | **10/29 (confirmed)** | re-derive after the report | 93.70 |
+| SNDK / WDC / EWY | not while MU is held (one memory name) | — | — | — | 10/22, 10/29 | — | SNDK 1,350.85 |
+| RKLB | none — Neutron slipped to 2027 (10/14); falling knife | — | — | — | ≈ 11/10 | re-check after Q3; speculative slot only | 54.35 |
+| AAOI | zone failed (Sept double bottom 93.6 broke) | 82 | — | — | ≈ 11/5 | re-derive after the report | — |
+| LITE | **none**: support $784–800 pays 0.6–0.9:1 to the $876–894 gap (ATR 8%) | (680) | (876–894) | ✘ | **11/5 (confirmed)** AMC | re-derive after the report (blackout 11/2–11/5); one optical name with AXTI | 858.86 |
+| GOOGL | stale (9/24 levels) | — | — | — | ≈ 10/28 | re-research after the report | — |
 
-**Market flags** (S&P 500 record close **7,818.93 on 2026-10-06**; ≈ 7,803 on 10/13)
+**Market flags** (S&P 500 record close **7,818.93 on 2026-10-06**; 7,744.55 on 10/16 09:44 ET = −1.0%; VIX 15.9)
 - ☐ SPX **−4%** (≈ 7,506) → up to a quarter of the Reserve into VOO.
 - ⚠ SPX **−7%** (≈ 7,272) → deploy up to half the Reserve (VOO first). Use `/market-move`.
 - ⚠ SPX **−15%** (≈ 6,646) → deploy the second half, keep the 5% floor.
 - ⚠ Sleeve equity **< $3,402** (−10% from the $3,779.85 peak of 10/2) → circuit breaker: halve every satellite, no buys,
-  post-mortem. 10/13: ≈ $3,522 (−6.8%), $120 away.
-- ⚠ Open stop-risk **> 8%** (10/13: 2.9%) → no buys.
+  post-mortem. **10/16 close: $3,417.92 (−9.6%), $16 away. 10/19 10:28 ET: $3,457.81 (−8.5%), $56 away.** Monday 10/19, 15:45 ET: if the app shows the account below
+  $3,402, sell half of each satellite (AMD 0.457 sh, ARM 0.783 sh, MU 0.108 sh, TTWO 1.176 sh); keep VOO; no buys.
+- ⚠ Open stop-risk **> 8%** (10/16: $126 = 3.6%) → no buys.
 - ⚠ VIX spike or any holding gaps > 8% on news → `/market-move` **before** touching anything.
 - Rates and memory: 10-year 5.22%, the Fed hiked in September. Memory stocks are in a 4-month downtrend (SNDK −38%,
   WDC −54%, STX −37%, EWY −25% from June); Morgan Stanley's peak-cycle note 10/13.
@@ -215,19 +224,23 @@ frozen by losses: it *is* the opportunity, and it keeps until a level is hit.
 | October | $200 contribution (still not deposited) | → Reserve (Core is at 34.5%) |
 | 2026-10-14 | CPI 8:30 ET (≈ +0.6% m/m headline) · BAC, MS, ASML earnings | no trades that morning |
 | 2026-10-15 | PPI + retail sales 8:30 ET · Warsh fireside chat | no trades that morning |
-| 2026-10-22 | **WDC and BE earnings** (both confirmed, AMC) | memory read-across · BE re-entry zone after |
-| 2026-10-27 | STX earnings (est) · SK hynix Q3 (after the US close) · last day for the AXTI / AMD October exception | memory read-across for SNDK / MU |
+| 2026-10-16 | Monthly options expiry · weekly check after the close | no new buy (two on 10/15) |
+| **2026-10-20** | **Arm v. Qualcomm bench-trial closing arguments** (10:00 ET); ruling any day after | royalty suspension granted → sell ARM at market |
+| 2026-10-22 | **WDC and BE earnings** (both confirmed, AMC) | memory read-across for MU · BE re-entry zone after |
+| 2026-10-27 | STX earnings (est) · SK hynix Q3 (after the US close) · last ANET buy day before the FOMC/blackout | memory read-across for MU |
 | 2026-10-28 | FOMC · GOOGL earnings (est) | no trades that day |
 | 2026-10-29 | PCE 8:30 ET · **SNDK, AXTI, INTC earnings** (AMC, confirmed) · Samsung final Q3 | no trades that morning |
 | 2026-11-01 | $200 contribution | Reserve (unless Core < 35% and a rung fires) |
-| 2026-11-03 | **AMD earnings** (confirmed, AMC) | AMD zone re-derived after |
+| 2026-11-02 | AMD pre-report decision | hold with the 498 stop, or sell ⅓ if in $630–658 |
+| 2026-11-03 | **AMD earnings** (confirmed, AMC; held) · **ANET earnings** (confirmed, AMC) | AMD levels re-derived after · ANET levels re-run 11/4 |
 | 2026-11-04 | **ARM earnings** (confirmed, AMC; implied ≈ ±8.8%) | hold with the 220 stop |
-| ≈ 2026-11-05 | AAOI earnings (est) | |
+| ≈ 2026-11-05 | AAOI earnings (est) · **LITE earnings** (confirmed, AMC) | LITE levels re-derived 11/6+ |
 | **2026-11-09** | **TTWO earnings** (confirmed AMC, PR 10/13; expected ≈ ±6.5%) | hold with the 190 stop |
 | 2026-11-12 / 11-19 | GTA VI pre-load / **launch** | launch week > 270 → TTWO sell ⅓ |
 | 2026-11-27 | China's Ga/Ge export-ban suspension to the US lapses | AXTI kill-switch date |
 | 2026-12-19 | TTWO review | exit or re-underwrite |
-| 2026-12-31 | v3 review | score fills, `TA` round trips and the override ledger |
+| 2026-12-31 | v3 review · **v3 or v4 decision (§10)** | score fills, `TA` round trips and the override ledger; run the §10 test and re-run the backtest to 12/31 |
+| 2027-01-04 | v4 start if §10 fails | sell half of each satellite, cash to VOO |
 
 **Anything else** (a headline that scares or excites you, an urge to buy something new): write it down, bring it to the
 desk **before** trading. A new name needs a research entry and must beat the weakest holding.
@@ -237,22 +250,26 @@ desk **before** trading. A new name needs a research entry and must beat the wea
 - Max drawdown of the whole sleeve: **target < 15%**. Circuit breaker at −10% from peak (halve every satellite, pause buys, write the post-mortem).
 - Profit ratcheted into Tiers 1+3 per year (dollars). Win rate matters less than this number.
 - Fills: 5–10 buys a month under v3 (5 normal pace, 10 hard cap); sells uncounted. Trade-around round trips scored separately. Fees tracked; review 2026-12-31.
-- **Override ledger** (trades made without the desk, marked against the plan's alternative), 10/13 10:30 ET:
+- **Override ledger** (trades made without the desk, marked against the plan's alternative), 10/16 close:
   WDC re-buy 10/2 −$44.85 · TTWO add 10/2 +$0.65 · STX 10/6 −$11.81 · EWY add 10/8 −$6.83 · EWY stop lowered 172 → 165
-  −$30.51 · BE buy-back 10/8 −$7.59 · WDC locked add 10/9 −$8.00 · QUBT stop lowered 8 → 7 −$25.28 · SNDK 10/12 −$3.76 ·
-  ARM re-buy 10/12 −$8.15 · fees on 8 buys −$8 → **net −$154.14 = −4.1% of the peak sleeve in 11 days.**
-  Stops, by contrast, saved: ARM 10/8 +$38.52 · STX +$9.09 · BE +$5.02 (vs 10/13 prices).
+  −$30.51 · BE buy-back 10/8 −$7.59 · WDC locked add 10/9 −$8.00 · QUBT stop lowered 8 → 7 −$25.28 · SNDK 10/12 **−$23.90
+  (closed)** · ARM re-buy 10/12 **−$43.98** (open) · AMD 10/15 $500 at 11:29 ET before its close trigger, which failed
+  (closed 562.23) **−$16.27** (open) · fees on 9 buys −$9 → **net −$227.38 = −6.0% of the peak sleeve in 15 days**, about 63% of the
+  $362 fall from the peak.
+  Stops, by contrast, saved: ARM 10/8 +$38.52 · STX +$9.09 · BE +$5.02 (vs 10/13 prices); SNDK 10/15 cost −$6.83 (vs 10/16).
 
-## 8. Current application (2026-10-13, 10:30 ET; see journal/2026-10-13-review.md)
+## 8. Current application (2026-10-16, 09:44 ET; see journal/2026-10-16-check.md)
 | Ticker | Avg cost | Now | P&L | Stop | Weight | Status | Notes |
 |---|---|---|---|---|---|---|---|
-| VOO | 705.79 | 714.88 | +1.3% | — | 34.5% (core) | hold | never trimmed |
-| TTWO | 213.11 | 203.72 | −4.4% | 190 | 13.6% | hold | earnings 11/9, launch 11/19 |
-| ARM | 255.87 | 251.74 | −1.6% | 220 | 11.2% | hold | Qualcomm verdict pending; 10/12 re-buy = OVERRIDE |
-| SNDK | 1,477.05 | 1,451.97 | −1.7% | none → 1,310 | 5.6% | **EXIT** | 10/12 buy = OVERRIDE |
+| VOO | 705.79 | 709.40 | +0.5% | — | 34.7% (core) | hold | never trimmed |
+| AMD | 546.54 | 544.97 | −0.3% | 498 | 14.3% | hold, no adds | 10/15 $500 one fill = OVERRIDE; earnings 11/3 |
+| TTWO | 213.11 | 208.83 | −2.0% | 190 | 14.1% | hold | earnings 11/9, launch 11/19 |
+| ARM | 255.87 | 237.62 | −7.1% | 220 | 10.7% | hold | royalty ruling pending; 10/12 re-buy = OVERRIDE |
+| MU | 926.20 | 902.52 | −2.6% | 850 | 5.6% | hold | desk buy 10/15; adds locked until the 10/29 prints |
 
-Reserve ≈ **$1,237 (35.1%)**, using estimated EWY/WDC fills. After the SNDK sale ≈ $1,432 (≈ 41%). Lines 4 (max 7).
-Sleeve ≈ $3,522, −6.8% from peak; the circuit breaker is at $3,402. Open stop-risk $101 = 2.9%.
+Reserve **$712.20 (20.5%)** (statement 10/15 book value less open cost). Lines 5 (max 7). Sleeve $3,474.75, −8.1% from peak; the circuit breaker is
+at $3,402 ($73 away). Open stop-risk $126 = 3.6%. Broker statement "account value" $3,413.91 is book value (beginning +
+realized + fees), not the mark-to-market used for the breaker.
 
 ## 9. Override protocol
 If Wael wants to do something the plan or the desk objects to: the desk states the objection, the
@@ -260,7 +277,46 @@ data, and the rule it breaks — once, plainly. If Wael still wants it, it is ex
 `journal/` as an **OVERRIDE** with the reasoning. Overrides are reviewed quarterly: if they are
 beating the rules, the rules change; if not, they stop.
 
+## 10. Year-end decision: v3 or v4 (written 2026-10-18, before the results)
+Client decision 2026-10-18: run v3 unchanged to 2026-12-31, then choose between v3 and v4. The desk recommended
+switching to v4 now (backtest below); the client chose to test v3 first. The test is fixed here so December's
+numbers cannot pick the conclusion.
+
+**v3 continues into 2027 only if both hold at the 2026-12-31 close:**
+1. **Zero OVERRIDES from 10/19 to 12/31**: every buy has a desk note, no stop is lowered, no re-buy in the session a stop fired.
+2. **The account beats VOO from the 10/16 close**: account value ≥ $3,417.92 plus every deposit after 10/16, each deposit
+   put into VOO on its date at VOO's close (start: $3,417.92 in VOO at $701.61).
+
+**Either fails → v4 from Monday 2027-01-04** (first trading day): sell half of each satellite, cash to VOO, then the v4
+rules below. A circuit-breaker fire (§7) is market, not behavior: it does not fail test 1 by itself.
+
+**What ten weeks cannot show:** whether the rules have an edge. The 20-year backtest already answered that. Test 1 measures
+discipline, and test 2 is mostly noise.
+
+**v4 (if it applies):** VOO 80%, never sold; $200 to VOO on the 1st of each month. Trading pot 20%, at most 3 names, same
+entry/stop/ratchet rules, never refilled, swept into VOO above 25% of the account, closed if it loses half its starting
+value. One buy without the desk → pot cut to 10%; a second → closed. Review 2027-04-18 against VOO.
+
+**Backtest (2026-10-18, rules followed perfectly, $3,300 + $200/month, $1 a fill, Yahoo adjusted closes).**
+Dashboard: https://claude.ai/artifact/65WKhZpiLah9vjcn9vRXmM. Journal: `journal/2026-10-18-v3-vs-v4-study.md`.
+| Oct 2006 → Oct 2026 ($51,300 in) | AI list | 2006 hot list | Worst drop | Beat S&P, 300 random lists |
+|---|---|---|---|---|
+| 100% S&P 500 | $251,182 | — | −55% | — |
+| v4 (80/20) | $247,707 | $254,219 | −49 to −52% | 58 / 300 |
+| v3 | $230,183 | $239,908 | −46 to −47% | 18 / 300 |
+| v3 at the Aug–Oct 2026 fill pace | $225,616 | — | −51% | — |
+| 50/50 | $150,572 | $168,953 | −31 to −33% | 0 / 300 |
+
 ## Changelog
+- 2026-10-19 — statement 10/1–10/18 (`portfolio/statements/amana-statement-2026-10-01_2026-10-18.pdf`): no fills after 10/15; cash $712.20 confirmed (book value $3,513.91); October fees $19, realized −$89.72; the October $200 is still not deposited. 10:28 ET: chips bounce (SOX +2.6%, S&P +0.7%, VIX 18.0); account $3,457.81, $56 above the breaker. No ARM royalty ruling yet. 15:45 ET breaker check unchanged. Flag Board v18 and Account Ledger v13 refreshed. Research: a 10/19 update entry in all 12 `research/TICKER.md` files; verdicts unchanged. ARM bench-trial closing arguments set for 10/20 (calendar).
+- 2026-10-18 — v3 vs v4 study (5-year and 20-year backtests, 50/50 added). Desk recommended v4 now; **client chose v3 to
+  2026-12-31, then decide** (§10). Year-end test written in advance: zero overrides from 10/19 and the account beats VOO
+  from the 10/16 close, or v4 from 2027-01-04. Monday 10/19 15:45 ET circuit-breaker check unchanged.
+- 2026-10-17 — 10/16 close: S&P −1.1%, NDX −2.5%, SOX −3.8% (8th straight down day, the longest since 2008), VIX 20.0. Causes: AI-debt and returns fears (CoreWeave −12%), CXMT memory progress, oil. AMD −6.0% (528.75), ARM −6.9% (227.80), MU −5.6% (878.84), TTWO −2.0%, VOO −1.1%. Account $3,417.92 (−9.6% from peak), **$16 above the breaker**; still +$114.66 on $3,303.26 put in. Shock engine: NOISE for the index, no mechanical action, no VOO tranche (S&P −2.0%). Monday rule written: below $3,402 at 15:45 ET → halve every satellite. October buying closed; no buys until 11/2. ANET zone A failed (176.98) → ≤ $160 only. Override ledger −$227.38.
+- 2026-10-16 — statement 10/15: SNDK stopped 1,300.39 (−$23.90); **AMD bought $499.96 @546.54 at 11:29 ET** (OVERRIDE: 2.5× the ≈ $200 proposal, 14.6% in one fill > 8%, before its close trigger, which failed at 562.23); **MU bought $199.93 @926.20 at 15:40 ET** on the desk's close trigger (≈ $150 proposed; desk error: no price ceiling, R/R 1.4:1 at the fill, 2:1 needed ≤ 910). Cash $712.11. Buys 10 of 12. Stops AMD 498, MU 850. AMD adds blocked (15% cap); MU adds locked to the 10/29 prints. Desk gate for buys #11–12: account ≥ $3,500. ANET rows merged (A $178–181 / B ≤ $160); AXTI and INTC zones failed on 10/15; ARM jury verdict 10/13 ($2; royalty suspension with the judge). Override ledger −$197.16.
+- 2026-10-15 — researched ANET (WATCH → buy $178–181 on a close until 10/28, stop 170) and RKLB (WATCH, no setup after the Neutron delay).
+- 2026-10-15 — ANET and LITE added to the research study (`research/ANET.md`, `research/LITE.md`), both **WATCH**. Both are −16% / −22% from the 10/9 highs in an optics/networking unwind with no company news (Broadcom CEO AI-funding remarks 10/12). ANET: 2:1 only at ≤ $160 (stop 150, sell zone 181–187); reports 11/3. LITE: no 2:1 zone at ATR 8.5%; reports 11/5. LITE and AXTI are one InP trade, so only one of them can be held.
+- 2026-10-15 — OVERRIDE (client): October buy cap raised 10 → **12** for October only; back to 10 on 11/1. Statement to 10/14: EWY filled 163.23 (−$34.93), WDC 360.62 (−$50.85). SNDK stopped at 1,300 on 10/15 (≈ −$23.95). Cash $1,414. Proposals: AMD in $530–545 (stop 498), MU on a close ≥ $895 after the 858 flush (stop 850).
 - 2026-10-14 (pm) — price-alert cloud routine disabled at the client's request; the client sets the alerts manually in the Amana app.
 - 2026-10-14 (pm) — MU researched ("might double" on X): WATCH, zone $880–895 from 11/2, stop 830, sell zone 1,030–1,045 (2.1–3.0:1). A double = $2.09T = 10.5× FY27 EPS. One memory name: MU replaces SNDK if SNDK is sold on 10/28. Price-alert routine created (cloud, 15:45 ET, 10/15–10/27): AXTI ≥ 62, AMD 530–545, SPX ≤ 7,506.
 - 2026-10-14 (pm) — client: "missing out on the dips" in BE, ARM, SNDK, AMD, INTC. None is at a level (all report 10/22–11/4; ARM/SNDK adds R/R 1.5 and 1.4). One October exception through the desk: AXTI (in its zone, 2.7:1) or AMD ($530–545). New watch zones: BE $210–218 / 195, INTC $95–98 / 89, AMD $530–545 / 498. Confirmed dates: BE 10/22, INTC 10/29, AMD 11/3. SNDK stop 1,300 (client). Flag Board and Account Ledger artifacts refreshed.

@@ -3,8 +3,32 @@
 One file per ticker; newest entry first. Each entry is dated; numbers are as of that date.
 
 Entries:
+- 2026-10-19 (update)
 - 2026-10-13
 - 2026-09-09
+
+---
+
+## TTWO — update 2026-10-19
+
+**Verdict:** HOLD to the launch with the $190 stop · no adds (2 of 2) · sell ⅓ in $222–228, or > $270 in launch week ·
+**Conviction:** Med. Quiet: no new dated news since the 10/13 entry. GTA VI is still **11/19**; no delay reports.
+
+| | |
+|---|---|
+| Price | **$205.14** (2026-10-19, 10:35 ET, −0.1%); close $205.28 (10/16); 10/13 low **$196.30** |
+| 20 / 50 / 200-DMA | **$204.9** / $218.3 (falling) / $222.1 — price on the 20, −6.0% under the 50 |
+| RSI(14) · ATR(14) | 45.7 · **$6.73 = 3.3% a day** · −23% from the 7/7 high of $265.94 |
+| Position | 2.3516 sh @ $213.11 = ≈ $482, 14.0% of the sleeve, −3.7% |
+| Stop | **$190** (broker, confirmed live 10/19): 7.4% / 2.3 ATR below, above the Feb–Mar shelf $187.6–189.5. Risk ≈ $35 |
+| Sell zone (⅓) | **$222–228** = the 50 and 200-DMAs plus the 9/14 high → 0.78 sh; it is 8% above today's price |
+| Next events | **Earnings Mon 11/9** after the close (company PR 10/13) · pre-load 11/12 · **launch 11/19** · review 12/19 |
+
+The chip sell-off did not touch TTWO (−2.0% on 10/16 vs SOX −3.8%). It is the one satellite that does not move with
+AMD, ARM and MU, and that is why it stays. The risk is the 11/9 guide: Wells Fargo (10/12) expects $3.35–3.40B for
+the launch quarter vs $3.446B consensus.
+
+**Sources:** Yahoo chart API TTWO 1y daily, fetched 2026-10-19 10:35 ET · news sweep 10/19: no TTWO item dated 10/10–10/19 · launch date per the 10/13 entry sources.
 
 ---
 

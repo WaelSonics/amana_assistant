@@ -3,7 +3,62 @@
 One file per ticker; newest entry first. Each entry is dated; numbers are as of that date.
 
 Entries:
+- 2026-10-19 (update)
+- 2026-10-16 (position opened 10/15)
 - 2026-10-14
+
+---
+
+## MU — update 2026-10-19
+
+**Verdict:** HOLD with the $850 stop · adds locked to the 10/29 prints · **Conviction:** Med. Back above the $880–895
+zone on the sector bounce. No new dated MU or CXMT news since 10/16 (sweep 10/19); the peak-cycle question is still
+answered only by the memory prints.
+
+| | |
+|---|---|
+| Price | **$914.32** (2026-10-19, 10:35 ET, +4.0%); close $878.84 (10/16, −5.6%); 10/15 flush low **$858.00** |
+| 20 / 50 / 200-DMA | $1,026.5 / **$983.9** (rising) / $721.0 — price −7.1% under the 50 |
+| RSI(14) · ATR(14) | 39.8 · **$48.69 = 5.3% a day** · −27% from the 6/25 high of $1,255 |
+| Position | 0.2159 sh @ $926.20 = ≈ $197, 5.7% of the sleeve, −1.3% |
+| Stop | **$850** (broker, confirmed live 10/19): 7.0% / 1.3 ATR below. Risk ≈ $14 |
+| Sell zone (⅓) | $1,030–1,045 → 0.07 sh · target 2 $1,090–1,109. R/R from today: 1.8:1 to $1,030 |
+| Adds | 0 of 2, **locked** until WDC (10/22), SK hynix (≈ 10/27) and Samsung/SNDK (10/29) report; then only in $880–895, ≤ $150 |
+| Next earnings | ≈ mid-December (not announced) |
+
+**Analysts (dated):** 10/5–10/6, Morgan Stanley kept Overweight ($1,200) and Susquehanna Positive ($2,000); mean target
+≈ $1,581. Morgan Stanley's view after the FQ4 report: 2027–28 supply/demand tighter than 2026, but estimate raises may
+lag earlier quarters. **CXMT** is the #4 DRAM maker, within ≈ 1 point of Micron's share (Counterpoint, Q2 2026), and still
+behind in HBM. That is the bear case the 10/29 prints have to answer.
+
+**Sources:** Yahoo chart API MU 1y daily, fetched 2026-10-19 10:35 ET · [parameter.io, 10/6: analysts stick with bullish calls](https://parameter.io/analysts-stick-with-bullish-micron-mu-calls-despite-minor-dip-following-banner-fiscal-year/) · [Stocktwits: Morgan Stanley flags estimate raises may lag](https://stocktwits.com/news-articles/markets/equity/micron-s-post-earnings-estimate-hikes-may-lag-previous-quarters-flags-morgan-stanley/cZMSCqhRBQx) (undated) · [PCGH: CXMT DRAM share, Counterpoint Q2](https://www.pcgameshardware.de/RAM-Hardware-154108/News/CMXT-Speicher-DRAM-Marktanteil-1550368/).
+
+---
+
+## MU — position card 2026-10-16
+
+**Verdict:** HOLD with the stop · **Conviction:** Med. Bought 10/15 at 15:40 ET, $926.20 × 0.2158615 sh = $199.93, on the
+desk's close trigger (a close ≥ $895 after the $858 flush; it closed at $931.24). The desk proposed ≈ $150. It is the one
+memory name; SNDK was stopped out on 10/15.
+
+| | |
+|---|---|
+| Price | **$902.52** (2026-10-16, 09:44 ET; low $894.31); close $931.24 (10/15); 10/15 low **$858.00** |
+| 20 / 50 / 200-DMA | $1,034.2 / $983.6 / $718.0 · RSI 36.2 · ATR $47.81 = 5.3% a day |
+| Stop | **$850**, under the 10/15 flush low. That is −8.2% from cost. Risk ≈ $11 at today's price |
+| Sell zone (⅓) | **$1,030–1,045** → ⅓ = 0.07 sh · target 2 **$1,090–1,109** |
+| Reward/risk at the fill | **1.4:1 to $1,030 ✘**, 2.1:1 to $1,090. **Desk error:** the trigger had a floor ($895) and no ceiling. For 2:1 to $1,030 the fill needed to be ≤ $910 |
+| Ladder | +25% $1,157.75 · +40% $1,296.68 · +75% $1,620.85 · hard exit −15% $787.27 |
+| Adds | 0 of 2. **Locked** until the memory prints (WDC 10/22, SK hynix 10/27, Samsung and SNDK 10/29) answer the peak-cycle question. Then only in $880–895, ≤ $150 |
+| Next earnings | ≈ 12/16 (not announced). Buyback usable from 12/9 |
+
+The 10/14 thesis and risks below still stand. What changes: MU is now held, so the stop is the decision, and the 10/29 memory
+prints decide whether it gets an add.
+
+## Sources
+- Yahoo chart API MU 1y daily and 5-day 5-min bars, fetched 2026-10-16 09:44 ET (fill check: the 15:40 ET bar on 10/15 was
+  925.05–927.90)
+- Amana statement 2026-10-15 (`portfolio/statements/amana-statement-2026-10-15_2026-10-15.pdf`)
 
 ---
 

@@ -1,3 +1,2 @@
-# Free cash in the stock account (USD). Client-reported 2026-10-14 after the EWY and WDC stop-outs of 10/13
-# (the estimated fills at the opens, 163.18 / 359.01, gave 1237.00; actual fills were ~$2 better in total).
-1239.00
+# Free cash (USD), statement 2026-10-01..10-18 (no fills after 10/15): book value 3,513.91 (beginning 3,522.63 + $100 referral - $19 fees - $89.72 realized) less the cost of open positions 2,801.71.
+712.20

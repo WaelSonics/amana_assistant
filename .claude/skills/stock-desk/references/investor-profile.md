@@ -1,6 +1,6 @@
 # Investor profile — Wael
 
-Last updated: 2026-10-10. Update this file when any number below changes.
+Last updated: 2026-10-16. Update this file when any number below changes.
 
 ## Capital structure
 - **Savings split (client, 2026-10-03): ≈ 70% physical holdings (recorded earlier as physical gold), ≈ 20% cash,
@@ -10,7 +10,7 @@ Last updated: 2026-10-10. Update this file when any number below changes.
 - Stock sleeve contributions: **≈ $200 / month** (confirmed from statement: $200 deposits on
   2026-07-01 and 2026-09-01; earlier months ranged $100–$450). The October $200 was not on the 10/2 statement;
   a $100 referral bonus landed 10/1.
-- Sleeve size (10/13 ≈ 10:30 ET, statement to 10/12 + estimated EWY/WDC stop fills): **≈ $3,522**, cash ≈ $1,237 (35%).
+- Sleeve size (10/16 09:44 ET, statement to 10/15): **$3,474.75**, cash $712.11 (20.5%); peak $3,779.85, breaker $3,402.
   Peak $3,779.85 (10/2); circuit breaker $3,402. Statement archive: `portfolio/statements/`.
 - **Order types (client, 2026-10-07): no limit orders as far as the client knows.** Each position carries one broker
   SL and one TP, and both close the WHOLE line. So partial trims (⅓ ladder, trade-around) and buys at a level are
@@ -34,8 +34,8 @@ Last updated: 2026-10-10. Update this file when any number below changes.
 - Practically: asymmetric setups, defined invalidation, willingness to sit in cash.
 
 ## Thematic focus
-- **The AI race** — infrastructure and enablers (see `ai-race-map.md`). Current sleeve (2026-10-13): VOO (core 34.5%), TTWO (GTA VI),
-  ARM, SNDK (exit called), ≈ 35% cash. Stopped out 10/12–10/13: STX, BE, QUBT, EWY, WDC. Earlier: ARM 10/8, AMD 9/21, INTC 9/8.
+- **The AI race** — infrastructure and enablers (see `ai-race-map.md`). Current sleeve (2026-10-16): VOO (core 34.7%), AMD, TTWO (GTA VI),
+  ARM, MU, ≈ 20% cash. Stopped out 10/12–10/15: STX, BE, QUBT, EWY, WDC, SNDK. Earlier: ARM 10/8, AMD 9/21, INTC 9/8.
 
 ## History that matters
 - Account start → **2026-08-12**: experimentation, no clear strategy. Treat pre-Aug-12 trades as
@@ -73,6 +73,18 @@ Last updated: 2026-10-10. Update this file when any number below changes.
   The override ledger reached −$154 (−4.1% of the sleeve in 11 days). Client: "I fucked up again." Asked for research on
   every holding and **one research file per ticker** (`research/TICKER.md`). Watch for the next trigger: ≈ 35–40% cash after
   a string of stop-outs is the exact setup where the client has redeployed within hours.
+- **2026-10-14 → 10-16**: pushed back hard on the caution ("paranoid", "different this time") and raised the October cap
+  10 → 12. Then followed the desk on MU (close trigger, $200 vs $150) but bought AMD **$500 at 11:29 ET**, before a
+  close-based trigger that then failed (closed 562 vs ≤ 545). Same pattern as 10/9: the desk's price, not its size or its
+  timing. SNDK stopped at 1,300 (the stop held). Override ledger −$197 (−5.2%). The account sits $73 above the circuit
+  breaker. Desk lesson: write triggers as bands ("close in $X–Y"), never one-sided.
+- **Scored 2026-10-17:** the client's unprompted *protective* acts helped (ARM stop raised to 280 and BE to 260: ≈ +$43.5
+  saved; BE half sold at 295.02: +$41.59 banked; SNDK stop 1,300 ≈ even). Every unprompted *buy* lost except a +$0.65 TTWO add
+  (−$227 total). Trust their sells and stop raises; route every buy through the desk.
+- **2026-10-18**: after the −9.6% slide, asked whether indexing beats trading. Backtests showed v3 followed perfectly still
+  trails the S&P (20 yrs: $230–240k vs $251k; v4 $248–254k; 50/50 $151–169k). The desk recommended v4; the client chose
+  **v3 to 12/31, then decide** (PLAN §10: zero overrides and beating VOO from 10/16, or v4 on 2027-01-04). Every override
+  from 10/19 now counts against v3 itself: name it as such when one is proposed.
 ## How to talk to this client
 - **Role (client, 2026-10-07): greedy and logical, and harsh.** Greedy: push to keep winners running and hunt the
   best R/R setups; call out profit left on the table. Logical: every call rests on levels, rules and numbers. Harsh:

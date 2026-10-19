@@ -3,8 +3,35 @@
 One file per ticker; newest entry first. Each entry is dated; numbers are as of that date.
 
 Entries:
+- 2026-10-19 (update)
 - 2026-10-14 (check)
 - 2026-10-13
+
+---
+
+## SNDK — update 2026-10-19 (not held: stopped 10/15 at $1,300.39)
+
+**Verdict:** WATCH · no buy while MU is held (one memory name) · re-check after the **10/29** report · **Conviction:**
+Med on the business, Low on the setup. The 10/15 stop sold at $1,300.39; it closed 10/16 at $1,299.30, so the stop was
+right on the day. It is +6.9% since on the bounce, which changes nothing about the rules.
+
+| | |
+|---|---|
+| Price | **$1,388.37** (2026-10-19, 10:35 ET, +6.9%); close $1,299.30 (10/16, −6.9%; 7th straight lower close); 10-day low **$1,276** |
+| 20 / 50 / 200-DMA | $1,631.5 / $1,596.6 (rising) / **$1,216.5** — price −13% under the 50, +14% over the 200 |
+| RSI(14) · ATR(14) | 37.5 · **$98 = 7.1% a day** · −41% from the 6/22 high of $2,354.39 |
+| Report | **10/29** after the close (Unusual Whales, FXLeaders; not seen on Sandisk IR). Consensus EPS ≈ $45.22, revenue ≈ $10.7B; implied move ≈ ±11%. Last quarter's non-GAAP gross margin 84.6% |
+
+**News (dated):** the 10/16–10/19 fear is CXMT ("4F²" density, a product before year-end). CXMT makes DRAM, not NAND;
+Goldman calls the fear overstated (≈ 50% of China's local demand by 2028). Morgan Stanley's 10/13 note was on Samsung and
+SK hynix: memory stocks have peaked 4–8 months before earnings did. KeyBanc expects NAND prices +≈ 20% q/q in Q4 2026.
+Targets since 10/1: Mizuho $2,050 (10/5), Goldman $2,200 (10/12), Bernstein $3,000; no downgrade found. September
+insider sales (CEO ≈ $53M on 9/17) were 10b5-1 plan sales.
+
+**When it could be a buy again:** only if MU is sold or the client wants a second memory line (which the plan does not
+allow), after 11/2, on a higher low after the print with gross margin ≥ 83% and a stop within 1.5 ATR.
+
+**Sources:** Yahoo chart API SNDK 1y daily, fetched 2026-10-19 10:35 ET · [FXLeaders, 10/19: Sandisk forecast, CXMT, earnings](https://www.fxleaders.com/news/2026/10/19/sandisk-stock-forecast-sndk-cxmt-earnings/) · [KuCoin: Samsung/SK hynix valuation trap (Morgan Stanley 10/13)](https://www.kucoin.com/blog/samsung-sk-hynix-valuation-trap) · [Unusual Whales: SNDK earnings](https://unusualwhales.com/stock/SNDK/earnings) · [ad-hoc-news: Goldman $2,200](https://www.ad-hoc-news.de/boerse/news/corporate-news/goldman-sets-usd-2-200-target-for-sandisk-stock/70359204) · [SEC Form 4, CEO 9/17](https://www.sec.gov/Archives/edgar/data/0002023554/000124264826000032/edgardoc.xml).
 
 ---
 

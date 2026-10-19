@@ -3,7 +3,45 @@
 One file per ticker; newest entry first. Each entry is dated; numbers are as of that date.
 
 Entries:
+- 2026-10-19 (update)
 - 2026-10-13
+
+---
+
+## ARM — update 2026-10-19 (royalty ruling: closing arguments 10/20)
+
+**Verdict:** HOLD with the $220 stop · no adds · **sell at market if Judge Noreika lets Qualcomm suspend royalties** ·
+**Conviction:** Low. The binary is now dated: the bench-trial closing arguments are **Tue 10/20, 10:00 ET** (court
+minute entry, 90 minutes split). The ruling can come any day after that; there is no deadline.
+
+| | |
+|---|---|
+| Price | **$230.25** (2026-10-19, 10:35 ET, +1.1%); close $227.80 (10/16, −6.9%); 10/15–10/16 lows **$226.54 / $226.65** |
+| 20 / 50 / 200-DMA | $282.1 / $266.8 (rising) / **$224.0** — price −13.7% under the 50, +2.8% over the 200 |
+| RSI(14) · ATR(14) | 35.6 · **$16.85 = 7.3% a day** · −49% from the 6/18 high of $452.70 |
+| Position | 1.5668 sh @ $255.87 = ≈ $361, 10.5% of the sleeve, **−10.0%** |
+| Stop | **$220** (broker, confirmed live 10/19): only **4.4% / 0.6 ATR** below, just under the 200-DMA. Risk ≈ $16. Never lowered |
+| Sell zone (⅓) | $275–281 → 0.52 sh (above cost) |
+| Buy zone | $225–233 — **locked** until after the 11/4 report *and* the ruling. `portfolio_report.py` flags "IN BUY ZONE"; ignore it |
+| Next events | **10/20 closing arguments** · ruling date unknown · earnings **Wed 11/4** after the close (implied ≈ ±8.8%) |
+
+### The ruling (dated)
+- **10/13 jury:** Arm breached its Architecture License Agreement and interfered with Qualcomm's Meta relationship;
+  **$2** in damages ($1 per claim). Arm won the Technology License Agreement claims.
+- **With the judge:** (1) whether the clause letting Qualcomm **suspend royalties for 5 years** after a material breach
+  is enforceable — Qualcomm says it applies automatically, Arm says it is unenforceable; Arm itself puts it at
+  "billions"; (2) whether Arm negotiated next-generation pricing in good faith. Noreika declined to decide (1) before trial.
+- Rule (unchanged since 10/13): **a ruling that grants the suspension = thesis break → sell the whole line at market.**
+  A ruling that voids the clause is a relief catalyst, but the adds stay locked until after 11/4.
+
+### Gap risk, stated plainly
+On a suspension ruling ARM would likely **gap through $220**. A −20 to −25% gap from $230 costs ≈ **$70–90** on this line,
+about the account's whole **$56 cushion** over the $3,402 breaker (10:28 ET). The stop does not protect against a gap.
+The plan does not require a sale before the ruling, and the desk does not recommend one: selling now locks ≈ −$40 and
+pays the same for a coin flip in the other direction. It is the client's call. A sale is always allowed without the
+desk; a re-buy is not.
+
+**Sources:** Yahoo chart API ARM 1y daily, fetched 2026-10-19 10:35 ET · [Insurance Journal, 10/15: jury verdict and the open bench issues](https://www.insurancejournal.com/news/east/2026/10/15/889003.htm) · [Tech Times, 10/14: $2 verdict unlocks the royalty-suspension fight](https://www.techtimes.com/articles/329023/20261014/qualcomm-jury-finds-arm-breach-2-verdict-unlocks-billion-dollar-royalty-suspension-fight.htm) · [Forbes/Tirias, 10/15: who came out on top](https://www.forbes.com/sites/tiriasresearch/2026/10/15/qualcomm-vs-arm-the-jury-verdict-is-in-who-came-out-on-top/) · [24/7 Wall St, 10/16](https://247wallst.com/investing/2026/10/16/arm-and-amd-fall-5-as-qualcomm-verdict-adds-to-chip-selloff-taiwan-semiconductor-slips) · closing-argument date and time from the court minute entry as quoted in search results 10/19 (docket not fetched directly).
 
 ---
 

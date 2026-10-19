@@ -3,8 +3,30 @@
 One file per ticker; newest entry first. Each entry is dated; numbers are as of that date.
 
 Entries:
+- 2026-10-19 (update)
 - 2026-10-14 (check)
 - 2026-10-09
+
+---
+
+## AXTI — update 2026-10-19
+
+**Verdict:** WATCH, setup failed · re-derive after the **10/29** report · **Conviction:** Low on the setup. The 10/14
+zone ($62–63.50, stop $54) broke on 10/15 (low $53.31) and again on 10/16 (close $51.47). It is now **under the 200-DMA**.
+
+| | |
+|---|---|
+| Price | **$56.63** (2026-10-19, 10:35 ET, +10.0%); close $51.47 (10/16, −11.1%); 10-day low **$50.57** |
+| 20 / 50 / 200-DMA | $72.4 / $70.2 / **$63.2** — price −19.3% under the 50, −10.5% under the 200 |
+| RSI(14) · ATR(14) | 39.4 · **$6.69 = 11.8% a day** · −60% from the 5/26 high of $143.16 |
+| Report | **10/29** after the close (set 10/1); ≈ ±20% typical move |
+| China | The Ga/Ge/Sb export-ban suspension to the US runs **to 11/27/2026**; licences and the military end-user ban still apply. No extension news yet. InP substrates were not in the original controls; Tongmei got InP export permits in Aug 2025 |
+
+A +10% day at an 11.8% ATR is one normal move, not evidence. Under the 200-DMA there is no trend to buy into. After the
+report, a fresh zone needs a higher low above $50.57 and a stop within 1.5 ATR. Analysts' 2027 revenue estimates rose
+from ≈ $222M to ≈ $461M between 6/30 and 9/30 (TIKR), so the business case is intact; the chart is not.
+
+**Sources:** Yahoo chart API AXTI 1y daily, fetched 2026-10-19 10:35 ET · [TIKR, 10/8: AXT fell 10% as estimates doubled](https://www.tikr.com/de/blog/axt-stock-fell-10-in-a-day-even-as-analysts-more-than-doubled-their-2027-revenue-estimates-heres-where-the-stock-could-go) · [Mining Technology: China suspends export ban to the US](https://www.mining-technology.com/news/china-suspends-ban-exports-us/) · [TipRanks: export controls and AXT](https://www.tipranks.com/news/could-chinas-new-export-controls-impact-axt-nasdaqaxti).
 
 ---
 

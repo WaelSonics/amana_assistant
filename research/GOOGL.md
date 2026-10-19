@@ -3,7 +3,33 @@
 One file per ticker; newest entry first. Each entry is dated; numbers are as of that date.
 
 Entries:
+- 2026-10-19 (update)
 - 2026-09-24
+
+---
+
+## GOOGL — update 2026-10-19
+
+**Verdict:** WATCH · the 9/24 levels are stale · re-research after the Q3 report (**≈ 10/27–10/28**, not confirmed) ·
+**Conviction:** Med on the business, Low on the timing. The price is pinned to its moving averages, with a report
+in about 7 sessions and October buying closed.
+
+| | |
+|---|---|
+| Price | **$344.87** (2026-10-19, 10:35 ET, +1.3%); close $340.59 (10/16) |
+| 20 / 50 / 200-DMA | $345.9 / **$344.4** (falling) / $341.1 — price is on all three |
+| RSI(14) · ATR(14) | 48.8 · **$8.67 = 2.5% a day** · −15.6% from the 5/18 high of $408.61 |
+| 9/24 Trigger A | "close > $345, stop $330, T1 $380": the price has crossed $345 several times since without follow-through. It is not a buy before the report anyway |
+| Report | **≈ 10/28** after the close (Admiral Markets; Investing.com says 10/27 tentatively) · consensus EPS ≈ $3.04, revenue ≈ $127.4B |
+
+**What the report has to answer (dated):** Q2 (July) raised 2026 capex to **$195–205B** from $180–190B and said 2027 will
+"rise significantly". Q2 free cash flow was ≈ **−$5.9B**, it issued **$25B** of notes, and Gemini 3.5 Pro was delayed. The
+stock fell 8.5% after that print. Positives: multi-GW TPU agreements with revenue mostly in 2027 (10-Q). The court did not
+order an ad-exchange sale; appeals and EU/UK cases remain. Cantor and HSBC kept Buy at $420 (10/12).
+
+**Fit:** it would be a third AI-capex-driven line next to AMD and ARM. It needs to beat the weakest holding to get a slot.
+
+**Sources:** Yahoo chart API GOOGL 1y daily, fetched 2026-10-19 10:35 ET · [Investing.com, 10/16: stalled near the 200-day before Q3](https://www.investing.com/news/stock-market-news/alphabet-stock-analysis-stalled-near-200day-average-ahead-of-q3-earnings-93CH-4954685) · [Admiral Markets: Q3 2026 preview](https://admiralmarkets.com/education/articles/shares/alphabet-stock-q3-2026-earnings-preview) · [Finbold, 10/12: analyst targets](https://finbold.com/wall-street-analysts-update-google-googl-stock-price-target-for-12-months/).
 
 ---
 

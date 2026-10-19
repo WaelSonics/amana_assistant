@@ -3,7 +3,29 @@
 One file per ticker; newest entry first. Each entry is dated; numbers are as of that date.
 
 Entries:
+- 2026-10-19 (update)
 - 2026-10-09
+
+---
+
+## AAOI — update 2026-10-19
+
+**Verdict:** WATCH, setup invalid · re-derive only after the ≈ **11/5** report and a confirmed 1.6T qualification ·
+**Conviction:** Low. The 10/9 zone ($94–96.50) broke and the price is **under the $82 invalidation**. All three
+moving averages are falling.
+
+| | |
+|---|---|
+| Price | **$77.09** (2026-10-19, 10:35 ET, +2.0%); close $75.57 (10/16); 10-day low **$75.43** |
+| 20 / 50 / 200-DMA | $102.1 / $109.8 / $112.4 — all falling; price −30% under the 50 and −31% under the 200 |
+| RSI(14) · ATR(14) | 34.1 · **$9.07 = 11.8% a day** · −67% from the 5/13 high of $233.67 |
+
+**News (dated):** the **$600M ATM program was reported completed** (≈ 10/5): more dilution, on top of ≈ $1.65B of ATMs
+in 2026. −9% intraday on 10/14 and a 10/15 close of $83.73 (−23.6% from 10/9), harder hit than LITE and COHR.
+**B. Riley cut its target to $92 from $109** (week of 10/16). The 1.6T case rests on the 8/6 call: shipments late Q3,
+ramp in Q4, > $200M of 1.6T orders. No October confirmation. Q3 guide $255–290M; top 10 customers = 99% of revenue.
+
+**Sources:** Yahoo chart API AAOI 1y daily, fetched 2026-10-19 10:35 ET · [Motley Fool, 10/16: why AAOI plummeted this week](https://www.fool.com/coverage/market-movers/2026/10/16/why-applied-optoelectronics-stock-plummeted-this-week/) · [24/7 Wall St, 10/14](https://247wallst.com/investing/2026/10/14/applied-optoelectronics-dives-9-as-ai-funding-fears-hit-optical-stocks-coherent-slides-7-lumentum-drops-7/) · [MarketBeat: Q2 call highlights, 8/6](https://www.marketbeat.com/instant-alerts/applied-optoelectronics-q2-earnings-call-highlights-2026-08-06/) · earnings date unconfirmed by the company.
 
 ---
 
