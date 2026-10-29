@@ -3,8 +3,180 @@
 One file per ticker; newest entry first. Each entry is dated; numbers are as of that date.
 
 Entries:
+- 2026-10-28 (deep dive)
 - 2026-10-19 (update)
 - 2026-10-15
+
+---
+
+## LITE — Lumentum Holdings — deep dive 2026-10-28
+
+**Verdict:** WATCH, no passing zone · **Conviction:** Med on the business, Low on the setup. Same answer as 10/15 and
+10/19, now measured by `levels.py`. At a 7.6% daily ATR a 2:1 trade needs **≈ $203 of clear air** above support, and
+the nearest swing high is only $10–113 away. The $784–800 support from the last entry **broke on 10/22–10/23**, and so
+did the 200-DMA on a closing basis, before a +17% V-rebound. Earliest buy is **11/6 afternoon, realistically 11/9**,
+after the 11/5 report.
+
+| | |
+|---|---|
+| Price (date) | **$887.35** (levels.py, 2026-10-28 10:52 ET; high 897.99). Cross-check $895.00 (stockanalysis, 11:04 ET) |
+| Entry zone | **None passes.** Three zones tested (below) |
+| Invalidation (stop) | n/a, no position. Thesis-level: FQ1 revenue < $1.225B guide low, a FQ2 guide that flattens, a weekly close under the 200-DMA, a change to the NVIDIA commitment |
+| Target 1 / 2 | n/a. Swing highs above: 897.00 / 970.32 / 998.50 / 1,002 / 1,026.76 / 1,143 (record). Fundamental: analyst average $1,166.28 (stockanalysis 10/28) |
+| Reward/risk (T1) | Best tested: **1.14:1** (zone 845–855, stop 735, T1 970.32, skipping 897). ✘ |
+| Size | n/a. When a zone passes: ≈ $190 starter (5.5%). Hold at most **one optical name** (LITE / AXTI / AAOI) |
+| Timeframe | Months (the InP laser / OCS / CPO ramp, 2026–28) |
+| Next earnings | **2026-11-05 after the close** (Lumentum IR 10/5; webcast 5:00 ET; levels.py: 6 sessions). Blackout **11/2–11/5** |
+
+### What changed since the 10/19 update
+- **The support failed.** 10/22 close **$752.54 (−11.5%)**, 10/23 low **$736.01**, close $756.17. Both closes were
+  under the 200-DMA (≈ $784–787 those days). The $784–800 shelf that the 10/15 and 10/19 entries called "best real
+  support" gave way by $48. The hypothetical $680 stop was not reached.
+- **Then a V.** 10/26 **+8.2%** to $818.10 on a StoneX initiation (Buy, $1,200; 24/7 Wall St 10/26). 10/27 +5.9% to
+  $866.18. Today $887.35, which is **+17.3% from the 10/23 close** and **+20.6% from the low**. It is testing the 7/23
+  swing high (897.00) and the 9/28 low (881.23), and today's high was 897.99.
+- **The 50-DMA has turned down** ($921.30 vs $931.07 ten sessions ago). ATR is $67.52 = 7.6% (it was $69.26 = 8.1%).
+- Consensus is firm at **$1.25B / $4.21–4.22** (MarketBeat 10/28), against Alpha Vantage's stale 3.82. Implied move
+  **±13.33%** for the report week (optionslam 10/28).
+
+### Thesis
+Lumentum makes the indium-phosphide laser chips (EMLs, CW lasers for silicon photonics, CPO light sources) and the
+optical circuit switches inside AI clusters. It guided FQ1'27 to **$1.225–1.275B revenue, a 39.5–40.5% non-GAAP
+operating margin and $4.05–4.35 non-GAAP EPS** (8/11 release). Coverage on 10/26 again cites the CEO's "sold out through
+early 2029" (24/7 Wall St). It has **$1.07B of net cash** and $300M of TTM FCF (stockanalysis 10/28). The price is the
+catch: **41× forward earnings, 26× trailing sales**, $81B market cap. The stock trades as a high-beta proxy for
+AI-capex *funding* (it fell −11.5% on 10/22 with no company news). It is the best business of the three optical names
+and the hardest to buy under the 2:1 / 1.5-ATR rule.
+
+### Chart & technicals — `levels.py LITE` (quote 2026-10-28 10:52 ET)
+```
+LITE  $887.35 (2026-10-28 10:52 ET); last daily bar 2026-10-28 close $887.35
+  20/50/200-DMA  939.04 / 921.30 (falling) / 795.70 (rising)   price vs 50 -3.7%, vs 200 +11.5%
+  RSI(14) 48.7   ATR(14) $67.52 = 7.6% a day   52-wk 184.20–1,143.00 (-22% from the high)
+  Trend: above a rising 200-DMA
+  Chase guard: ok
+  Next report: 2026-11-05 after the close (6 sessions; EPS est. 3.82)   ✓ outside the buy blackout
+  Swing support below: 881.23, 854.62, 845.00   resistance above: 897.00, 970.32, 998.50
+```
+- **Trend:** above a 200-DMA that rises ≈ $2.9 a day, and below a falling 50-DMA. The two-session close under the
+  200-DMA (10/22–10/23) was reclaimed in one day. That is a shakeout, but not yet a higher-low structure: the last swing
+  low (736) is far below the prior one (881, 9/28).
+- **levels.py blind spot:** the **10/22–10/23 lows ($746.23 / $736.01)** are not listed because the swing finder needs
+  5 bars on each side. They are the real nearest major support under the 845–855 May lows.
+- **Levels:** support 881.23 · 854.62 · 845.00 · 818.89 · 795.7 (200-DMA) · 787/784 (8/11, 8/24, now broken) ·
+  **736.01** · 680.43 · 650.82 · 594.84. Resistance **897.00** · 921 (50-DMA) · 939 (20-DMA) · 970.32 · 998.50–1,002 ·
+  1,026.76 · 1,049.53 · 1,085.68 · 1,143.00.
+- **Volume:** 10/22 down 6.16M, 10/26 up 6.06M, 10/27 up 5.56M. The bounce had real volume, unlike the 10/15 entry's
+  "distribution".
+- Chart: `/tmp/claude-1000/-home-waelas-wael-amana-amana-assistant/cf7235bd-03e5-456e-8948-a8c2229a57bd/scratchpad/charts/LITE.png`.
+  It shows the wick through the 200-DMA and the V back into the 881–897 band, under a rolling 20/50.
+
+### Zone checks — `levels.py LITE --zone … --size 190 --sleeve 3426` (10:52 ET data)
+```
+# 1. 200-DMA + 8/11–8/24 lows (the old "best support"), stop under the 7/7 low, T1 = 7/23 swing high
+  Setup: zone 784.00–800.00, stop 680.00, T1 897.00
+    at low     784.00: R/R 1.09:1, stop 1.54 ATR (13.3%)   ✘ R/R < 2
+    at mid     792.00: R/R 0.94:1, stop 1.66 ATR (14.1%)   ✘ R/R < 2
+    at high    800.00: R/R 0.81:1, stop 1.78 ATR (15.0%)   ✘ R/R < 2
+    size $190 ≈ 0.2399 sh at the mid; risk to stop $26.87 = 0.8% of $3,426   ✓ ≤ 2%
+# 2. May lows 845–855, stop under the 10/23 low
+  Setup: zone 845.00–855.00, stop 735.00, T1 897.00
+    at low     845.00: R/R 0.47:1, stop 1.63 ATR (13.0%)   ✘ R/R < 2
+    at mid     850.00: R/R 0.41:1, stop 1.70 ATR (13.5%)   ✘ R/R < 2
+    at high    855.00: R/R 0.35:1, stop 1.78 ATR (14.0%)   ✘ R/R < 2
+# 3. Same, generous T1 (skips 897 and both falling MAs)
+  Setup: zone 845.00–855.00, stop 735.00, T1 970.32
+    at low     845.00: R/R 1.14:1, stop 1.63 ATR (13.0%)   ✘ R/R < 2
+    at high    855.00: R/R 0.96:1, stop 1.78 ATR (14.0%)   ✘ R/R < 2
+```
+**No zone passes.** The arithmetic: 1.5 ATR = **$101**, so T1 must sit **≥ $203 (3 ATR)** above the zone top. Below
+**$675** even the stop band is empty, because 1.5 ATR would exceed the 15% hard exit.
+
+**What would create a zone:**
+- **(a)** A post-report close above **$1,143** (the record; no overhead swing high), with a measured-move T1 written
+  first and the chase guard passing.
+- **(b)** ATR falls to ≈ 4% (≈ $35) and a new base forms with ≥ 3 ATR to the next swing high.
+
+Neither is likely before mid-November.
+
+### Earnings preview (section A) — not held
+1. **Date/time:** Thu **11/5 after the close**, webcast 5:00 ET (Lumentum IR, 10/5). COHR reports 11/4 AMC (24/7 Wall St
+   via search, unverified), which gives a read-across the day before.
+2. **Consensus:** **$1.25B revenue / $4.22 EPS** (MarketBeat, fetched 10/28; search summary $4.21). That is the guide
+   midpoint: revenue $1.225–1.275B, non-GAAP op margin 39.5–40.5%, EPS $4.05–4.35 (8/11). It has beaten EPS in 6 of the
+   last 8 quarters (MarketBeat). The metrics that move it are the FQ2 revenue guide, OCS revenue (≥ $100M was expected
+   for FQ1 per the 10/15 entry, not re-fetched) and CPO timing. Alpha Vantage's 3.82 is stale.
+3. **Implied move:** **±13.33%** (weekly, 11/6 expiry; monthly ±17.25%; optionslam 10/28) ≈ **±$118 → $769–1,006**. On
+   a $190 starter that is ≈ $25. In August the implied move was 14.16% and the close-to-close +13.63%.
+4. **Scenarios:**
+
+   | Scenario | What has to happen | Likely reaction | Action written now |
+   |---|---|---|---|
+   | Bull | FQ1 > $1.275B, FQ2 guide clearly up, OCS/CPO pulled in | Gap +10–15% into $998–1,027 | No buy into the gap. A zone needs a close > $1,143 or a base with ≥ 3 ATR to T1 |
+   | Base | In line, guide ≈ +10% q/q | ±7%, chop $820–950 | No zone; stays WATCH |
+   | Bear | Miss, or a flat FQ2 guide | Gap −13% or worse, under the 200-DMA (≈ $815 by 11/6) toward 736/680 | Under the 200-DMA there are no fresh longs. Wait for a base and a reclaim |
+
+5. **History** (close-to-close / opening gap, levels.py Yahoo bars): 11/5/25 **+23.6% / +16.0%** · 2/4/26 **+7.0% /
+   +8.7%** · 5/6/26 **−5.1% / +0.1%** · 8/12/26 **+13.6% / +9.6%**. Three of four were up. (The 11/4/25 and 2/3/26
+   report dates are inferred from the gaps.)
+6. **Decision:** not held. No pre-report day is open: the client freeze runs to 11/2 and the blackout covers 11/2–11/5.
+   Run `levels.py LITE` after the **11/6 close**. 11/6 is a jobs-report morning, so the earliest buy is the 11/6
+   afternoon, realistically **11/9**.
+
+### Thesis scorecard (section B)
+| Pillar (falsifiable) | Expected | Status (dated) | Trend |
+|---|---|---|---|
+| FQ1 revenue ≥ guide low | ≥ $1.225B | consensus $1.25B (MarketBeat 10/28); report 11/5 | pending |
+| Non-GAAP op margin in the 39.5–40.5% guide | ≥ 39.5% | FQ4 36.6% (10/15 entry); test 11/5 | improving (guided) |
+| Demand sold out into 2029 | CEO 10/8–10/9 | restated in 24/7 coverage 10/26 | stable |
+| No new equity; net cash ≥ $1B | yes | net cash $1.07B, shares +7.2% y/y (stockanalysis 10/28); no 8-K/S-3 since 10/6 (EDGAR) | stable |
+| Multiple holds while growth delivers | ≈ 39× FY27 (10/15) | forward P/E 41.1 (10/28) | richer |
+
+**Thesis-break exits:** FQ1 revenue under $1.225B · a FQ2 guide flat or down q/q · a change to the NVIDIA purchase
+commitment. **Conviction:** Med. Up if FQ2 guides ≥ +10% q/q with margins in range; down on a guide that only flattens.
+
+### Fundamentals (stockanalysis statistics, 2026-10-28 11:04 ET, unless noted)
+- Market cap **$81.07B**, EV $80.00B. **Forward P/E 41.1**, P/S 26.5, forward P/S 12.6.
+- TTM revenue $3.01B, GM 44.2%, GAAP op margin 17.8%, FCF $300.1M. **Net cash $1.07B** (cash $2.74B, debt $1.67B).
+  Shares 90.58M, **+7.18% y/y**.
+- **Data oddity:** stockanalysis shows a **TTM net loss of −$6.94B (EPS −$92.96)**. The page does not explain it.
+  Probably a non-cash mark on the converts or the NVIDIA preferred, but this is **unverified**. GAAP P/E is not
+  meaningful.
+- FQ1'27 guide (8/11 release, via Stocktitan): revenue $1.225–1.275B, non-GAAP op margin 39.5–40.5%, EPS $4.05–4.35.
+
+### News & catalysts (last 30d / next 90d)
+- 2026-10-28 — neutral — +2.4% to $887; today's high 897.99 is at the 7/23 swing high (897.00).
+- 2026-10-26 — confirming (sentiment) — **StoneX initiates Buy, PT $1,200**. LITE +8% intraday, AAOI and COHR +6%
+  (24/7 Wall St, 10/26). The article blames the prior slide on "questions about how customers will fund large AI
+  infrastructure projects".
+- 2026-10-22 — neutral (sector) — optics sell-off "as tech selloff deepens": COHR −12%, AAOI −10%, LITE −9% intraday
+  (24/7 Wall St headline, 10/22); LITE closed **−11.5%**. It followed Meta's 10/21 print (Q3 capex $34.9B > operating
+  cash flow; FY26 capex $135–145B).
+- 2026-10-05 — neutral — report date set: 11/5 AMC.
+- **Next:** 10/28 FOMC + MSFT/GOOGL · 10/29 PCE + AMZN · 11/4 COHR · **11/5 LITE** · 11/6 jobs.
+
+### Positioning & sentiment
+- Short interest **7.45M = 8.26% of float** (up from 6.51M), 1.66 days (stockanalysis 10/28; settlement date not shown).
+- Analysts **Buy (28)**, average PT **$1,166.28** (stockanalysis 10/28). StoneX $1,200 (10/26).
+- Insiders: a run of Form 144s and Form 4s from 9/15 to 10/2, none since (EDGAR 10/28).
+- Crowded, high-beta AI optics. A ±13% implied move on an $81B name is the crash profile the client wants to avoid.
+
+### What would make me wrong
+- A clean beat-and-raise that never pulls back. Acceptable: missing a winner costs less than a 2-ATR stop-out.
+- A weekly close under the 200-DMA after the report, or a FQ2 guide that flattens, ends the thesis for this cycle.
+- The 10/22–10/23 shakeout could prove to be the low. Even then, the rule needs a base and room to T1, not a hope.
+
+### Sources
+- `levels.py LITE` and zone checks, Yahoo chart API, quote 2026-10-28 10:52 ET. Chart PNG above
+- [Lumentum IR: FQ1'27 reporting date](https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-Reporting-Date-for-Fiscal-First-Quarter-2027-Financial-Results/default.aspx) — 2026-10-05 (via search, fetched 10/28)
+- [Stocktitan: FQ4'26 results and FQ1'27 outlook](https://www.stocktitan.net/news/LITE/lumentum-announces-fourth-quarter-and-full-fiscal-year-2026-k3q8m0wxnl6c.html) — 2026-08-11 (via search)
+- [MarketBeat: LITE Q1 2027 earnings estimates](https://www.marketbeat.com/earnings/reports/2026-11-5-lumentum-holdings-inc-stock/) — fetched 10/28
+- [optionslam LITE](https://www.optionslam.com/earnings/straddle/LITE) — fetched 10/28
+- [stockanalysis LITE statistics](https://stockanalysis.com/stocks/lite/statistics/) — 10/28 11:04 ET
+- [24/7 Wall St, 10/26: Lumentum jumps 8% as StoneX starts coverage](https://247wallst.com/investing/2026/10/26/lumentum-jumps-8-as-stonex-starts-coverage-with-1200-target-applied-optoelectronics-and-coherent-climb-6/)
+- 24/7 Wall St, 10/22: "Optics Stocks Tumble as Tech Selloff Deepens Ahead of Earnings" (headline/teaser only; URL https://247wallst.com/investing/2026/10/22/optics-stocks-tumble-as-tech-selloff-deepens-ahead-of-earnings-coherent-tumbles-12-applied-optoelectronics-drops-10-lumentum-falls-9)
+- EDGAR filing list, CIK 1633978 — fetched 10/28
+- [Gotrade, 10/23: Meta Q3 capex/FCF](https://www.heygotrade.com/en/news/meta-meta-stock-news-october-23-2026/) (via search summary)
 
 ---
 

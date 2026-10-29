@@ -6,28 +6,23 @@ and is invoked with `/stock-desk` (or automatically when a request is about a st
 ```
 .claude/skills/stock-desk/   research/review skill: SKILL.md + references/ + scripts/
 .claude/skills/market-move/  shock playbook: /market-move on a big up/down day → decision card
-PLAN.md                      the living investment plan (tiers, profit ratchet, reserve ladder)
+PLAN.md                      the investment plan, v6 (2026-10-29): VOO 35% + dip rule + eight October rules
+archive/                     retired plans (v3 with its full history)
 portfolio/holdings.csv       open positions: ticker,shares,avg_cost,theme,opened,notes
-portfolio/transactions.csv   every fill: date,ticker,side,shares,price,fees,note
+portfolio/transactions.csv   every fill: date,ticker,side,shares,price,fees,note (dip trades tagged DIP)
 portfolio/cash.txt           free cash in the account
-portfolio/levels.csv         per-name stop, ladder stage done, catalyst, rating (edit freely)
-portfolio/peak.txt           sleeve high-water mark for the circuit breaker
-research/                    one file per ticker, TICKER.md (dated entries, newest first)
+portfolio/levels.csv         per line: kind (core/legacy/dip), stop, tp, opened, exit_by, theme
+portfolio/peak.txt           high-water mark for the account brake (−15%)
+research/                    one file per ticker, TICKER.md (dated entries and dip studies, newest first)
 journal/                     dated reviews, trade logs, lessons
 ```
 
-`theme` in holdings.csv uses the layer names from `references/ai-race-map.md`
-(e.g. `Compute`, `Power generation`, `Foundry`, `Platforms`) or `Non-AI` for anything else.
-
-Quick report (prices are passed in because there is no live feed):
+Daily scan and weekly report (Yahoo prices; the earnings calendar from Alpha Vantage, key in
+`~/.config/amana-desk/alphavantage.key`):
 
 ```
-python3 .claude/skills/stock-desk/scripts/portfolio_report.py --prices BE=xx.xx INTC=xx.xx
+python3 .claude/skills/stock-desk/scripts/levels.py MU AMD BE ...   # technicals + the "Dip rule (v6)" line
+python3 .claude/skills/stock-desk/scripts/levels.py --report        # v6 checks: SL/TP, slots, cash floor, themes, brakes
 ```
 
-Shock day:
-
-```
-/market-move            # or just: "market is down 4%, what do I do"
-python3 .claude/skills/market-move/scripts/shock_playbook.py --prices ... --day-move -4 --spx-now .. --spx-high .. --vix ..
-```
+Shock day: `/market-move` (or just "market is down 4%, what do I do"). Its v3 engine `shock_playbook.py` is retired.

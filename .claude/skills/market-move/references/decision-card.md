@@ -1,29 +1,25 @@
-# Decision card — template
+# Decision card — template (plan v6)
 
-**[DATE TIME] · SHOCK: <class> · S&P <±x.x%> today, <−x.x%> from high · VIX <nn> · cause: <one line, sourced>**
-**Verdict: <DO NOTHING | DEPLOY $x | TRIM x | EXIT x> — <one sentence why>**
+**[DATE TIME] · SHOCK: <class> · S&P <±x.x%> today, <−x.x%> from the record · VIX <nn> · cause: <one line, sourced>**
+**Verdict: <DO NOTHING NOW | SELL x (thesis break) | SCAN AT THE CLOSE> — <one sentence why>**
 
-## Do now (mechanical, from PLAN.md)
-| # | Action | Size | Limit / condition | Rule |
-|---|---|---|---|---|
-| 1 | Buy VOO | $xxx | ≤ $xxx.xx | §5 tranche 1 |
-| 2 | Sell ⅓ BE | 0.32 sh ≈ $xx | market | §3 +40% |
+## What the app's stops and take-profits did / will do
+| Line | Px | P&L | SL | TP | Distance to SL | Status |
+|---|---|---|---|---|---|---|
 
-## Reserve
-Cash $xxx (xx%). Unlocked: $xxx. After actions: $xxx (xx%). Next tranche unlocks at S&P <level> (−15%).
-
-## Holdings — status
-| Ticker | Px | P&L | Weight | Status | Level that changes it |
+## Tonight's scan (signals are read on the close)
+| Name | % from the 20-session high close | 200-DMA filter | Earnings | Theme count | Would we take it? |
 |---|---|---|---|---|---|
+Slots n/5 · $400 buys that fit above the $150 floor: n · brakes: account $x above $3,212.87 · dip trades net $x (pause −$400)
 
 ## Do NOT
-- …
+- buy intraday · lower a stop · re-buy a name that stopped today · sell VOO
 
 ## Macro or mine?
-<2 sentences: which holdings' theses are actually touched by the cause, if any>
+<2 sentences: which holdings' studies name this cause as a thesis break, if any>
 
 ## Changes the call in 48h
-- <e.g. S&P closes below 6,100 → tranche 2 / VIX back under 20 → resume normal cadence>
+- <e.g. a close under $3,212.87 → buys pause two weeks / a holding's thesis-break event confirmed → sell at the open>
 
 ## Challenge (only if the client's instinct broke a rule)
-<rule, number, past parallel; then "your call — say the word and I log it as an OVERRIDE">
+<rule number from PLAN v6 §4, its October price; then "your call — say the word and I log it as an OVERRIDE">

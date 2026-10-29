@@ -44,7 +44,8 @@ chart page; state the source and date):
 - One-paragraph thesis: why this stock, why now, what the market is missing or under-weighting.
 - **Invalidation**: a price level *and* a fundamental event, either of which exits the position.
 - **Target**: technical (measured move/prior high) and fundamental (valuation re-rate) — use the lower.
-- **R/R** = (target − entry) / (entry − stop). Recommend only if ≥ 2.0.
+- **R/R** = (target − entry) / (entry − stop). Plan v3 required ≥ 2.0; under plan v6 it is information only (the entry is
+  the dip rule, PLAN §2).
 
 ## 6. Verdict
 Fill the verdict table. Choose exactly one action: BUY / ADD / HOLD / TRIM / EXIT / WATCH (with the

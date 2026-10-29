@@ -1,17 +1,17 @@
 # Investor profile — Wael
 
-Last updated: 2026-10-16. Update this file when any number below changes.
+Last updated: 2026-10-29 (plan v6). Update this file when any number below changes.
 
 ## Capital structure
 - **Savings split (client, 2026-10-03): ≈ 70% physical holdings (recorded earlier as physical gold), ≈ 20% cash,
   ≈ 10% the Amana stock sleeve.** The first two are the vault — the safety base, never managed or tapped here.
-  A total loss of the sleeve would cost ≈ 10% of savings; plan v3 caps "every stop hit at once" at 8% of the sleeve
-  (≈ 0.8% of savings).
+  A total loss of the sleeve would cost ≈ 10% of savings. Under plan v6 (10/29) a full stop on one $400 dip trade costs
+  ≈ $102 (≈ 3% of the sleeve); the client accepted that risk for faster profits.
 - Stock sleeve contributions: **≈ $200 / month** (confirmed from statement: $200 deposits on
   2026-07-01 and 2026-09-01; earlier months ranged $100–$450). The October $200 was not on the 10/2 statement;
   a $100 referral bonus landed 10/1.
-- Sleeve size (10/16 09:44 ET, statement to 10/15): **$3,474.75**, cash $712.11 (20.5%); peak $3,779.85, breaker $3,402.
-  Peak $3,779.85 (10/2); circuit breaker $3,402. Statement archive: `portfolio/statements/`.
+- Sleeve size (10/29 11:43 ET, statement to 10/26): **$3,426**, cash $1,239.59 (36%). Peak $3,779.85 (10/2); the v6
+  account brake is $3,212.87 (−15%). Statement archive: `portfolio/statements/`.
 - **Order types (client, 2026-10-07): no limit orders as far as the client knows.** Each position carries one broker
   SL and one TP, and both close the WHOLE line. So partial trims (⅓ ladder, trade-around) and buys at a level are
   done as: price alert at the level → manual market order when it fires. Never write "limit order" in a
@@ -85,14 +85,29 @@ Last updated: 2026-10-16. Update this file when any number below changes.
   trails the S&P (20 yrs: $230–240k vs $251k; v4 $248–254k; 50/50 $151–169k). The desk recommended v4; the client chose
   **v3 to 12/31, then decide** (PLAN §10: zero overrides and beating VOO from 10/16, or v4 on 2027-01-04). Every override
   from 10/19 now counts against v3 itself: name it as such when one is proposed.
+- **2026-10-22 → 10-23**: the circuit breaker fired (MU stopped, account $3,386.88). The night before the halving, the client
+  proposed removing the AMD stop and calling the position a "long-term investment" (−7%, 2% above its stop). Desk: no. That is a
+  stop lowered to zero, an OVERRIDE that fails §10 test 1, and the disposition effect: sell winners early, keep losers. The
+  hold-forever bucket is VOO. Watch for: rule-softening proposals arriving at the point of maximum pain.
+- **2026-10-29**: pushed again for looser rules ("lower the stop, ride the upswings"; "BE and Intel bought on 10/24 would
+  have made money"). This time the desk tested the claim in two regimes, not just refused it. The client adopted a written
+  dip rule (PLAN §3c), live from 11/2 against the desk's 11/10. Pattern: rule pressure follows a week when skipped trades
+  bounced. Answer with tests and written rules, and keep the line on lowering existing stops.
+- **2026-10-29 (later)**: the desk showed that v3's entry gate would have blocked all 7 post-reset winners. The client
+  dropped v3 and adopted **plan v6**: VOO 35%, the dip rule as the only entry, 5 slots × $400 (above the desk's 4 × $200),
+  SL −25% / TP +25% / 30 sessions, and eight October rules he called "the fruits of learning" (no lowered stops, no
+  same-session re-buys, SL+TP always set, signal-only dips, ≤ 2 per theme, size/slot/cash caps, earnings blackout, a study
+  first). Hold him to the eight rules. The size is his accepted risk; don't re-argue it.
+
 ## How to talk to this client
 - **Role (client, 2026-10-07): greedy and logical, and harsh.** Greedy: push to keep winners running and hunt the
   best R/R setups; call out profit left on the table. Logical: every call rests on levels, rules and numbers. Harsh:
   the client says they get excited easily, so when excitement drives a request (FOMO, "it seems down", chasing a spike,
   trading between checks), say so bluntly, name the rule it breaks and its past cost, and refuse to soften it.
-  Accepted plan: v3 with 5–10 buys/month (client agreed to the summary 2026-10-07).
+  Accepted plan: **v6** (2026-10-29): the dip rule, 5 × $400, the eight October rules (PLAN.md).
 - Quantitative, direct, ranked. One clear recommendation per decision.
-- Always show: entry zone, invalidation, target, size as % of sleeve, timeframe.
+- Always show (v6): the signal line, the $400 size, SL −25% and TP +25% prices, the 30-session exit date, slots and cash
+  after the buy.
 - Explain the *why* in a few lines — the client is learning to invest intentionally and wants
   reasoning they can reuse.
 - Small account ⇒ few names, fractional shares, low turnover. Never recommend options, leverage,

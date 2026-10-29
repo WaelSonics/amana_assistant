@@ -3,8 +3,173 @@
 One file per ticker; newest entry first. Each entry is dated; numbers are as of that date.
 
 Entries:
+- 2026-10-28 (deep dive)
 - 2026-10-19 (update)
 - 2026-10-09
+
+---
+
+## AAOI — Applied Optoelectronics — deep dive 2026-10-28
+
+**Verdict:** WATCH, off the buy list for this cycle · **Conviction:** Low. Two rules block it before any zone math:
+- **It is 31.6% under a rising 200-DMA**, so no fresh longs.
+- **Its ATR is 10.1%.** At any price under **$78.60**, 1.5 ATR exceeds the 15% hard exit, so no stop can satisfy both rules.
+
+The 10/9 zone is long gone. The **$82 invalidation broke on 10/16**, the levels.py "support" of $76.01 broke on 10/22
+(low $66.28), and the 50-DMA has crossed under the 200-DMA. The business still burns cash: **TTM FCF −$900M**, with
+shares **+49% y/y**.
+
+| | |
+|---|---|
+| Price (date) | **$77.78** (levels.py, 2026-10-28 10:52 ET). Cross-check $78.75 (stockanalysis, 11:05 ET) |
+| Entry zone | **None passes**: below the 200-DMA, and the stop band is empty at 10% ATR (checks below) |
+| Invalidation (stop) | n/a, no position. Thesis-level: a 4th ATM / equity filing, 1.6T qualification still unconfirmed at the Q3 report, a GM guide < 29% |
+| Target 1 / 2 | n/a. Nearest real resistance: 81.32 (10/21 high) · 83.7–85.0 (10/15) · 91.5–97 (broken Jul/Sep lows) · 100.7 (50-DMA) · 110.74 (levels.py's first swing high) · 113.8 (200-DMA) |
+| Reward/risk (T1) | Not computable inside the rules. The best-looking test (T1 110.74) shows 3.7–4.4:1, but the stop fails 1.5 ATR and 15% at every edge |
+| Size | n/a. If it ever qualifies: optical slot (one of LITE/AXTI/AAOI); high-beta name → ≤ $190 |
+| Timeframe | Quarters (the 800G/1.6T ramp) |
+| Next earnings | **2026-11-05 after the close**, call 4:30 ET (**company PR 10/15**: now confirmed; levels.py 6 sessions). Blackout **11/2–11/5** |
+
+### What changed since the 10/19 update
+- **A new low.** 10/22 **−12.0%** to $68.07 (14.1M shares), low **$66.28**. 10/26 low $66.51, a near-double low. Then
+  10/26 +6.6% and 10/27 +7.0%, so today's $77.78 is **+15% from the 10/23 close**. It has not made a higher high: the
+  10/21 high of $81.32 is untouched.
+- **The death cross happened.** 50-DMA **$100.73** (falling fast: $112.86 ten sessions ago) is now under the 200-DMA
+  **$113.76** (rising). The 20-DMA ($92.56) is below both, a fully bearish stack.
+- **Report date confirmed by the company:** Thu 11/5 AMC (PR, 10/15 4:10 PM). The 10/19 entry had it as an estimate.
+- **Analysts:** Needham cut its PT **$190 → $170** (Buy, reported 10/27). B. Riley **$109 → $92** (Neutral, 10/15).
+- **No new ATM since the 10/5 completion:** no 424B5 or S-3 since 9/1 (EDGAR, fetched 10/28). Five **Form 4s filed
+  10/26** were not parsed. A 13G/A was filed 10/27.
+- ATR fell slightly, from $9.07 (11.8%) to $7.86 (10.1%), but is still above the 10% line that makes the stop band
+  impossible.
+
+### Thesis (unchanged, weaker)
+AOI builds the transceivers (400G/800G now, 1.6T starting) that link AI servers, plus CATV amplifiers, mostly in Texas.
+Q2'26 revenue was **$191.9M, +86.3%** (MarketBeat via DailyPolitical, 10/27). It guides Q3 to **$255–290M** with EPS
+**$0.11–0.26**. On the Q2 call it said it would be the **fourth 1.6T supplier qualified** at a major hyperscaler
+"in 2–3 weeks", with **> $70M** of 1.6T revenue in Q4 (Yahoo Q2 call highlights, via search). **No October confirmation
+of that qualification was found.** The funding model is the problem. TTM free cash flow is **−$900.5M** on $768.6M of
+capex. Net cash is only **$199.6M** after ≈ $1.65B of 2026 ATMs, and shares are **+49.3% y/y** (stockanalysis 10/28).
+Another raise is more likely than not before FCF turns.
+
+### Chart & technicals — `levels.py AAOI` (quote 2026-10-28 10:52 ET)
+```
+AAOI  $77.78 (2026-10-28 10:52 ET); last daily bar 2026-10-28 close $77.79
+  20/50/200-DMA  92.56 / 100.73 (falling) / 113.76 (rising)   price vs 50 -22.8%, vs 200 -31.6%
+  RSI(14) 40.1   ATR(14) $7.86 = 10.1% a day   52-wk 18.50–233.67 (-67% from the high)
+  Trend: BELOW a rising 200-DMA  → protocol: no fresh longs until it reclaims it
+  Chase guard: ok
+  Next report: 2026-11-05 after the close (6 sessions; EPS est. 0.08)   ✓ outside the buy blackout
+  Swing support below: 76.01   resistance above: 110.74, 116.90, 128.35
+```
+- **levels.py blind spot, and it matters here:** "Swing support below: 76.01" (the 7/29 low) is **already broken**. The
+  10/22 low of **$66.28** and the 10/26 low of **$66.51** are not listed, because the swing finder needs 5 bars on each
+  side. The resistance list (first entry 110.74) also skips the nearer real levels: 81.32 (10/21 high), 85.02 (10/15
+  high), 91.5 (7/17 low), 93.6–96.96 (Sept lows) and the 50-DMA at 100.7.
+- **Structure:** lower highs since May (233.7 → 161.0 → 131.2) and lower lows (76.0 in July → 66.3 in October). The
+  bounce is +17% from the low on falling volume (14.1M on 10/22 down; 11.3M and 9.4M on the 10/26–10/27 up days).
+- Chart: `/tmp/claude-1000/-home-waelas-wael-amana-amana-assistant/cf7235bd-03e5-456e-8948-a8c2229a57bd/scratchpad/charts/AAOI.png`.
+  It shows a fully bearish MA stack and price far under all three averages.
+
+### Zone checks — `levels.py AAOI --zone … --size 190 --sleeve 3426` (10:52 ET data)
+```
+# 1. The October double low 66.28/66.51, stop ≈ 1.3–1.5 ATR under, T1 = 10/21 high
+  Setup: zone 66.50–68.00, stop 56.50, T1 81.32
+    at low      66.50: R/R 1.48:1, stop 1.27 ATR (15.0%)   ✘ R/R < 2; stop < 1.5 ATR; stop > 15% (hard exit)
+    at mid      67.25: R/R 1.31:1, stop 1.37 ATR (16.0%)   ✘ R/R < 2; stop < 1.5 ATR; stop > 15% (hard exit)
+    at high     68.00: R/R 1.16:1, stop 1.46 ATR (16.9%)   ✘ R/R < 2; stop < 1.5 ATR; stop > 15% (hard exit)
+    size $190 ≈ 2.8253 sh at the mid; risk to stop $30.37 = 0.9% of $3,426   ✓ ≤ 2%
+# 2. Same zone, T1 = levels.py's first swing high (generous; skips five nearer levels)
+  Setup: zone 66.50–68.00, stop 56.50, T1 110.74
+    at low      66.50: R/R 4.42:1, stop 1.27 ATR (15.0%)   ✘ stop < 1.5 ATR; stop > 15% (hard exit)
+    at mid      67.25: R/R 4.05:1, stop 1.37 ATR (16.0%)   ✘ stop < 1.5 ATR; stop > 15% (hard exit)
+    at high     68.00: R/R 3.72:1, stop 1.46 ATR (16.9%)   ✘ stop < 1.5 ATR; stop > 15% (hard exit)
+```
+**No zone passes, and none can at this volatility.** 1.5 ATR = $11.79, which is more than 15% of any entry under
+$78.60. Even a far T1 does not rescue the stop.
+
+**What would create a zone (all three are needed):**
+- **(1)** A close back above the **200-DMA (≈ $116 by 11/6)**, +49% from here.
+- **(2)** ATR under ≈ 9% of price.
+- **(3)** A base with ≥ 3 ATR (≈ $24 today) to the next resistance.
+
+That is not a realistic November setup. It is a 2027 question.
+
+### Earnings preview (section A) — not held
+1. **Date/time:** Thu **11/5 AMC**, call 4:30 ET (company PR 10/15; levels.py agrees).
+2. **Consensus, and it conflicts:** revenue **$268.1M / EPS $0.14** (MarketBeat) vs **$270.3M / $0.28** (Earnings
+   Whispers), both via search on 10/28. Guide $255–290M / EPS $0.11–0.26. Alpha Vantage's 0.08 matches neither. The
+   metrics that move it: **1.6T shipments and the Q4 1.6T number (> $70M)**, GM vs 29%, and any word on funding or an ATM.
+3. **Implied move:** **±19.10%** (weekly, 11/6 expiry; monthly ±22.94%; optionslam 10/28) ≈ **±$14.9 → $63–93**. On a
+   $190 starter that is ≈ $36 at stake. That is half the account's $69 risk budget on one gap, and larger than any stop
+   distance the rules allow.
+4. **Scenarios:**
+
+   | Scenario | What has to happen | Likely reaction | Action written now |
+   |---|---|---|---|
+   | Bull | Q3 ≈ $290M, 1.6T shipping and the Q4 1.6T ≥ $70M reaffirmed, GM ≥ 30%, no new ATM | Gap +20–30% into $91.5–97 (broken Sept lows), still under the 50- and 200-DMA | No buy: still below the 200-DMA. Re-run weekly; a qualifying base is weeks away |
+   | Base | Mid-range revenue, vague 1.6T timing | ±10%, chop $66–85 | Nothing |
+   | Bear | Miss, 1.6T slip, or an ATM/equity filing | Break of $66.28 toward the $50s | Nothing. A new ATM is a thesis break: drop it from the watchlist |
+
+5. **History** (close-to-close / opening gap, levels.py Yahoo bars): 11/7/25 **−1.8% / −14.1%** · 2/27/26 **+56.9% /
+   +22.8%** · 5/8/26 **−5.5% / +10.3%** · 8/7/26 **+9.2% / +14.7%**. Opening gaps of −14% to +23%. Two of four reversed
+   intraday by 12–16 points. (11/6/25 and 2/26/26 report dates inferred from the gaps.)
+6. **Decision:** not held, nothing to decide. Run `levels.py AAOI` after the **11/6 close**. Even if a level appears,
+   it must first clear the 200-DMA rule and the one-optical-name rule.
+
+### Thesis scorecard (section B)
+| Pillar (falsifiable) | Expected | Status (dated) | Trend |
+|---|---|---|---|
+| 1.6T qualified and shipping; Q4 1.6T > $70M | Q2 call (8/6): "2–3 weeks" | **no confirmation found** by 10/28 | weakening |
+| Non-GAAP GM ≥ 29% | 29–30.5% guide | TTM GAAP 28.9% (stockanalysis 10/28); Q3 test 11/5 | flat |
+| No new equity before FCF turns | none | no 424B5/S-3 since 9/1 (EDGAR 10/28); TTM FCF −$900M, net cash $199.6M | weakening |
+| Q3 revenue inside $255–290M | ≥ $255M | test 11/5 | pending |
+| US-made premium vs Chinese transceivers | policy tailwind | no new policy news this session | unverified |
+
+**Thesis-break exits:** a 4th ATM or any equity/convert filing · the 1.6T qualification not confirmed at Q3 · a GM guide
+< 29%. **Conviction:** Low. Up only on confirmed 1.6T revenue *and* a funding plan that is not new shares.
+
+### Fundamentals (stockanalysis statistics, 2026-10-28 11:05 ET, unless noted)
+- Market cap **$7.13B**, EV $6.94B. Forward P/E 34.2, P/S 11.7, **forward P/S 3.8**.
+- TTM revenue $596.0M, GM 28.9%, op margin **−11.3%**. Operating cash flow −$131.8M, capex −$768.6M, **FCF −$900.5M**.
+- **Net cash $199.6M** (cash $499.7M, debt $300.1M). Shares 90.60M: **+49.3% y/y, +7.35% q/q**.
+- Q2'26: revenue $191.92M (+86.3%), EPS $0.06 vs $0.02 consensus. Analysts expect $0.55 FY EPS (MarketBeat via
+  DailyPolitical, 10/27).
+
+### News & catalysts (last 30d / next 90d)
+- 2026-10-27 — breaking (sentiment) — **Needham cuts PT to $170 from $190**, keeps Buy (DailyPolitical/MarketBeat,
+  10/27).
+- 2026-10-26 — neutral — +6.6% with the optics rebound after StoneX's LITE initiation (24/7 Wall St, 10/26). Five Form 4s
+  filed (EDGAR).
+- 2026-10-22 — neutral (sector) — **−12.0%** close, new low $66.28, in the post-Meta optics sell-off (24/7 Wall St
+  headline 10/22: AAOI −10% intraday).
+- 2026-10-15 — confirming (date) — company sets the Q3 call for 11/5, 4:30 ET. B. Riley cuts PT to $92.
+- 2026-10-12 — neutral — CFO Murry sold 4,000 shares at $102.87 (10b5-1). 56,887 insider shares ($6.58M) sold in 90
+  days, no buys reported (DailyPolitical, 10/27).
+- **Next:** 11/4 COHR · **11/5 AAOI** · any ATM/S-3 filing (watch EDGAR).
+
+### Positioning & sentiment
+- Short interest **13.87M = 16.0% of float**, 2.07 days (stockanalysis 10/28; settlement date not shown).
+- Analysts conflict: **Buy (6), PT $156** (stockanalysis 10/28) vs **Hold, PT $143** (3 Buy / 2 Hold / 1 Sell; MarketBeat
+  via DailyPolitical 10/27). Weiss "sell (d−)" (10/21).
+- Beta 3.85 (MarketBeat). One of the most crowded, highest-beta optical names, with leveraged single-stock ETFs (10/9
+  entry). The profile behind the −67% drawdown from May.
+
+### What would make me wrong
+- 1.6T confirmed with a big Q4 number and no ATM could squeeze a 16%-short stock +30% in a day. The rules would still miss
+  it, and that is acceptable for a cash-burning, diluting name.
+- The thesis is wrong outright if another equity raise lands before FCF turns, or 1.6T slips again.
+
+### Sources
+- `levels.py AAOI` and zone checks, Yahoo chart API, quote 2026-10-28 10:52 ET. Chart PNG above
+- [Finviz/PR Newswire, 10/15: AOI announces date of Q3 2026 call](https://finviz.com/news/403299/applied-optoelectronics-announces-date-of-third-quarter-2026-financial-results-conference-call) — fetched 10/28
+- [DailyPolitical, 10/27: Needham lowers AAOI target](https://www.dailypolitical.com/2026/10/27/applied-optoelectronics-nasdaqaaoi-stock-price-target-lowered-at-needham-company-llc.html) — fetched 10/28
+- [stockanalysis AAOI statistics](https://stockanalysis.com/stocks/aaoi/statistics/) — 10/28 11:05 ET
+- [optionslam AAOI](https://www.optionslam.com/earnings/straddle/AAOI) — fetched 10/28
+- [MarketBeat AAOI Q3 estimates](https://www.marketbeat.com/earnings/reports/2026-11-5-applied-optoelectronics-inc-stock/) and [Earnings Whispers AAOI](https://www.earningswhispers.com/epsdetails/AAOI) — via search 10/28 (conflicting consensus)
+- [Yahoo: AAOI Q2 2026 call highlights](https://finance.yahoo.com/markets/stocks/articles/applied-optoelectronics-inc-aaoi-q2-050943160.html) — 1.6T qualification language (via search)
+- [24/7 Wall St, 10/26](https://247wallst.com/investing/2026/10/26/lumentum-jumps-8-as-stonex-starts-coverage-with-1200-target-applied-optoelectronics-and-coherent-climb-6/) · 24/7 Wall St 10/22 headline (see LITE entry)
+- EDGAR filing list, CIK 1158114 — fetched 10/28
 
 ---
 

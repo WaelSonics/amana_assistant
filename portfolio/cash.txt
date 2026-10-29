@@ -1,2 +1,2 @@
-# Free cash (USD), statement 2026-10-01..10-18 (no fills after 10/15): book value 3,513.91 (beginning 3,522.63 + $100 referral - $19 fees - $89.72 realized) less the cost of open positions 2,801.71.
-712.20
+# Free cash (USD): statement 10/26 'beginning value' 3,340.45 + the $100 referral of 10/1 (single-period statements omit it, as on 10/15) = book 3,440.45, less open cost 2,200.86. Matches the app (≈ $3,430 equity, 10/27 11:49 ET).
+1239.59

@@ -3,8 +3,237 @@
 One file per ticker; newest entry first. Each entry is dated; numbers are as of that date.
 
 Entries:
+- 2026-10-28 (deep dive + 11/4 earnings preview + thesis scorecard; not held)
+- 2026-10-21 (stopped out 10/20)
 - 2026-10-19 (update)
 - 2026-10-13
+
+---
+
+## ARM — Arm Holdings plc (ADR) — deep dive 2026-10-28
+
+**Verdict:** WATCH · not held · **no passing zone** · earliest buy **11/5**, and only after the 11/4 report *and* the Qualcomm
+royalty ruling · **Conviction:** Low on the setup. The business is intact, but at a 6.1% daily ATR every real level is
+closer than the 3 ATR a 2:1 trade needs. The binary ruling is still open.
+
+| | |
+|---|---|
+| Price (date) | **$233.35** (levels.py, 2026-10-28 11:07 ET); close $226.60 (10/27); 10/22–10/23 lows **$208.30 / $208.50** |
+| Entry zone | **None passes** (checks below) |
+| Invalidation (stop) | n/a (not held). For any future setup, structure says under the $208.30 double low (≈ $205) · event: a royalty-suspension ruling |
+| Target 1 / 2 | Nearest real resistance **$233.29 → $236.59–239.50** · then $245.87 / $250.20 / the falling 50-DMA $259.98 / $267.69 |
+| Reward/risk (T1) | **0.17–0.63:1** for the old $225–233 zone with a $205 stop to $237.68 (levels.py) ✘ |
+| Size | 0 now. Plan placeholder ≈ $190 from 11/5 (PLAN §6b) |
+| Timeframe | Weeks to quarters |
+| Next earnings | **Wed 11/4 after the close**, call 17:00 ET (Arm newsroom, 10/5). levels.py: 5 sessions; the buy blackout starts 10/30 |
+
+**What changed since 10/21** ($226.94 then):
+- **10/22:** −7.3% to $210.10 in the Lam/SOX sell-off. The low of $208.30 was 5.7% under the 10/20 stop fill ($220.85).
+  10/23 made a matching low at $208.50.
+- **Bounce:** +12% from that low (10/26 +6.2% close to close, Yahoo bars; TradingKey: "oversold", brokers reiterating), to $233.35 now.
+  At the low, the stop had saved ≈ $20; at this price it has cost ≈ $20 (1.5668 sh × $12.50).
+- **The 50-DMA turned down** (it was rising on 10/19; now $259.98, falling).
+- **Implied move ±12.3%**, up from ≈ ±8.8% on 10/13.
+- **Short interest rose** to 17.7M (10/15) from 16.2M.
+- **Still no ruling.** Futurum (10/27): expected "before the end of the calendar year".
+- **New soft negative.** AMD's 10/27 release says AMD EPYC processors "support the computing environments" behind Meta's
+  Muse agent. The 9/21 +17% ARM spike was built on the *assumption* that Muse runs on Arm's AGI CPU.
+- **§4a evidence is forming:** a higher low (10/26 $210.82 > $208.30) and today's high of $233.55 above $233. If today
+  closes above $233, the "close > $233" leg is met. **It still does not open a buy:** the report and ruling gates come first,
+  and no zone passes the R/R test.
+
+### Thesis scorecard (earnings-and-thesis.md §B; not held — kept for the re-entry decision)
+| Pillar (falsifiable) | What was expected | Status (dated) | Trend |
+|---|---|---|---|
+| Royalty revenue growth ≥ low-teens % y/y | Q2 FY27 guide: low teens | Q1 FY27 total revenue $1.29B, +22% (Yahoo, 10/25). The royalty guide for Q2 is down to low teens; smartphone royalty growth seen at high teens for FY27, from 20%+ (Hudson Labs, 10/7) | **weakening** |
+| Data-center royalties > 2× y/y | > 2× | Q1: "more than doubled" (Yahoo, 10/25) | stable |
+| AGI CPU demand converts into revenue | > $2B demand, $1B capacity secured | No update since 7/29. A fuller revenue and margin update was promised for later (Yahoo, 10/25). The AMD/Meta Muse release is a soft negative (above) | stable to weakening |
+| The Qualcomm remedy does not suspend royalties | No suspension | 10/13 jury: breach and $2 in damages. The remedy is pending, expected by year-end (Futurum, 10/27). Qualcomm ≈ $443M of last FY's revenue (≈ 9%) (Yahoo, 10/25). Futurum's estimate of a suspension: ≈ $300M a year, ≈ $1.5B in total | **open (binary)** |
+| Valuation supported by growth | — | ≈ 105× FY27 normalized EPS ($2.23; Yahoo, 10/25; desk arithmetic at $233.35) | — |
+
+- **Thesis-break exits** (each keeps ARM off the re-entry list, whatever the price):
+  1. The royalty suspension is granted.
+  2. The royalty growth guide is cut again on 11/4.
+  3. A major licensee publicly moves designs to RISC-V.
+- **Disconfirming evidence:**
+  - The CFO's automatic sales at $300 (9/21) and $255.33 (8/27).
+  - The Muse/EPYC read-across.
+  - Short interest rising into the report.
+- **Conviction: Low.** It goes to Med on a ruling that voids the clause *and* a royalty guide at or above low teens.
+
+### Earnings preview — Q2 FY27, Wed 11/4 after the close (§A)
+1. **Date and time.** 11/4 after the close, call 14:00 PT / 17:00 ET (Arm newsroom, 10/5). Last decision point: none needed,
+   since ARM is not held.
+2. **Consensus:**
+   - Revenue **$1,376M** (Hudson Labs, 10/7) vs guide **$1.38B ± $50M** (+22% y/y).
+   - Non-GAAP EPS guide **$0.47 ± $0.04**. The GAAP consensus is $0.23 (Hudson Labs); levels.py/Zacks shows **$0.22**, a GAAP
+     basis, so don't compare it to the non-GAAP print.
+   - **Metrics that move it:** royalty growth (guided low teens), licensing (guided ≈ +30%), data-center royalties, the AGI
+     CPU capacity line, and any Qualcomm remedy comment.
+3. **Implied move: ±12.3%.** The Nov 6 at-the-money straddle (232.50 strike) was $14.22 + $14.43 = **$28.65** on $232.34
+   (Nasdaq, 10/28 10:59 ET); the Oct 30 straddle alone is ±5.3%. That is ≈ $204–261.
+   - **$ at stake: $0** (not held). For the plan's ≈ $190 re-entry it would be ±$23 on one night. That is why the re-entry
+     waits until 11/5.
+4. **Scenarios** (written 10/28):
+
+   | Scenario | What has to happen | Likely reaction | Action written now |
+   |---|---|---|---|
+   | Bull | Revenue ≥ $1.43B, royalty growth above low teens, AGI CPU capacity raised; ideally a ruling that voids the clause | +10% to +15% (July analog: +14.7% gap) → $255–270, into the falling 50-DMA | **No chase.** Re-derive 11/5 from the new bars; a gap into the 50-DMA is resistance, not an entry |
+   | Base | In line, royalty low teens, no AGI CPU numbers | ±5–10% (May −10.1%, February +5.7%) | Re-derive 11/5. A buy needs the ruling out, §4a evidence, and a zone that passes levels.py |
+   | Bear | Royalty guide cut again, AGI CPU supply-limited, or a suspension ruling | −10% to −25% | A close under **$208.30** breaks the base: off the list until a new one forms. A suspension ruling is a thesis break: off the list |
+5. **History** (Yahoo daily bars via levels.py; report-day close → next session):
+
+   | Report (after the close) | Next open (gap) | Next close |
+   |---|---|---|
+   | 2025-11-05 (Q2 FY26) | +4.3% | **−1.2%** |
+   | 2026-02-04 (Q3 FY26) | −0.4% | **+5.7%** |
+   | 2026-05-06 (Q4 FY26) | −6.3% | **−10.1%** |
+   | 2026-07-29 (Q1 FY27) | +14.7% | **+7.4%** |
+
+   Same series as the 10/13 entry. The 5/6 date is inferred from it and was not re-fetched this session.
+6. **Decision:** none on 11/3 or 11/4 (not held). The re-entry plan is unchanged: **from 11/5**, after the report *and* the
+   ruling, with a zone that passes all three points.
+
+### Thesis
+Arm takes a royalty on nearly every smartphone chip and a fast-growing share of data-center CPUs. Data-center royalties more
+than doubled in Q1. It now also sells its own AGI CPU, with demand above $2B and $1B of capacity secured.
+
+The market is paying ≈ 105× FY27 earnings for that. It is not paying for a Qualcomm royalty holiday (≈ 9% of revenue) or a
+second guide-down in royalty growth. Both are live into 11/4. The float is ≈ 13% of the shares (SoftBank owns ≈ 86%; 10/13
+entry), so moves get amplified.
+
+### Chart & technicals (levels.py, 2026-10-28 11:07 ET)
+```
+ARM  $233.35 (2026-10-28 11:07 ET); last daily bar 2026-10-28 close $233.35
+  20/50/200-DMA  252.09 / 259.98 (falling) / 227.80 (rising)   price vs 50 -10.2%, vs 200 +2.4%
+  RSI(14) 43.1   ATR(14) $14.20 = 6.1% a day   52-wk 100.02–452.70 (-48% from the high)
+  Trend: above a rising 200-DMA
+  Chase guard: ok
+  Next report: 2026-11-04 after the close (5 sessions; EPS est. 0.22)   ✓ outside the buy blackout
+  Swing support below: 233.29, 225.46, 219.39   resistance above: 237.68, 239.50, 267.69
+```
+- **Structure.** Lower highs from $336.98 (9/23): $318.36 (10/2), $260.15 (10/13), $245.87 (10/15), $239.42 (10/16), $236.59
+  (10/19), $228.95 (10/21).
+  - Then a double low at $208.30 / $208.50 (10/22–10/23), under the 200-DMA, and a reclaim. Today's high of $233.55 is the
+    first higher high since September.
+  - The bounce volume (4.7M, 3.7M) is below the 5.7M of the 10/22 drop. That is fading, not conviction.
+- **levels.py's support list misses the actual low.** At 10:52 ET it listed $225.46 / $219.39 / $200.89 and skipped the 10/22
+  low of $208.30: a pivot needs 5 bars after it, and there are only 4.
+- **Real resistance, from the bars:** $233.29 (8/24 low, broken support) · $236.59–239.50 (10/19 and 10/16 highs; 4/24 and
+  5/6 pivots) · $245.87 · $250.20 · $252.09 (20-DMA) · $255–260 (10/12–10/13 highs and the falling 50-DMA) · $267.69.
+- **Zone checks** (`levels.py ARM --zone … --size 190 --sleeve 3426`, 11:06–11:07 ET, ATR $14.20):
+```
+  Setup: zone 225.00–233.00, stop 205.00, T1 237.68     # the old re-entry zone; stop under the double low
+    at low     225.00: R/R 0.63:1, stop 1.41 ATR (8.9%)   ✘ R/R < 2; stop < 1.5 ATR
+    at mid     229.00: R/R 0.36:1, stop 1.69 ATR (10.5%)   ✘ R/R < 2
+    at high    233.00: R/R 0.17:1, stop 1.97 ATR (12.0%)   ✘ R/R < 2
+  Setup: zone 222.00–225.00, stop 205.00, T1 267.69     # generous T1: skips 237.7–260 (only legitimate after a reclaim)
+    at low     222.00: R/R 2.69:1, stop 1.20 ATR (7.7%)   ✘ stop < 1.5 ATR
+    at mid     223.50: R/R 2.39:1, stop 1.30 ATR (8.3%)   ✘ stop < 1.5 ATR
+    at high    225.00: R/R 2.13:1, stop 1.41 ATR (8.9%)   ✘ stop < 1.5 ATR
+  Setup: zone 222.00–225.00, stop 200.00, T1 267.69     # wider stop under the 5/12 low
+    at low     222.00: R/R 2.08:1, stop 1.55 ATR (9.9%)   ✓
+    at mid     223.50: R/R 1.88:1, stop 1.66 ATR (10.5%)   ✘ R/R < 2
+    at high    225.00: R/R 1.71:1, stop 1.76 ATR (11.1%)   ✘ R/R < 2
+  Setup: zone 222.00–225.00, stop 200.00, T1 245.87     # honest T1 after a reclaim of 239.50
+    at low     222.00: R/R 1.09:1, stop 1.55 ATR (9.9%)   ✘ R/R < 2
+    at mid     223.50: R/R 0.95:1, stop 1.66 ATR (10.5%)   ✘ R/R < 2
+    at high    225.00: R/R 0.83:1, stop 1.76 ATR (11.1%)   ✘ R/R < 2
+```
+- **No passing zone, even with a T1 the chart does not justify.**
+  - **Why:** a 2:1 trade with a 1.5-ATR stop needs ≥ 3 ATR = **$42.60** of clear air to T1. Between $208 and $260, ARM's
+    real levels are $4–12 apart.
+  - **Condition that would create a zone** (from 11/5, after the report and the ruling):
+    - ATR(14) contracts to **≤ ≈ $7** (≈ 3% a day), and
+    - a higher low holds above $208.30.
+    - Then a ≈ $213–216 zone with a ≈ $205 stop pays 2:1 to $237.68.
+  - A breakout alone does not fix it: above the 50-DMA the next levels ($267.69 / $274.80 / $279.20) are also < 3 ATR apart.
+  - Expect no ARM buy in the first half of November. The plan's "≈ $190 from 11/5" is a placeholder, not a trade.
+- Chart: `/tmp/claude-1000/-home-waelas-wael-amana-amana-assistant/cf7235bd-03e5-456e-8948-a8c2229a57bd/scratchpad/charts/ARM.png`
+  (stop 205, T1 267.69 drawn for reference). Visual check: lower highs under falling 20/50-DMAs, sitting on a rising
+  200-DMA. Cosmetic: the stop label overlaps the candles.
+
+### Fundamentals
+- **Q1 FY27** (reported 7/29): revenue **$1.29B, +22%**; non-GAAP EPS **$0.45, +29%**, above the top of the guide;
+  data-center royalties more than doubled (Yahoo, 10/25).
+  - The royalty / licensing split ($715M / $574M) and TTM FCF $1.51B are from the 10/13 entry (Arm newsroom, 7/29), not
+    re-fetched.
+- **FY27:** revenue estimate $6.06B (+23.2% on FY26's $4.92B); normalized EPS $2.23 (Yahoo, 10/25). Zacks via Nasdaq: FY (Mar
+  2027) EPS $1.15, GAAP basis.
+- **Valuation:** ≈ 105× FY27 normalized EPS and ≈ 68× FY28 at $210 (Yahoo, 10/25), higher now. Beta is high, and the float
+  is small.
+- **Balance sheet:** net cash and no dilution concern (10/13 entry; not re-fetched). The SoftBank margin loan (9/18) is the
+  overhang, not Arm's own balance sheet.
+
+### News & catalysts (last 30d / next 90d)
+- 10/13 — Delaware jury: Arm breached the Architecture License Agreement and interfered with Qualcomm's Meta relationship; $2
+  in damages; Arm won the TLA claims — **breaking-risk** (it unlocks the remedy)
+- 10/20 — Bench-trial closing arguments; ARM stopped at $220.85 — **neutral**
+- 10/22 — −7.3% to $210.10 in the Lam supply-warning sell-off (SOX −6.7%); "nothing in Lam's warning was about Arm"
+  (Yahoo, 10/25) — **neutral** (sector)
+- 10/26 — +6.2% close to close (Yahoo bars; TradingKey: oversold, brokers reiterate) — **neutral**
+- 10/27 — Futurum: no ruling yet; remedy "expected before the end of the calendar year"; the loser is expected to appeal —
+  **open binary**
+- 10/27 — AMD/Meta release: AMD EPYC behind Meta's Muse — **soft disconfirming** for the AGI CPU story
+- **Next:** MSFT and GOOGL 10/28 · AMZN 10/29 · AMD 11/3 (read-across) · **ARM 11/4 after the close** · **royalty ruling: any
+  day to ≈ year-end** · AGI CPU update promised with a later report
+
+### Positioning & sentiment
+- **Short interest:** 17.70M (10/15) vs 16.19M (9/30); **3.75 days to cover** (Nasdaq). Rising into the binary.
+- **Analysts:** 17 Buy / 5 Hold / 0 Sell; mean target **$299.47** (range $150–480) (Nasdaq, 10/28). Unchanged since 10/13.
+- **Insiders:**
+  - CFO Jason Child: automatic sales of 10,400 sh at $300.00 (9/21) and $255.33 (8/27).
+  - No open-market buys: Nasdaq's 12-month "buys" include a 64-share non-open-market acquisition (Haas, 8/31).
+- **SoftBank:** owns ≈ 86% and has a margin loan (10/13 entry). No SoftBank-specific news found 10/23–10/27.
+- **Crowded and extended?** Not extended (RSI 43, −10% under the 50-DMA). It is crowded by beta, binary-exposed and
+  small-float: the protocol §4 crash setup is present around 11/4.
+
+### What would make me wrong
+- **The ruling voids the clause and 11/4 reaccelerates royalties.** ARM could gap through the 50-DMA and never offer a 2:1
+  zone. That is acceptable: missing a trade costs $0.
+- **Price:** a daily close under $208.30 means the base failed.
+- **Events:** the suspension is granted (a thesis break); the royalty guide is cut again; RISC-V defections.
+
+### Sources
+- `levels.py ARM` (Yahoo daily bars; Alpha Vantage calendar), runs 2026-10-28 10:52–11:07 ET; chart PNG above
+- Nasdaq option chain, ARM Nov 6 and Oct 30 expiries, 10/28 10:59 ET — https://api.nasdaq.com/api/quote/ARM/option-chain
+- Nasdaq earnings-forecast / targetprice / short-interest / insider-trades APIs for ARM, fetched 10/28 — https://api.nasdaq.com/api/analyst/ARM/targetprice
+- [Arm announces earnings release date for Q2 FYE27](https://newsroom.arm.com/news/arm-announces-earnings-release-date-for-second-quarter-fiscal-year-ending-2027) — 2026-10-05
+- [Hudson Labs: ARM Q2 FY27 preview](https://www.hudson-labs.com/research/arm-q2-2027-earnings-preview-arm-revenue-and-outlook) — 2026-10-07
+- [Yahoo Finance: Arm stock is down 8% last week. What does Lam Research have to do with it?](https://finance.yahoo.com/markets/stocks/articles/arm-stock-down-8-last-154101616.html) — 2026-10-25
+- [Futurum: Qualcomm wins liability verdict, royalty suspension ruling to follow](https://futurumgroup.com/insights/qualcomm-wins-liability-verdict-against-arm-with-royalty-suspension-ruling-to-follow/) — 2026-10-27
+- [TradingKey: ARM up 5.69% on Oct 26](https://www.tradingkey.com/news/market-movers/262239732-market-movers-arm-20261026) — 2026-10-26
+- [TradingKey: ARM down 6.69% on Oct 22](https://www.tradingkey.com/news/market-movers/262232913-market-movers-arm-20261022) — 2026-10-22
+- [AMD and Meta release (Muse / EPYC)](https://www.stocktitan.net/news/AMD/amd-and-meta-advance-strategic-partnership-to-power-meta-s-w7j6r9jk2soy.html) — 2026-10-27
+
+---
+
+## ARM — stopped out 2026-10-20 (not held)
+
+**Verdict:** WATCH · no re-entry before the **11/4** report *and* the royalty ruling · **Conviction:** Low on the setup.
+
+| | |
+|---|---|
+| Exit | Broker stop $220 → **sold 1.56684554 sh @ $220.85 at 09:36 ET on 10/20**, −$54.87 + $1 fee (statement 10/20) |
+| The day | Open $224.66, low **$217.26** (09:50 ET), close **$221.06**; the hearing started at 10:00 ET |
+| Since | **$226.94** (10/21, 15:44 ET), +$9.54 against the fill |
+| Line result | The 10/12 re-buy (OVERRIDE, §4a) ends **−$56.87** with both fees. ARM since 8/18: +$13.46 realized |
+| Ruling | Closing arguments heard 10/20. Bloomberg (10/20): the judge is reluctant to step into the next-generation licensing talks. **No ruling on the 5-year royalty-suspension clause yet** |
+
+**Was the stop wrong?** It was flagged on 10/19: $220 sat only 0.6 ATR ($16.85) under the price, so a normal opening dip
+could take it. That happened. But the stop itself was right by the plan (under the 200-DMA and the 8/3 swing low, set
+before the re-buy's loss grew). The cause was the entry: the 10/12 re-buy at $255.87 had no higher low under §4a, and by
+10/19 the price had fallen to within one day's range of the stop. The client held and did not lower the stop (10/19). That
+part was right. A stop that is never moved down costs a small known amount. Lowering stops (QUBT, EWY) cost $56 in October.
+
+**Re-entry (§4a), from 11/5 at the earliest:** the ruling must be out, and not a royalty suspension. Then a higher low, or a
+close back above **$233** (the 8/24 low and the broken zone top), a new stop written first, and R/R ≥ 2:1. 50-DMA ≈ $265
+(the sell zone $275–281 sits above it), 200-DMA ≈ $224.
+
+**Sources:** Amana statement 2026-10-01 → 10-20 (`portfolio/statements/amana-statement-2026-10-01_2026-10-20.pdf`) ·
+Yahoo chart API ARM 5-min bars 10/20 and daily bars, fetched 2026-10-21 15:44 ET ·
+[Bloomberg, 10/20: Judge reluctant to intervene in Qualcomm-Arm licensing talks](https://www.bloomberg.com/news/articles/2026-10-20/judge-reluctant-to-intervene-in-qualcomm-arm-licensing-talks) ·
+[Notebookcheck: Arm's v10 royalty demand, trial figures](https://www.notebookcheck.net/Arm-s-v10-royalty-demand-equals-up-to-30-of-a-220-Snapdragon-chip-s-price-trial-figures-suggest.1429935.0.html)
 
 ---
 

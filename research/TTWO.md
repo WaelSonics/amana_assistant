@@ -3,9 +3,186 @@
 One file per ticker; newest entry first. Each entry is dated; numbers are as of that date.
 
 Entries:
+- 2026-10-28 (deep dive + 11/9 earnings preview + thesis scorecard)
 - 2026-10-19 (update)
 - 2026-10-13
 - 2026-09-09
+
+---
+
+## TTWO — Take-Two Interactive — deep dive 2026-10-28
+
+**Verdict:** HOLD through the 11/9 report with the **$190 broker stop** · no adds (2 of 2 used) · sell ⅓ only in $222–228, or
+above $270 in launch week · **Conviction:** Med on the launch, **Low on the report**. Three of the last four reports traded
+≥ 6.9% below the prior close intraday. Two brokers trimmed into it. The price sits 4.6% above the stop, and options imply ≈ 10%.
+
+| | |
+|---|---|
+| Price | **$199.06** (2026-10-28 10:52 ET, levels.py; refresh $199.82 at 11:06 ET, 5.0% above the stop); close $201.28 (10/27); 10/13 low **$196.30** |
+| Position | 2.35163202 sh @ $213.11 = **$468.13**, 13.7% of the $3,426 sleeve, **−6.6% (−$33.03)** |
+| 20 / 50 / 200-DMA | $204.86 / $212.44 (falling) / $220.39 (falling): −6.3% under the 50, −9.7% under the 200 |
+| RSI(14) · ATR(14) | 39.3 · **$5.69 = 2.9% a day** · 52-wk $187.63–265.94 (−25% from the high) |
+| Stop | **$190** (broker, hard; never lowered): $9.06 = **4.55% = 1.59 ATR** below. Risk from here **$21.31**; from cost −$54.35 (−10.8%). Hard exit −15% from cost = $181.14 |
+| Sell zone (⅓ = 0.78 sh) | **$222–228** = the falling 200-DMA ($220.39) and the 9/14 high ($224.26); 11.5% above. Banks ≈ +$6.93 at $222. The 50-DMA ($212.44) has dropped out of the zone; first resistance is $204.9–212.0 (20-DMA, 9/30 high $210.15, 10/22 high $212.00) |
+| Buy zone | **none**: 2 of 2 adds used, and price is below a falling 200-DMA |
+| Next events | **Earnings Mon 11/9 after the close** (company PR 10/13; levels.py/Alpha Vantage: 8 sessions) · decision confirmed Fri 11/6 · pre-load 11/12 · reviews 11/18 (reported, unconfirmed) · **GTA VI 11/19** · review 12/19 |
+| Override note | Circuit-breaker halving (1.1758 sh) skipped 10/23–10/27: an OVERRIDE on the §7 ledger. Not re-argued here |
+
+### What changed since the 10/19 entry
+- **Price** $205.14 → $199.06 (−3.0%):
+  - a lower high at $212.00 (10/22), then closes of $203.69, $203.35 and $201.28;
+  - the 50-DMA fell $218.3 → $212.44 and the 200-DMA $222.1 → $220.39;
+  - RSI 45.7 → 39.3, ATR $6.73 → $5.69.
+- **BofA** kept Buy but cut its target **$368 → $330**: FY28 EPS cut to $13.03 from $14.13; "be long TTWO through the GTA 6
+  launch". Reported 10/28 (tech-insider). Single source; the note's date is not given.
+- **GTA VI review codes** are reportedly out with an **11/18 embargo** (insider NateTheHate, 10/26; via GTABoom and Insider
+  Gaming; not confirmed by Rockstar). The official page still lists 11/19 (10/27). Pre-load starts 11/12 (Rockstar). No delay
+  reports.
+- **Short interest** 9.63M shares = **5.21% of float**, 3.8 days to cover, +3.5% (MarketBeat, 10/15 record). It was 5.0% at 9/30.
+- **Implied move** now ≈ ±10.2% to the 11/13 expiry and ±12.7% to 11/20 (OptionSlam). The 10/13 entry had ±14% / ±17% from
+  another source.
+
+### levels.py check (informational: an add is blocked anyway)
+"If this were a buy today": stop $190, T1 = the nearest real resistance ($210.15):
+```
+  Setup: zone 198.90–201.50, stop 190.00, T1 210.15
+    at low     198.90: R/R 1.26:1, stop 1.56 ATR (4.5%)   ✘ R/R < 2
+    at mid     200.20: R/R 0.98:1, stop 1.79 ATR (5.1%)   ✘ R/R < 2
+    at high    201.50: R/R 0.75:1, stop 2.02 ATR (5.7%)   ✘ R/R < 2
+    size $190 ≈ 0.9491 sh at the mid; risk to stop $9.68 = 0.3% of $3,426   ✓ ≤ 2%
+    price is IN the zone
+```
+The same line, using the sell-zone bottom ($222) as T1, gives 2.60 / 2.14 / 1.78 : 1 (✘ at the high edge). The hold is a
+catalyst bet to 11/19, not a technical setup. No add would pass even if one were left.
+
+### Earnings preview — Q2 FY27, Mon 2026-11-09 after the close
+1. **Date and time:** 11/9 after the close (company PR 10/13). levels.py: "2026-11-09 after the close (8 sessions)".
+   - Last decision session: Fri 11/6. The decision is written now and confirmed after the 11/6 close.
+   - Client commitment: no trades until 11/2. A stop fill is not a breach.
+2. **Consensus and guide:**
+   - **Q2 guide (8-K, 8/7):** net bookings **$1,620–1,670M**; GAAP revenue $1,420–1,470M; GAAP EPS −$0.84 to −$0.75.
+   - **Consensus EPS is unreliable:** MarketBeat $0.97 (basis unclear), Alpha Vantage $0.49, against a GAAP guide that is
+     negative. The stock trades on bookings and the guide.
+   - **FY27 guide (reiterated 8/7):** net bookings **$8.0–8.2B**; GAAP revenue $7.9–8.1B; GAAP EPS $0.55–0.75; operating cash
+     flow > $1.0B.
+   - **The number that moves the stock:** the first launch-quarter (Oct–Dec) bookings guide. Wells Fargo expects
+     **$3,350–3,400M vs $3,446M consensus**, and adjusted EBITDA $876–900M vs $926M (10/12).
+   - **Also watch:** GTA VI pre-order and sell-through commentary; NBA 2K (Wells Fargo: units −10% y/y); mobile (top-20 daily
+     users −22% y/y in Q2); recurrent consumer spending (84% of Q1 bookings, −1% y/y).
+3. **Implied move:** **±10.16%** to the 11/13 weekly. It covers the report plus the 11/12 pre-load ($25.60 on a $201.28
+   reference). It is ±12.72% to 11/20, which includes the launch (OptionSlam, fetched 10/28). The earnings-only part is
+   smaller; the 10/13 entry estimated ≈ ±6.5%.
+   - **vs the stop:** 4.55% away, so the implied move is **2.2× the distance**. A gap can skip the $190 stop.
+   - **$ at stake:** ±10.16% × $468.13 = **±$47.56** (±$30.43 at ±6.5%).
+   - **Gap math:** a −10.16% gap opens near **$178.84**, under both the stop and the −15% hard exit ($181.14). The broker sells
+     there: **−$47.56 from now, −$80.59 from cost (2.4% of the sleeve)**. A gap is how the 2% risk cap gets broken. With
+     everything else flat, the account would be ≈ $3,378 against the $3,401.87 breaker. Even a clean fill at $190 (−$21.31)
+     would leave ≈ $3,405, a cushion of ≈ $3.
+4. **Scenarios:**
+
+   | Scenario | What has to happen | Likely reaction | Action written now |
+   |---|---|---|---|
+   | Bull | Q2 bookings ≥ $1.67B; FY27 $8.0–8.2B reiterated or raised; launch-quarter guide ≥ $3.45B; firm pre-order color | +6 to +10% → $211–219, into the $210–216 resistance and the 50-DMA | Hold. No add (2 of 2). Sell ⅓ (0.78 sh) only if it trades in **$222–228**. Launch week 11/16–20 above **$270** → sell ⅓ |
+   | Base | Q2 in range; FY27 reiterated; launch-quarter guide $3.35–3.45B | ±3–5% → $189–209 | Hold with the $190 stop. If it fills, that is the plan |
+   | Bear | FY27 cut, launch-quarter guide < $3.35B, or any GTA VI timing wobble | −8 to −12% gap → $175–183 | The broker stop sells at the open. No re-buy that session (§4a). A FY27 cut or a GTA VI delay is a thesis break: no re-entry before the 12/19 review |
+
+5. **History** (levels.py bars; reaction day vs the prior close):
+
+   | Report | Opening gap | Close | Intraday low |
+   |---|---|---|---|
+   | 11/6/25 after the close | −8.1% | −8.1% | −10.0% |
+   | 2/3/26 after the close | −2.1% | −5.4% | −6.9% |
+   | 5/21/26 after the close | +2.4% | −4.4% | −7.4% |
+   | 8/7/26 before the open | +0.4% | +6.0% | −0.6% |
+
+   **A stop 4.55% below the pre-report close would have filled in 3 of the 4**: at the open once, intraday twice.
+6. **Decision (written 10/28; confirm after the 11/6 close):** **hold through the report with the $190 broker stop.** Never
+   lower it, and no adds. Sell ⅓ (0.78 sh) only if it trades in $222–228 before the report. Exit before 11/9 only on a thesis
+   break, such as an official GTA VI date change. Why not trim or exit now:
+   - **(a)** The line is held for the 11/19 launch, eight sessions after the report.
+   - **(b)** Below cost there is no sell zone (PLAN §3b). The stop decides (§4).
+   - **(c)** The gap risk is the price of the thesis.
+
+   The plan's tool for cutting that exposure was the breaker halving, and it was skipped (an OVERRIDE). Said plainly: **the
+   stop is more likely than not to be tested on 11/10.** Never decide on report night.
+
+### Thesis
+GTA VI (PS5, Xbox Series X|S; $79.99 / $99.99) is still dated **11/19/2026**. The official page shows it as of 10/27, and
+review codes are reportedly out. FY27 bookings guidance of $8.0–8.2B rests on it. Wells Fargo models ≈ 50M units at a $90
+gross price; the guidance implies ≈ 33M at $80 (10/12). At $199 the stock carries no launch premium: −25% from the 7/7 high
+and −20% YTD (Investing.com, 10/19). The risk is the 11/9 launch-quarter guide, not the launch. This is a catalyst hold to
+11/19 and the 12/19 review, not a compounder.
+
+### Chart & technicals (levels.py, 10/28 10:52 ET; chart `scratchpad/charts/TTWO.png` with the stop and $222)
+- **Trend:** below a falling 50 and 200. Lower highs: $224.26 (9/14) → $215.66 (10/9) → $212.00 (10/22). Lows: $196.30
+  (10/13), then $199.60–199.90 (10/26–10/27) and $198.90 today.
+- **Support:** $196.30, then the Feb–Mar shelf $187.6–189.5. Under it, the stop.
+- **Momentum and volume:** RSI 39.3, falling. Volume is quiet (1.3–2.4M a day since 10/14, against 5.2M on the 10/13 flush).
+- **Distance from the 50-DMA:** −6.3%, so the chase guard is not relevant.
+
+### Fundamentals (8-K, 2026-08-07)
+- **Q1 FY27:** net bookings $1,385.9M (−3% y/y, above the $1.32–1.37B guide); GAAP revenue $1,533.9M; GAAP EPS −$0.18.
+- **FY27 guide:** see the preview above. Capex ≈ $290M.
+- **Balance sheet and earnings (Investing.com, 10/19, data as of 6/30):** debt $2.94B, levered FCF $298.7M. Consensus EPS
+  $6.99 for FY27 and $10.25 for FY28.
+
+### News & catalysts (last 30 days / next 90)
+- **10/12:** Wells Fargo kept Overweight at $300 and cut its Q2 estimates. Launch-quarter bookings $3.35–3.40B vs $3.446B
+  consensus. *Weakening.*
+- **10/13:** closed −4.1% (low $196.30, −6.0% intraday) on a PC-port timing rumor (TipRanks headline via search). *Neutral.*
+- **BofA:** target $368 → $330, Buy kept. Reported 10/28; the note's date is unverified. *Weakening.*
+- **10/26:** review codes reportedly out, 11/18 embargo. Unconfirmed. *Confirming.*
+- **Next:**
+  - **11/9 report**;
+  - 11/12 pre-load;
+  - 11/18 reviews (reported);
+  - **11/19 launch**;
+  - 12/19 desk review.
+
+### Positioning & sentiment
+- **Short interest:** 5.21% of float, rising (10/15).
+- **Analysts:**
+  - BofA Buy $330 (the cut above);
+  - Wells Fargo Overweight $300 (10/12);
+  - Investing.com's fair-value model shows 8.3% downside (10/19).
+- **Insiders:** zero buys in 2026, ≈ $12.9M sold in 90 days (10/13 entry; not re-fetched).
+- **Crowding:** not crowded or extended. It is a single-event stock into a binary report.
+
+### Thesis scorecard
+| Pillar (falsifiable) | Expected | Status (dated) | Trend |
+|---|---|---|---|
+| GTA VI ships 11/19/2026 | on date | Official page 11/19 (10/27); pre-load 11/12; review codes reportedly out (10/26) | stable / improving |
+| FY27 net bookings guide held | $8.0–8.2B | Reiterated 8/7; next test 11/9 | stable (untested) |
+| Launch-quarter guide ≥ consensus | ≥ $3.35B (WF low), ideally ≥ $3.446B | Wells Fargo expects $3.35–3.40B (10/12); BofA FY28 EPS cut (reported 10/28) | **weakening** |
+| Core business stable (NBA 2K, mobile) | Q2 bookings in $1.62–1.67B | NBA 2K units −10%, mobile daily users −22% (Wells Fargo, 10/12); Q1 above guide | **weakening** |
+| Price holds the stop shelf | closes > $190 | $199.06; lower highs; −9.7% under a falling 200-DMA | **weakening** |
+
+- **Thesis-break exits (whatever the price):**
+  1. Any official GTA VI date change.
+  2. A FY27 net bookings guide cut below $8.0B on 11/9.
+  3. A daily close under $190, which the broker stop executes.
+- **Disconfirming evidence logged:** two broker cuts into the print, a 3-of-4 down-reaction history, and rising short interest.
+- **Conviction:** Med on the launch, Low on the report. A launch-quarter guide ≥ $3.45B lifts it to Med. A FY27 cut ends the
+  position.
+
+### What would make me wrong
+- **On the hold:** the 11/9 guide is weak and the stock gaps through $190. The fill could land near $179–183, which costs
+  $38–48 from here.
+- **On the patience:** a strong guide and a launch run past $222 in days. Then the call is to sell ⅓ in the zone, not to chase
+  the add.
+- **On the launch:** a delay. That is the one event that ends the position outright.
+
+### Sources
+- levels.py (Yahoo chart API daily bars; Alpha Vantage calendar), run 2026-10-28, quotes 10:52 ET; reaction history computed
+  from the same bars
+- [Take-Two Q1 FY27 results, 8-K](https://www.sec.gov/Archives/edgar/data/0000946581/000162828026054580/ttwo1q27earningsrelease.htm): 2026-08-07
+- [OptionSlam: TTWO earnings straddle](https://www.optionslam.com/earnings/straddle/TTWO): fetched 2026-10-28 (reference $201.28)
+- [tech-insider: BofA Buy, $330 target](https://tech-insider.org/take-two-bofa-buy-330-target-gta-6-earnings-2026/): 2026-10-28
+- [Investing.com: Wells Fargo reiterates Overweight at $300](https://investing.com/news/analyst-ratings/wells-fargo-reiterates-taketwo-stock-overweight-rating-at-300-target-93CH-4943909): 2026-10-12 (re-fetched 10/28)
+- [Investing.com: TTWO stock analysis into GTA VI release](https://www.investing.com/news/stock-market-news/taketwo-interactive-ttwo-stock-analysis-into-gta-vi-release-93CH-4956738): 2026-10-19
+- [GTABoom: review codes going out, 11/18 embargo](https://www.gtaboom.com/trusted-insider-says-gta-6-review-codes-are-going-out-right-now-4d27): 2026-10-26 (via search)
+- [MarketBeat: TTWO short interest](https://www.marketbeat.com/stocks/NASDAQ/TTWO/short-interest/): 10/15 record, published 10/26
+- [MarketBeat: TTWO Q2 2027 estimates](https://www.marketbeat.com/earnings/reports/2026-11-9-take-two-interactive-software-inc-stock/): via search, 10/28
 
 ---
 

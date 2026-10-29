@@ -1,5 +1,18 @@
 # Output templates
 
+## Dip study (plan v6) → new entry at the top of `research/TICKER.md`, before every buy (PLAN rule 8)
+
+```markdown
+## TICKER — dip study YYYY-MM-DD (plan v6)
+1. **What it is:** one line.
+2. **Why it fell:** the cause, dated and sourced, and whether it touches the business or only the price.
+3. **Next earnings:** YYYY-MM-DD (N sessions; blackout?), with the source.
+4. **Sell whatever the price if:** the 1–2 events that break the thesis (guidance withdrawn, a lost key customer, fraud…).
+5. **Signal (levels.py, date time):** close −x.x% from the 20-session high close; 200-DMA filter pass.
+**Order:** $400 at the next open → SL fill −25%, TP fill +25% in the app · exit by YYYY-MM-DD (30 sessions) ·
+slots n/5 and cash $x after it · theme count n/2.
+```
+
 ## Ticker deep dive → new entry at the top of `research/TICKER.md` (one file per ticker; create it with a `# TICKER — Company — research log` title if it does not exist)
 
 ```markdown
