@@ -25,4 +25,6 @@ python3 .claude/skills/stock-desk/scripts/levels.py MU AMD BE ...   # technicals
 python3 .claude/skills/stock-desk/scripts/levels.py --report        # v6 checks: SL/TP, slots, cash floor, themes, brakes
 ```
 
+Flag Board page: `python3 .claude/skills/stock-desk/board/build_board.py OUT.html` (text in `board/notes.json`).
+
 Shock day: `/market-move` (or just "market is down 4%, what do I do"). Its v3 engine `shock_playbook.py` is retired.

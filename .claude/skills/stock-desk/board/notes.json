@@ -1,0 +1,60 @@
+{
+  "plan": "v6 (adopted 2026-10-29)",
+  "next_buy_day": "2026-11-02",
+  "steps": [
+    {"when": "now", "tone": "act", "title": "Set the take-profits in the app",
+     "text": "AMD TP $683.18 and TTWO TP $266.39 (+25% from cost). The stops stay at $498 and $190. Rule 3: no line without both."},
+    {"when": "to Mon 11/2", "tone": "hold", "title": "No trades until Monday, your commitment",
+     "text": "The app's stops and take-profits still act on their own. A fill there is the plan, not a breach."},
+    {"when": "Fri 10/30 close", "tone": "watch", "title": "The first v6 scan",
+     "text": "The desk runs the dip rule on the watchlist at Friday's close, writes a 5-line study for each signal, and sends Monday's buy list before the open. Today's cash funds 2 buys of $400 above the $150 floor."},
+    {"when": "this week", "tone": "warn", "title": "TTWO sits just above its $190 stop",
+     "text": "A 2027 GTA VI delay rumor is going around (unconfirmed; Xbox still lists 11/19, preload 11/12). An official delay is a thesis break: sell at the next open. Otherwise the stop decides. Never lower it."},
+    {"when": "Tue 11/3", "tone": "watch", "title": "AMD reports after the close",
+     "text": "Options imply about ±9.7%. Under v6 the $498 stop and the $683.18 take-profit decide; there is no pre-report rule."},
+    {"when": "when you can", "tone": "hold", "title": "Deposit the October $200",
+     "text": "It goes to cash, because VOO is at its 35% target."}
+  ],
+  "calendar": [
+    {"d": "2026-10-29", "what": "PCE · MRK, LLY before the open · INTC, SNDK, AXTI, AMZN after the close", "act": "INTC and SNDK signals must survive their reports"},
+    {"d": "2026-10-30", "what": "ABBV, XOM, CVX before the open", "act": "After the close: the first v6 scan and studies"},
+    {"d": "2026-11-01", "what": "$200 contribution · US clocks go back an hour", "act": "To cash while VOO ≥ 35%"},
+    {"d": "2026-11-02", "what": "First v6 buy day", "act": "Buys at the open from Friday's signals, desk study first"},
+    {"d": "2026-11-03", "what": "AMD and ANET after the close · US midterms", "act": "AMD: the stop and TP decide"},
+    {"d": "2026-11-04", "what": "ARM after the close", "act": "—"},
+    {"d": "2026-11-05", "what": "LITE and AAOI after the close", "act": "—"},
+    {"d": "2026-11-06", "what": "Jobs report 8:30 ET", "act": "—"},
+    {"d": "2026-11-09", "what": "TTWO and RKLB after the close", "act": "TTWO: the stop and TP decide"},
+    {"d": "2026-11-12", "what": "GTA VI pre-load", "act": "—"},
+    {"d": "2026-11-18", "what": "PGR October results before the open", "act": "—"},
+    {"d": "2026-11-19", "what": "GTA VI launch", "act": "TTWO's TP is $266.39"},
+    {"d": "2026-11-26", "what": "Thanksgiving: US market closed", "act": "—"},
+    {"d": "2026-11-27", "what": "China's Ga/Ge export-ban pause lapses (extension unverified)", "act": "AXTI thesis check"},
+    {"d": "2026-12-09", "what": "FOMC", "act": "No buys that day"},
+    {"d": "2027-03-31", "what": "Plan v6 review", "act": "Keep, resize, or put everything into VOO"}
+  ],
+  "watchlist": {
+    "Compute and chips": ["NVDA", "ARM", "INTC", "TSM", "AMD"],
+    "Memory and storage": ["MU", "SNDK", "WDC", "STX", "EWY"],
+    "Networking and optical": ["ANET", "LITE", "AAOI", "AXTI"],
+    "AI power": ["BE"],
+    "Platforms": ["GOOGL"],
+    "Space": ["RKLB"],
+    "Games": ["TTWO"],
+    "Healthcare": ["JNJ", "ABBV", "MRK", "XLV"],
+    "Staples": ["PM"],
+    "Energy": ["XLE"],
+    "Defense": ["RTX"],
+    "Insurance": ["PGR"]
+  },
+  "rules": [
+    ["Never lower a stop, and never remove one", "EWY and QUBT: −$55.79"],
+    ["Never re-buy a name in the session its stop fired", "WDC and SNDK: −$68.75"],
+    ["Never hold a line without its SL and TP in the app", "SNDK 10/12 had no stop"],
+    ["Never buy a dip without a signal", "The instinct lost 3–5× more in the bust test"],
+    ["At most 2 open lines per theme", "Memory, five buys: ≈ −$160"],
+    ["Never more than $400 a buy, a 6th slot, or cash under $150", "AMD $500 in one fill; cash at 0.8%"],
+    ["No buy in the 3 sessions before earnings, or on an FOMC day", "Cheap insurance against gaps"],
+    ["Every buy has a 5-line study first", "October's overrides were all buys without the desk"]
+  ]
+}

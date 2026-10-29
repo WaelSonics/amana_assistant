@@ -50,6 +50,10 @@ capital numbers, goals, and the history that shapes every recommendation.
 - `levels.py --report` fetches live quotes for every holding and runs `portfolio_report.py`: the v6 checks (stop and TP on
   every line, slots, $400 buys that fit above the $150 floor, theme counts, time exits, account and dip brakes).
 - For earnings and thesis work, use the templates in `references/earnings-and-thesis.md`.
+- **Flag Board** (https://claude.ai/artifact/HjfHpid7GbLvP5VQUSYZmF): rebuild it with
+  `python3 .claude/skills/stock-desk/board/build_board.py <scratchpad>/flag-board.html`, then publish that file to the
+  board's URL. Numbers come from the repo and live quotes; the next steps, calendar, watchlist themes and rules come from
+  `board/notes.json`: edit that file first.
 
 ### B0. Dip study (v6) — before every buy
 Five lines, template in `references/output-templates.md`, saved at the top of `research/TICKER.md`. It is the desk note
